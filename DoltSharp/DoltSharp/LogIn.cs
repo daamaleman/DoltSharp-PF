@@ -16,5 +16,42 @@ namespace DoltSharp
         {
             InitializeComponent();
         }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtEmail.Text) || string.IsNullOrWhiteSpace(TxtPw.Text))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Los campos no deben estar vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!TxtEmail.Text.Contains("@") || !TxtEmail.Text.Contains(".com"))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El correo no es valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (TxtPw.Text.Length < 8)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "La contraseña debe tener al menos 8 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MetroFramework.MetroMessageBox.Show(this, "Bienvenido", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void CbxSee_CheckedChanged(object sender, EventArgs e)
+        {
+            if(CbxSee.Checked)
+            {
+                TxtPw.PasswordChar = '\0';
+                CbxSee.Text = "Ocultar";
+            }
+            else
+            {
+                TxtPw.PasswordChar = '*';
+                CbxSee.Text = "Ver";
+            }
+        }
     }
 }

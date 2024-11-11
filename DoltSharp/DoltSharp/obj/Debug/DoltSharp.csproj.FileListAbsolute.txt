@@ -1,0 +1,14 @@
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Design.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\bin\Debug\MetroFramework.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.AssemblyReference.cache
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.LogIn.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Properties.Resources.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.GenerateResource.cache
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.CoreCompileInputs.cache
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
