@@ -210,6 +210,7 @@
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Iniciar Sesion";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
