@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,62 @@ namespace DoltSharp
         public Register()
         {
             InitializeComponent();
+        }
+
+        private void BtnRegister_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtRegisterName.Text) || string.IsNullOrWhiteSpace(TxtRegisterLastName.Text) || string.IsNullOrWhiteSpace(TxtRegisterEmail.Text) || string.IsNullOrWhiteSpace(TxtRegisterPw.Text) || string.IsNullOrWhiteSpace(TxtRegisterVPw.Text))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Ninguno de los campos puede estar vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (DtpBirthDate.Value.Year > 2006)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "La fecha no puede ser mayor al año 2006", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!TxtRegisterEmail.Text.Contains("@") || !TxtRegisterEmail.Text.Contains(".com"))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El correo no es valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (TxtRegisterPw.Text.Length < 8)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "La contraseña debe tener al menos 8 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (TxtRegisterPw.Text != TxtRegisterVPw.Text)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MetroFramework.MetroMessageBox.Show(this, "Usuario registrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Hacer que cuando de click en el ok del mensaje se regrese a la ventana de LogIn nuevamente
+        }
+        private void TxtRegisterName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+                MetroFramework.MetroMessageBox.Show(this, "No puede poner numeros en el Nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtRegisterLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+                MetroFramework.MetroMessageBox.Show(this, "No puede poner numeros en el Apellido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

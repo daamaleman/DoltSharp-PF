@@ -27,3 +27,4 @@ C:\Users\elias\OneDrive\Imágenes\Escritorio\clon de doltsharp\DoltSharp-PF\Dolt
 C:\Users\elias\OneDrive\Imágenes\Escritorio\clon de doltsharp\DoltSharp-PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
 C:\Users\elias\OneDrive\Imágenes\Escritorio\clon de doltsharp\DoltSharp-PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\elias\OneDrive\Imágenes\Escritorio\clon de doltsharp\DoltSharp-PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
+C:\Users\diede\Desktop\Metodología\DoltSharp¨PF\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Register.resources
