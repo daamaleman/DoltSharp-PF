@@ -53,5 +53,12 @@ namespace DoltSharp
                 CbxSee.Text = "Ver";
             }
         }
+
+        private void BtnRegister_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Hide();
+        }
     }
 }

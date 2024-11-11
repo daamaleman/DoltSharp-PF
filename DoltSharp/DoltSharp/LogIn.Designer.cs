@@ -157,6 +157,7 @@
             this.BtnRegister.TabIndex = 7;
             this.BtnRegister.Text = "Registrarse";
             this.BtnRegister.UseSelectable = true;
+            this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // BtnResetPw
             // 
