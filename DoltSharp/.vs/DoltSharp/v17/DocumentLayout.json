@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|c:\\users\\diede\\desktop\\metodolog\u00EDa\\doltsharp\u00A8pf\\doltsharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp\u00A8PF\\DoltSharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|c:\\users\\diede\\desktop\\metodolog\u00EDa\\doltsharp\u00A8pf\\doltsharp\\doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp\u00A8PF\\DoltSharp\\doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -67,8 +67,7 @@
               "RelativeToolTip": "DoltSharp\\LogIn.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAnwDUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T19:14:38.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T19:14:38.709Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "ToolTip": "C:\\Users\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp\u00A8PF\\DoltSharp\\DoltSharp\\LogIn.cs [Dise\u00F1o]",
               "RelativeToolTip": "DoltSharp\\LogIn.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T14:31:55.645Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-08T14:31:55.645Z"
             }
           ]
         }
