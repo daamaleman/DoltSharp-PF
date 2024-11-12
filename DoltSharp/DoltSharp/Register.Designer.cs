@@ -214,6 +214,7 @@
             this.BtnRegister.TabIndex = 10;
             this.BtnRegister.Text = "Registrarse";
             this.BtnRegister.UseSelectable = true;
+            this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // metroLabel6
             // 

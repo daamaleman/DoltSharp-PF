@@ -44,3 +44,4 @@ C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
+C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.UsuarioConfig.resources
