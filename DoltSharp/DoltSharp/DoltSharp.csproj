@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UsuarioConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioConfig.Designer.cs">
+      <DependentUpon>UsuarioConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UsuarioConfig.resx">
+      <DependentUpon>UsuarioConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -112,6 +122,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\59801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d97bbb08017ac2309307f0822e63d082.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoltEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoltShits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_DoltSharp-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

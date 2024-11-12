@@ -16,5 +16,13 @@ namespace DoltSharp
         {
             InitializeComponent();
         }
+
+        // Boton para para redirigir a la configuracion de usuario
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            UsuarioConfig usuarioConfig = new UsuarioConfig();
+            usuarioConfig.Show();
+            this.Hide();
+        }
     }
 }
