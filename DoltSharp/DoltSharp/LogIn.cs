@@ -43,6 +43,10 @@ namespace DoltSharp
             }
 
             MetroFramework.MetroMessageBox.Show(this, "Bienvenido", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Hide();
         }
 
         // Mostrar u ocultar contraseña

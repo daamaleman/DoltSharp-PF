@@ -60,6 +60,9 @@ namespace DoltSharp
             MetroFramework.MetroMessageBox.Show(this, "Usuario registrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Hacer que cuando de click en el ok del mensaje se regrese a la ventana de LogIn nuevamente
+            LogIn logIn = new LogIn();
+            logIn.Show();
+            this.Hide();
         }
 
         // 6. No puede contener numeros 

@@ -52,20 +52,18 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(129, 175);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(172, 215);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(206, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(219, 20);
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "Registro de usuarios en el sistema";
             // 
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(94, 203);
-            this.LblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblName.Location = new System.Drawing.Point(125, 250);
             this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(62, 19);
+            this.LblName.Size = new System.Drawing.Size(64, 20);
             this.LblName.TabIndex = 2;
             this.LblName.Text = "Nombre:";
             // 
@@ -75,18 +73,18 @@
             // 
             // 
             this.TxtRegisterName.CustomButton.Image = null;
-            this.TxtRegisterName.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.TxtRegisterName.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterName.CustomButton.Location = new System.Drawing.Point(243, 1);
+            this.TxtRegisterName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterName.CustomButton.Name = "";
-            this.TxtRegisterName.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.TxtRegisterName.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.TxtRegisterName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtRegisterName.CustomButton.TabIndex = 1;
             this.TxtRegisterName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtRegisterName.CustomButton.UseSelectable = true;
             this.TxtRegisterName.CustomButton.Visible = false;
             this.TxtRegisterName.Lines = new string[0];
-            this.TxtRegisterName.Location = new System.Drawing.Point(184, 200);
-            this.TxtRegisterName.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterName.Location = new System.Drawing.Point(245, 246);
+            this.TxtRegisterName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterName.MaxLength = 32767;
             this.TxtRegisterName.Name = "TxtRegisterName";
             this.TxtRegisterName.PasswordChar = '\0';
@@ -95,7 +93,7 @@
             this.TxtRegisterName.SelectionLength = 0;
             this.TxtRegisterName.SelectionStart = 0;
             this.TxtRegisterName.ShortcutsEnabled = true;
-            this.TxtRegisterName.Size = new System.Drawing.Size(153, 19);
+            this.TxtRegisterName.Size = new System.Drawing.Size(204, 23);
             this.TxtRegisterName.TabIndex = 3;
             this.TxtRegisterName.UseSelectable = true;
             this.TxtRegisterName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -105,39 +103,36 @@
             // LblRegisterEmail
             // 
             this.LblRegisterEmail.AutoSize = true;
-            this.LblRegisterEmail.Location = new System.Drawing.Point(110, 311);
-            this.LblRegisterEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblRegisterEmail.Location = new System.Drawing.Point(147, 383);
             this.LblRegisterEmail.Name = "LblRegisterEmail";
-            this.LblRegisterEmail.Size = new System.Drawing.Size(44, 19);
+            this.LblRegisterEmail.Size = new System.Drawing.Size(45, 20);
             this.LblRegisterEmail.TabIndex = 4;
             this.LblRegisterEmail.Text = "Email:";
             // 
             // DtpBirthDate
             // 
-            this.DtpBirthDate.Location = new System.Drawing.Point(184, 271);
-            this.DtpBirthDate.Margin = new System.Windows.Forms.Padding(2);
-            this.DtpBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtpBirthDate.Location = new System.Drawing.Point(245, 334);
+            this.DtpBirthDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DtpBirthDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.DtpBirthDate.Name = "DtpBirthDate";
-            this.DtpBirthDate.Size = new System.Drawing.Size(189, 29);
+            this.DtpBirthDate.Size = new System.Drawing.Size(251, 30);
             this.DtpBirthDate.TabIndex = 5;
             // 
             // LblBirthDate
             // 
             this.LblBirthDate.AutoSize = true;
-            this.LblBirthDate.Location = new System.Drawing.Point(36, 280);
-            this.LblBirthDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblBirthDate.Location = new System.Drawing.Point(48, 345);
             this.LblBirthDate.Name = "LblBirthDate";
-            this.LblBirthDate.Size = new System.Drawing.Size(133, 19);
+            this.LblBirthDate.Size = new System.Drawing.Size(141, 20);
             this.LblBirthDate.TabIndex = 6;
             this.LblBirthDate.Text = "Fecha de nacimiento:";
             // 
             // LblRegisterPw
             // 
             this.LblRegisterPw.AutoSize = true;
-            this.LblRegisterPw.Location = new System.Drawing.Point(80, 348);
-            this.LblRegisterPw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblRegisterPw.Location = new System.Drawing.Point(107, 428);
             this.LblRegisterPw.Name = "LblRegisterPw";
-            this.LblRegisterPw.Size = new System.Drawing.Size(78, 19);
+            this.LblRegisterPw.Size = new System.Drawing.Size(82, 20);
             this.LblRegisterPw.TabIndex = 7;
             this.LblRegisterPw.Text = "Contraseña:";
             // 
@@ -147,18 +142,18 @@
             // 
             // 
             this.TxtRegisterEmail.CustomButton.Image = null;
-            this.TxtRegisterEmail.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.TxtRegisterEmail.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterEmail.CustomButton.Location = new System.Drawing.Point(243, 1);
+            this.TxtRegisterEmail.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterEmail.CustomButton.Name = "";
-            this.TxtRegisterEmail.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.TxtRegisterEmail.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.TxtRegisterEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtRegisterEmail.CustomButton.TabIndex = 1;
             this.TxtRegisterEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtRegisterEmail.CustomButton.UseSelectable = true;
             this.TxtRegisterEmail.CustomButton.Visible = false;
             this.TxtRegisterEmail.Lines = new string[0];
-            this.TxtRegisterEmail.Location = new System.Drawing.Point(184, 311);
-            this.TxtRegisterEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterEmail.Location = new System.Drawing.Point(245, 383);
+            this.TxtRegisterEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterEmail.MaxLength = 32767;
             this.TxtRegisterEmail.Name = "TxtRegisterEmail";
             this.TxtRegisterEmail.PasswordChar = '\0';
@@ -167,7 +162,7 @@
             this.TxtRegisterEmail.SelectionLength = 0;
             this.TxtRegisterEmail.SelectionStart = 0;
             this.TxtRegisterEmail.ShortcutsEnabled = true;
-            this.TxtRegisterEmail.Size = new System.Drawing.Size(153, 19);
+            this.TxtRegisterEmail.Size = new System.Drawing.Size(204, 23);
             this.TxtRegisterEmail.TabIndex = 8;
             this.TxtRegisterEmail.UseSelectable = true;
             this.TxtRegisterEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -179,18 +174,18 @@
             // 
             // 
             this.TxtRegisterPw.CustomButton.Image = null;
-            this.TxtRegisterPw.CustomButton.Location = new System.Drawing.Point(134, 1);
-            this.TxtRegisterPw.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterPw.CustomButton.Location = new System.Drawing.Point(241, 1);
+            this.TxtRegisterPw.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterPw.CustomButton.Name = "";
-            this.TxtRegisterPw.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.TxtRegisterPw.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.TxtRegisterPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtRegisterPw.CustomButton.TabIndex = 1;
             this.TxtRegisterPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtRegisterPw.CustomButton.UseSelectable = true;
             this.TxtRegisterPw.CustomButton.Visible = false;
             this.TxtRegisterPw.Lines = new string[0];
-            this.TxtRegisterPw.Location = new System.Drawing.Point(186, 344);
-            this.TxtRegisterPw.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterPw.Location = new System.Drawing.Point(248, 423);
+            this.TxtRegisterPw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterPw.MaxLength = 32767;
             this.TxtRegisterPw.Name = "TxtRegisterPw";
             this.TxtRegisterPw.PasswordChar = '*';
@@ -199,7 +194,7 @@
             this.TxtRegisterPw.SelectionLength = 0;
             this.TxtRegisterPw.SelectionStart = 0;
             this.TxtRegisterPw.ShortcutsEnabled = true;
-            this.TxtRegisterPw.Size = new System.Drawing.Size(152, 19);
+            this.TxtRegisterPw.Size = new System.Drawing.Size(203, 23);
             this.TxtRegisterPw.TabIndex = 9;
             this.TxtRegisterPw.UseSelectable = true;
             this.TxtRegisterPw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -207,10 +202,10 @@
             // 
             // BtnRegister
             // 
-            this.BtnRegister.Location = new System.Drawing.Point(152, 418);
-            this.BtnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnRegister.Location = new System.Drawing.Point(203, 514);
+            this.BtnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnRegister.Name = "BtnRegister";
-            this.BtnRegister.Size = new System.Drawing.Size(85, 60);
+            this.BtnRegister.Size = new System.Drawing.Size(113, 74);
             this.BtnRegister.TabIndex = 10;
             this.BtnRegister.Text = "Registrarse";
             this.BtnRegister.UseSelectable = true;
@@ -219,10 +214,9 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(94, 239);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel6.Location = new System.Drawing.Point(125, 294);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(62, 20);
             this.metroLabel6.TabIndex = 11;
             this.metroLabel6.Text = "Apellido:";
             // 
@@ -232,18 +226,18 @@
             // 
             // 
             this.TxtRegisterLastName.CustomButton.Image = null;
-            this.TxtRegisterLastName.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.TxtRegisterLastName.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterLastName.CustomButton.Location = new System.Drawing.Point(243, 1);
+            this.TxtRegisterLastName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterLastName.CustomButton.Name = "";
-            this.TxtRegisterLastName.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.TxtRegisterLastName.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.TxtRegisterLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtRegisterLastName.CustomButton.TabIndex = 1;
             this.TxtRegisterLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtRegisterLastName.CustomButton.UseSelectable = true;
             this.TxtRegisterLastName.CustomButton.Visible = false;
             this.TxtRegisterLastName.Lines = new string[0];
-            this.TxtRegisterLastName.Location = new System.Drawing.Point(184, 236);
-            this.TxtRegisterLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterLastName.Location = new System.Drawing.Point(245, 290);
+            this.TxtRegisterLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterLastName.MaxLength = 32767;
             this.TxtRegisterLastName.Name = "TxtRegisterLastName";
             this.TxtRegisterLastName.PasswordChar = '\0';
@@ -252,7 +246,7 @@
             this.TxtRegisterLastName.SelectionLength = 0;
             this.TxtRegisterLastName.SelectionStart = 0;
             this.TxtRegisterLastName.ShortcutsEnabled = true;
-            this.TxtRegisterLastName.Size = new System.Drawing.Size(153, 19);
+            this.TxtRegisterLastName.Size = new System.Drawing.Size(204, 23);
             this.TxtRegisterLastName.TabIndex = 12;
             this.TxtRegisterLastName.UseSelectable = true;
             this.TxtRegisterLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -262,10 +256,9 @@
             // LblRegisterVPw
             // 
             this.LblRegisterVPw.AutoSize = true;
-            this.LblRegisterVPw.Location = new System.Drawing.Point(2, 379);
-            this.LblRegisterVPw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblRegisterVPw.Location = new System.Drawing.Point(3, 466);
             this.LblRegisterVPw.Name = "LblRegisterVPw";
-            this.LblRegisterVPw.Size = new System.Drawing.Size(177, 19);
+            this.LblRegisterVPw.Size = new System.Drawing.Size(186, 20);
             this.LblRegisterVPw.TabIndex = 13;
             this.LblRegisterVPw.Text = "Confirmacion de contraseña:";
             // 
@@ -275,18 +268,18 @@
             // 
             // 
             this.TxtRegisterVPw.CustomButton.Image = null;
-            this.TxtRegisterVPw.CustomButton.Location = new System.Drawing.Point(135, 1);
-            this.TxtRegisterVPw.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterVPw.CustomButton.Location = new System.Drawing.Point(243, 1);
+            this.TxtRegisterVPw.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterVPw.CustomButton.Name = "";
-            this.TxtRegisterVPw.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.TxtRegisterVPw.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.TxtRegisterVPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtRegisterVPw.CustomButton.TabIndex = 1;
             this.TxtRegisterVPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtRegisterVPw.CustomButton.UseSelectable = true;
             this.TxtRegisterVPw.CustomButton.Visible = false;
             this.TxtRegisterVPw.Lines = new string[0];
-            this.TxtRegisterVPw.Location = new System.Drawing.Point(186, 379);
-            this.TxtRegisterVPw.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRegisterVPw.Location = new System.Drawing.Point(248, 466);
+            this.TxtRegisterVPw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRegisterVPw.MaxLength = 32767;
             this.TxtRegisterVPw.Name = "TxtRegisterVPw";
             this.TxtRegisterVPw.PasswordChar = '*';
@@ -295,7 +288,7 @@
             this.TxtRegisterVPw.SelectionLength = 0;
             this.TxtRegisterVPw.SelectionStart = 0;
             this.TxtRegisterVPw.ShortcutsEnabled = true;
-            this.TxtRegisterVPw.Size = new System.Drawing.Size(153, 19);
+            this.TxtRegisterVPw.Size = new System.Drawing.Size(204, 23);
             this.TxtRegisterVPw.TabIndex = 14;
             this.TxtRegisterVPw.UseSelectable = true;
             this.TxtRegisterVPw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -304,10 +297,10 @@
             // CbxRegisterSeePw
             // 
             this.CbxRegisterSeePw.AutoSize = true;
-            this.CbxRegisterSeePw.Location = new System.Drawing.Point(342, 348);
-            this.CbxRegisterSeePw.Margin = new System.Windows.Forms.Padding(2);
+            this.CbxRegisterSeePw.Location = new System.Drawing.Point(456, 428);
+            this.CbxRegisterSeePw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbxRegisterSeePw.Name = "CbxRegisterSeePw";
-            this.CbxRegisterSeePw.Size = new System.Drawing.Size(39, 15);
+            this.CbxRegisterSeePw.Size = new System.Drawing.Size(43, 17);
             this.CbxRegisterSeePw.TabIndex = 15;
             this.CbxRegisterSeePw.Text = "Ver";
             this.CbxRegisterSeePw.UseSelectable = true;
@@ -316,10 +309,10 @@
             // CbxRegisterSeePw2
             // 
             this.CbxRegisterSeePw2.AutoSize = true;
-            this.CbxRegisterSeePw2.Location = new System.Drawing.Point(344, 383);
-            this.CbxRegisterSeePw2.Margin = new System.Windows.Forms.Padding(2);
+            this.CbxRegisterSeePw2.Location = new System.Drawing.Point(459, 471);
+            this.CbxRegisterSeePw2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbxRegisterSeePw2.Name = "CbxRegisterSeePw2";
-            this.CbxRegisterSeePw2.Size = new System.Drawing.Size(39, 15);
+            this.CbxRegisterSeePw2.Size = new System.Drawing.Size(43, 17);
             this.CbxRegisterSeePw2.TabIndex = 16;
             this.CbxRegisterSeePw2.Text = "Ver";
             this.CbxRegisterSeePw2.UseSelectable = true;
@@ -328,19 +321,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(138, 51);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(184, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(164, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 496);
+            this.ClientSize = new System.Drawing.Size(557, 610);
             this.Controls.Add(this.CbxRegisterSeePw2);
             this.Controls.Add(this.CbxRegisterSeePw);
             this.Controls.Add(this.TxtRegisterVPw);
@@ -358,9 +351,9 @@
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Register";
-            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Text = "Registro";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

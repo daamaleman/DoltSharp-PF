@@ -16,5 +16,14 @@ namespace DoltSharp
         {
             InitializeComponent();
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            // Regresar a Main page cuando haga click en el boton
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Hide();
+
+        }
     }
 }
