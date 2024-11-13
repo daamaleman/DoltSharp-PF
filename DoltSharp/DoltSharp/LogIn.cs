@@ -20,61 +20,31 @@ namespace DoltSharp
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            // Validaciones
+            // Validaciones básicas
             if (string.IsNullOrWhiteSpace(TxtEmail.Text) || string.IsNullOrWhiteSpace(TxtPw.Text))
             {
                 MetroFramework.MetroMessageBox.Show(this, "Los campos no deben estar vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!TxtEmail.Text.Contains("@") || !TxtEmail.Text.Contains("."))
-            {
-                MetroFramework.MetroMessageBox.Show(this, "El correo no es valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (TxtPw.Text.Length < 8)
-            {
-                MetroFramework.MetroMessageBox.Show(this, "La contraseña debe tener al menos 8 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Leer el archivo y verificar las credenciales
+            // Codificar la contraseña ingresada para compararla
+            string encodedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(TxtPw.Text));
             string filePath = "registro_usuarios_DoltSharp.txt";
             bool loginSuccessful = false;
 
+            // Verificar si el archivo existe y leerlo
             if (File.Exists(filePath))
             {
-                string[] lines = File.ReadAllLines(filePath);
-                string encodedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(TxtPw.Text));
-
-                // Variables para almacenar los datos actuales del bloque de usuario
-                string email = string.Empty;
-                string password = string.Empty;
+                var lines = File.ReadAllLines(filePath);
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    if (lines[i].StartsWith("Correo: "))
+                    // Buscar líneas que contienen el correo y la contraseña juntos
+                    if (lines[i].Contains("Correo: " + TxtEmail.Text) &&
+                        lines[i + 2].Contains("Contraseña: " + encodedPassword))
                     {
-                        email = lines[i].Substring(8).Trim();
-                    }
-                    else if (lines[i].StartsWith("Contraseña: ")) // Ajuste aquí
-                    {
-                        password = lines[i].Substring(12).Trim();
-                    }
-
-                    // Si ambos correo y contraseña están presentes, verificar si coinciden
-                    if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
-                    {
-                        if (email == TxtEmail.Text && password == encodedPassword)
-                        {
-                            loginSuccessful = true;
-                            break;
-                        }
-
-                        // Reiniciar para el siguiente bloque de usuario
-                        email = string.Empty;
-                        password = string.Empty;
+                        loginSuccessful = true;
+                        break;
                     }
                 }
             }
@@ -84,18 +54,18 @@ namespace DoltSharp
                 return;
             }
 
+            // Resultado de la validación de inicio de sesión
             if (loginSuccessful)
             {
                 MetroFramework.MetroMessageBox.Show(this, "Bienvenido", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MainPage mainPage = new MainPage();
-                mainPage.Show();
+                new MainPage().Show();
                 this.Hide();
             }
             else
             {
                 MetroFramework.MetroMessageBox.Show(this, "Correo o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }@
+        }
 
         // Mostrar u ocultar contraseña
         private void CbxSee_CheckedChanged(object sender, EventArgs e)
