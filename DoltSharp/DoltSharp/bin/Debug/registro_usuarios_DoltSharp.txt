@@ -5,3 +5,10 @@ Correo: david@uamv.com
 Fecha de nacimiento: 25/08/2005
 Contraseña: MTIzNDU2Nzg=
 -------------------------------
+-------------------------------
+Nombre: Diedereich
+Apellido: Alemán
+Correo: diedereich@gmail.com
+Fecha de nacimiento: 20/7/2005
+Contraseña: MTIzNDU2Nzg=
+-------------------------------

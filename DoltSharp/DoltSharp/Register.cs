@@ -132,5 +132,13 @@ namespace DoltSharp
                 CbxRegisterSeePw2.Text = "Ver";
             }
         }
+
+        private void BtnReturn_Click(object sender, EventArgs e)
+        {
+            // Regresar a LogIn page cuando haga click en el boton
+            LogIn logIn = new LogIn();
+            logIn.Show();
+            this.Hide();
+        }
     }
 }

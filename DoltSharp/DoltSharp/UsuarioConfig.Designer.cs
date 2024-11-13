@@ -29,353 +29,404 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioConfig));
-            this.LblActualizarDatos = new MetroFramework.Controls.MetroLabel();
-            this.LblNombActualizar = new MetroFramework.Controls.MetroLabel();
-            this.LblAplldoActualizar = new MetroFramework.Controls.MetroLabel();
-            this.LblBirthDateActualizar = new MetroFramework.Controls.MetroLabel();
-            this.DteBirthdayActualizar = new MetroFramework.Controls.MetroDateTime();
-            this.TxtActualizarNombr = new MetroFramework.Controls.MetroTextBox();
-            this.TxtActualizarApellido = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.LblContrasena = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.LblUpdateData = new MetroFramework.Controls.MetroLabel();
+            this.LblUpdateName = new MetroFramework.Controls.MetroLabel();
+            this.LblUpdateLastName = new MetroFramework.Controls.MetroLabel();
+            this.LblUpdateBirthDate = new MetroFramework.Controls.MetroLabel();
+            this.DtpUpdateBirthDate = new MetroFramework.Controls.MetroDateTime();
+            this.TxtUpdateName = new MetroFramework.Controls.MetroTextBox();
+            this.TxtUpdateLastName = new MetroFramework.Controls.MetroTextBox();
+            this.LblUpdateEmail = new MetroFramework.Controls.MetroLabel();
+            this.TxtUpdateEmail = new MetroFramework.Controls.MetroTextBox();
+            this.LblUpdateAPw = new MetroFramework.Controls.MetroLabel();
+            this.TxtUpdateAPw = new MetroFramework.Controls.MetroTextBox();
+            this.LblNewPw = new MetroFramework.Controls.MetroLabel();
+            this.TxtNewPw = new MetroFramework.Controls.MetroTextBox();
+            this.LblVNewPw = new MetroFramework.Controls.MetroLabel();
+            this.TxtVNewPw = new MetroFramework.Controls.MetroTextBox();
+            this.BtnSaveUpdates = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CbxConfigSee1 = new MetroFramework.Controls.MetroCheckBox();
+            this.CbxConfigSee2 = new MetroFramework.Controls.MetroCheckBox();
+            this.CbxConfigSee3 = new MetroFramework.Controls.MetroCheckBox();
+            this.BtnCancel = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // LblActualizarDatos
+            // LblUpdateData
             // 
-            this.LblActualizarDatos.AutoSize = true;
-            this.LblActualizarDatos.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblActualizarDatos.Location = new System.Drawing.Point(41, 126);
-            this.LblActualizarDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblActualizarDatos.Name = "LblActualizarDatos";
-            this.LblActualizarDatos.Size = new System.Drawing.Size(134, 25);
-            this.LblActualizarDatos.TabIndex = 0;
-            this.LblActualizarDatos.Text = "Actualizar Datos";
+            this.LblUpdateData.AutoSize = true;
+            this.LblUpdateData.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblUpdateData.Location = new System.Drawing.Point(41, 126);
+            this.LblUpdateData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblUpdateData.Name = "LblUpdateData";
+            this.LblUpdateData.Size = new System.Drawing.Size(134, 25);
+            this.LblUpdateData.TabIndex = 0;
+            this.LblUpdateData.Text = "Actualizar Datos";
             // 
-            // LblNombActualizar
+            // LblUpdateName
             // 
-            this.LblNombActualizar.AutoSize = true;
-            this.LblNombActualizar.Location = new System.Drawing.Point(141, 249);
-            this.LblNombActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblNombActualizar.Name = "LblNombActualizar";
-            this.LblNombActualizar.Size = new System.Drawing.Size(64, 20);
-            this.LblNombActualizar.TabIndex = 1;
-            this.LblNombActualizar.Text = "Nombre:";
+            this.LblUpdateName.AutoSize = true;
+            this.LblUpdateName.Location = new System.Drawing.Point(141, 249);
+            this.LblUpdateName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblUpdateName.Name = "LblUpdateName";
+            this.LblUpdateName.Size = new System.Drawing.Size(62, 19);
+            this.LblUpdateName.TabIndex = 1;
+            this.LblUpdateName.Text = "Nombre:";
             // 
-            // LblAplldoActualizar
+            // LblUpdateLastName
             // 
-            this.LblAplldoActualizar.AutoSize = true;
-            this.LblAplldoActualizar.Location = new System.Drawing.Point(136, 295);
-            this.LblAplldoActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblAplldoActualizar.Name = "LblAplldoActualizar";
-            this.LblAplldoActualizar.Size = new System.Drawing.Size(68, 20);
-            this.LblAplldoActualizar.TabIndex = 2;
-            this.LblAplldoActualizar.Text = "Apellidos:";
+            this.LblUpdateLastName.AutoSize = true;
+            this.LblUpdateLastName.Location = new System.Drawing.Point(136, 295);
+            this.LblUpdateLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblUpdateLastName.Name = "LblUpdateLastName";
+            this.LblUpdateLastName.Size = new System.Drawing.Size(66, 19);
+            this.LblUpdateLastName.TabIndex = 2;
+            this.LblUpdateLastName.Text = "Apellidos:";
             // 
-            // LblBirthDateActualizar
+            // LblUpdateBirthDate
             // 
-            this.LblBirthDateActualizar.AutoSize = true;
-            this.LblBirthDateActualizar.Location = new System.Drawing.Point(43, 343);
-            this.LblBirthDateActualizar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblBirthDateActualizar.Name = "LblBirthDateActualizar";
-            this.LblBirthDateActualizar.Size = new System.Drawing.Size(144, 20);
-            this.LblBirthDateActualizar.TabIndex = 3;
-            this.LblBirthDateActualizar.Text = "Fecha de Nacimiento:";
+            this.LblUpdateBirthDate.AutoSize = true;
+            this.LblUpdateBirthDate.Location = new System.Drawing.Point(43, 343);
+            this.LblUpdateBirthDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblUpdateBirthDate.Name = "LblUpdateBirthDate";
+            this.LblUpdateBirthDate.Size = new System.Drawing.Size(136, 19);
+            this.LblUpdateBirthDate.TabIndex = 3;
+            this.LblUpdateBirthDate.Text = "Fecha de Nacimiento:";
             // 
-            // DteBirthdayActualizar
+            // DtpUpdateBirthDate
             // 
-            this.DteBirthdayActualizar.Location = new System.Drawing.Point(249, 337);
-            this.DteBirthdayActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DteBirthdayActualizar.MinimumSize = new System.Drawing.Size(0, 30);
-            this.DteBirthdayActualizar.Name = "DteBirthdayActualizar";
-            this.DteBirthdayActualizar.Size = new System.Drawing.Size(252, 30);
-            this.DteBirthdayActualizar.TabIndex = 4;
+            this.DtpUpdateBirthDate.Location = new System.Drawing.Point(249, 337);
+            this.DtpUpdateBirthDate.Margin = new System.Windows.Forms.Padding(4);
+            this.DtpUpdateBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtpUpdateBirthDate.Name = "DtpUpdateBirthDate";
+            this.DtpUpdateBirthDate.Size = new System.Drawing.Size(252, 30);
+            this.DtpUpdateBirthDate.TabIndex = 4;
             // 
-            // TxtActualizarNombr
-            // 
-            // 
-            // 
-            // 
-            this.TxtActualizarNombr.CustomButton.Image = null;
-            this.TxtActualizarNombr.CustomButton.Location = new System.Drawing.Point(189, 2);
-            this.TxtActualizarNombr.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtActualizarNombr.CustomButton.Name = "";
-            this.TxtActualizarNombr.CustomButton.Size = new System.Drawing.Size(31, 28);
-            this.TxtActualizarNombr.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtActualizarNombr.CustomButton.TabIndex = 1;
-            this.TxtActualizarNombr.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtActualizarNombr.CustomButton.UseSelectable = true;
-            this.TxtActualizarNombr.CustomButton.Visible = false;
-            this.TxtActualizarNombr.Lines = new string[0];
-            this.TxtActualizarNombr.Location = new System.Drawing.Point(249, 249);
-            this.TxtActualizarNombr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtActualizarNombr.MaxLength = 32767;
-            this.TxtActualizarNombr.Name = "TxtActualizarNombr";
-            this.TxtActualizarNombr.PasswordChar = '\0';
-            this.TxtActualizarNombr.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtActualizarNombr.SelectedText = "";
-            this.TxtActualizarNombr.SelectionLength = 0;
-            this.TxtActualizarNombr.SelectionStart = 0;
-            this.TxtActualizarNombr.ShortcutsEnabled = true;
-            this.TxtActualizarNombr.Size = new System.Drawing.Size(168, 28);
-            this.TxtActualizarNombr.TabIndex = 5;
-            this.TxtActualizarNombr.UseSelectable = true;
-            this.TxtActualizarNombr.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtActualizarNombr.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // TxtActualizarApellido
+            // TxtUpdateName
             // 
             // 
             // 
             // 
-            this.TxtActualizarApellido.CustomButton.Image = null;
-            this.TxtActualizarApellido.CustomButton.Location = new System.Drawing.Point(189, 2);
-            this.TxtActualizarApellido.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtActualizarApellido.CustomButton.Name = "";
-            this.TxtActualizarApellido.CustomButton.Size = new System.Drawing.Size(31, 28);
-            this.TxtActualizarApellido.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtActualizarApellido.CustomButton.TabIndex = 1;
-            this.TxtActualizarApellido.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtActualizarApellido.CustomButton.UseSelectable = true;
-            this.TxtActualizarApellido.CustomButton.Visible = false;
-            this.TxtActualizarApellido.Lines = new string[0];
-            this.TxtActualizarApellido.Location = new System.Drawing.Point(249, 289);
-            this.TxtActualizarApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtActualizarApellido.MaxLength = 32767;
-            this.TxtActualizarApellido.Name = "TxtActualizarApellido";
-            this.TxtActualizarApellido.PasswordChar = '\0';
-            this.TxtActualizarApellido.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtActualizarApellido.SelectedText = "";
-            this.TxtActualizarApellido.SelectionLength = 0;
-            this.TxtActualizarApellido.SelectionStart = 0;
-            this.TxtActualizarApellido.ShortcutsEnabled = true;
-            this.TxtActualizarApellido.Size = new System.Drawing.Size(168, 28);
-            this.TxtActualizarApellido.TabIndex = 6;
-            this.TxtActualizarApellido.UseSelectable = true;
-            this.TxtActualizarApellido.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtActualizarApellido.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtUpdateName.CustomButton.Image = null;
+            this.TxtUpdateName.CustomButton.Location = new System.Drawing.Point(142, 2);
+            this.TxtUpdateName.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateName.CustomButton.Name = "";
+            this.TxtUpdateName.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.TxtUpdateName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtUpdateName.CustomButton.TabIndex = 1;
+            this.TxtUpdateName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtUpdateName.CustomButton.UseSelectable = true;
+            this.TxtUpdateName.CustomButton.Visible = false;
+            this.TxtUpdateName.Lines = new string[0];
+            this.TxtUpdateName.Location = new System.Drawing.Point(249, 249);
+            this.TxtUpdateName.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateName.MaxLength = 32767;
+            this.TxtUpdateName.Name = "TxtUpdateName";
+            this.TxtUpdateName.PasswordChar = '\0';
+            this.TxtUpdateName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtUpdateName.SelectedText = "";
+            this.TxtUpdateName.SelectionLength = 0;
+            this.TxtUpdateName.SelectionStart = 0;
+            this.TxtUpdateName.ShortcutsEnabled = true;
+            this.TxtUpdateName.Size = new System.Drawing.Size(168, 28);
+            this.TxtUpdateName.TabIndex = 5;
+            this.TxtUpdateName.UseSelectable = true;
+            this.TxtUpdateName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtUpdateName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(161, 396);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(45, 20);
-            this.metroLabel1.TabIndex = 7;
-            this.metroLabel1.Text = "Email:";
-            // 
-            // metroTextBox1
+            // TxtUpdateLastName
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(236, 2);
-            this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(31, 28);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(249, 391);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(203, 28);
-            this.metroTextBox1.TabIndex = 8;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtUpdateLastName.CustomButton.Image = null;
+            this.TxtUpdateLastName.CustomButton.Location = new System.Drawing.Point(142, 2);
+            this.TxtUpdateLastName.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateLastName.CustomButton.Name = "";
+            this.TxtUpdateLastName.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.TxtUpdateLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtUpdateLastName.CustomButton.TabIndex = 1;
+            this.TxtUpdateLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtUpdateLastName.CustomButton.UseSelectable = true;
+            this.TxtUpdateLastName.CustomButton.Visible = false;
+            this.TxtUpdateLastName.Lines = new string[0];
+            this.TxtUpdateLastName.Location = new System.Drawing.Point(249, 289);
+            this.TxtUpdateLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateLastName.MaxLength = 32767;
+            this.TxtUpdateLastName.Name = "TxtUpdateLastName";
+            this.TxtUpdateLastName.PasswordChar = '\0';
+            this.TxtUpdateLastName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtUpdateLastName.SelectedText = "";
+            this.TxtUpdateLastName.SelectionLength = 0;
+            this.TxtUpdateLastName.SelectionStart = 0;
+            this.TxtUpdateLastName.ShortcutsEnabled = true;
+            this.TxtUpdateLastName.Size = new System.Drawing.Size(168, 28);
+            this.TxtUpdateLastName.TabIndex = 6;
+            this.TxtUpdateLastName.UseSelectable = true;
+            this.TxtUpdateLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtUpdateLastName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // LblContrasena
+            // LblUpdateEmail
             // 
-            this.LblContrasena.AutoSize = true;
-            this.LblContrasena.Location = new System.Drawing.Point(65, 436);
-            this.LblContrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblContrasena.Name = "LblContrasena";
-            this.LblContrasena.Size = new System.Drawing.Size(122, 20);
-            this.LblContrasena.TabIndex = 9;
-            this.LblContrasena.Text = "Contraseña actual:";
+            this.LblUpdateEmail.AutoSize = true;
+            this.LblUpdateEmail.Location = new System.Drawing.Point(161, 396);
+            this.LblUpdateEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblUpdateEmail.Name = "LblUpdateEmail";
+            this.LblUpdateEmail.Size = new System.Drawing.Size(44, 19);
+            this.LblUpdateEmail.TabIndex = 7;
+            this.LblUpdateEmail.Text = "Email:";
             // 
-            // metroTextBox2
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(212, 2);
-            this.metroTextBox2.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(31, 28);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(249, 430);
-            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(185, 28);
-            this.metroTextBox2.TabIndex = 10;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(61, 476);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(127, 20);
-            this.metroLabel2.TabIndex = 11;
-            this.metroLabel2.Text = "Nueva Contraseña:";
-            // 
-            // metroTextBox3
+            // TxtUpdateEmail
             // 
             // 
             // 
             // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(212, 2);
-            this.metroTextBox3.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(31, 28);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(249, 470);
-            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(185, 28);
-            this.metroTextBox3.TabIndex = 12;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtUpdateEmail.CustomButton.Image = null;
+            this.TxtUpdateEmail.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtUpdateEmail.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateEmail.CustomButton.Name = "";
+            this.TxtUpdateEmail.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.TxtUpdateEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtUpdateEmail.CustomButton.TabIndex = 1;
+            this.TxtUpdateEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtUpdateEmail.CustomButton.UseSelectable = true;
+            this.TxtUpdateEmail.CustomButton.Visible = false;
+            this.TxtUpdateEmail.Lines = new string[0];
+            this.TxtUpdateEmail.Location = new System.Drawing.Point(249, 391);
+            this.TxtUpdateEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateEmail.MaxLength = 32767;
+            this.TxtUpdateEmail.Name = "TxtUpdateEmail";
+            this.TxtUpdateEmail.PasswordChar = '\0';
+            this.TxtUpdateEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtUpdateEmail.SelectedText = "";
+            this.TxtUpdateEmail.SelectionLength = 0;
+            this.TxtUpdateEmail.SelectionStart = 0;
+            this.TxtUpdateEmail.ShortcutsEnabled = true;
+            this.TxtUpdateEmail.Size = new System.Drawing.Size(203, 28);
+            this.TxtUpdateEmail.TabIndex = 8;
+            this.TxtUpdateEmail.UseSelectable = true;
+            this.TxtUpdateEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtUpdateEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel3
+            // LblUpdateAPw
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(31, 514);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(147, 20);
-            this.metroLabel3.TabIndex = 13;
-            this.metroLabel3.Text = "Confirmar Contraseña:";
+            this.LblUpdateAPw.AutoSize = true;
+            this.LblUpdateAPw.Location = new System.Drawing.Point(65, 436);
+            this.LblUpdateAPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblUpdateAPw.Name = "LblUpdateAPw";
+            this.LblUpdateAPw.Size = new System.Drawing.Size(116, 19);
+            this.LblUpdateAPw.TabIndex = 9;
+            this.LblUpdateAPw.Text = "Contraseña actual:";
             // 
-            // metroTextBox4
-            // 
-            // 
+            // TxtUpdateAPw
             // 
             // 
-            this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(212, 2);
-            this.metroTextBox4.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(31, 28);
-            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox4.CustomButton.TabIndex = 1;
-            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox4.CustomButton.UseSelectable = true;
-            this.metroTextBox4.CustomButton.Visible = false;
-            this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(249, 508);
-            this.metroTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroTextBox4.MaxLength = 32767;
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '\0';
-            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox4.SelectedText = "";
-            this.metroTextBox4.SelectionLength = 0;
-            this.metroTextBox4.SelectionStart = 0;
-            this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(185, 28);
-            this.metroTextBox4.TabIndex = 14;
-            this.metroTextBox4.UseSelectable = true;
-            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(192, 601);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(149, 37);
-            this.metroButton1.TabIndex = 15;
-            this.metroButton1.Text = "Guardar Cambios";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.TxtUpdateAPw.CustomButton.Image = null;
+            this.TxtUpdateAPw.CustomButton.Location = new System.Drawing.Point(159, 2);
+            this.TxtUpdateAPw.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateAPw.CustomButton.Name = "";
+            this.TxtUpdateAPw.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.TxtUpdateAPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtUpdateAPw.CustomButton.TabIndex = 1;
+            this.TxtUpdateAPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtUpdateAPw.CustomButton.UseSelectable = true;
+            this.TxtUpdateAPw.CustomButton.Visible = false;
+            this.TxtUpdateAPw.Lines = new string[0];
+            this.TxtUpdateAPw.Location = new System.Drawing.Point(249, 430);
+            this.TxtUpdateAPw.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtUpdateAPw.MaxLength = 32767;
+            this.TxtUpdateAPw.Name = "TxtUpdateAPw";
+            this.TxtUpdateAPw.PasswordChar = '*';
+            this.TxtUpdateAPw.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtUpdateAPw.SelectedText = "";
+            this.TxtUpdateAPw.SelectionLength = 0;
+            this.TxtUpdateAPw.SelectionStart = 0;
+            this.TxtUpdateAPw.ShortcutsEnabled = true;
+            this.TxtUpdateAPw.Size = new System.Drawing.Size(185, 28);
+            this.TxtUpdateAPw.TabIndex = 10;
+            this.TxtUpdateAPw.UseSelectable = true;
+            this.TxtUpdateAPw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtUpdateAPw.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // LblNewPw
+            // 
+            this.LblNewPw.AutoSize = true;
+            this.LblNewPw.Location = new System.Drawing.Point(61, 476);
+            this.LblNewPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblNewPw.Name = "LblNewPw";
+            this.LblNewPw.Size = new System.Drawing.Size(119, 19);
+            this.LblNewPw.TabIndex = 11;
+            this.LblNewPw.Text = "Nueva Contraseña:";
+            // 
+            // TxtNewPw
+            // 
+            // 
+            // 
+            // 
+            this.TxtNewPw.CustomButton.Image = null;
+            this.TxtNewPw.CustomButton.Location = new System.Drawing.Point(159, 2);
+            this.TxtNewPw.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtNewPw.CustomButton.Name = "";
+            this.TxtNewPw.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.TxtNewPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtNewPw.CustomButton.TabIndex = 1;
+            this.TxtNewPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtNewPw.CustomButton.UseSelectable = true;
+            this.TxtNewPw.CustomButton.Visible = false;
+            this.TxtNewPw.Lines = new string[0];
+            this.TxtNewPw.Location = new System.Drawing.Point(249, 470);
+            this.TxtNewPw.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtNewPw.MaxLength = 32767;
+            this.TxtNewPw.Name = "TxtNewPw";
+            this.TxtNewPw.PasswordChar = '*';
+            this.TxtNewPw.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtNewPw.SelectedText = "";
+            this.TxtNewPw.SelectionLength = 0;
+            this.TxtNewPw.SelectionStart = 0;
+            this.TxtNewPw.ShortcutsEnabled = true;
+            this.TxtNewPw.Size = new System.Drawing.Size(185, 28);
+            this.TxtNewPw.TabIndex = 12;
+            this.TxtNewPw.UseSelectable = true;
+            this.TxtNewPw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtNewPw.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // LblVNewPw
+            // 
+            this.LblVNewPw.AutoSize = true;
+            this.LblVNewPw.Location = new System.Drawing.Point(31, 514);
+            this.LblVNewPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblVNewPw.Name = "LblVNewPw";
+            this.LblVNewPw.Size = new System.Drawing.Size(142, 19);
+            this.LblVNewPw.TabIndex = 13;
+            this.LblVNewPw.Text = "Confirmar Contraseña:";
+            // 
+            // TxtVNewPw
+            // 
+            // 
+            // 
+            // 
+            this.TxtVNewPw.CustomButton.Image = null;
+            this.TxtVNewPw.CustomButton.Location = new System.Drawing.Point(159, 2);
+            this.TxtVNewPw.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtVNewPw.CustomButton.Name = "";
+            this.TxtVNewPw.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.TxtVNewPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtVNewPw.CustomButton.TabIndex = 1;
+            this.TxtVNewPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtVNewPw.CustomButton.UseSelectable = true;
+            this.TxtVNewPw.CustomButton.Visible = false;
+            this.TxtVNewPw.Lines = new string[0];
+            this.TxtVNewPw.Location = new System.Drawing.Point(249, 508);
+            this.TxtVNewPw.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtVNewPw.MaxLength = 32767;
+            this.TxtVNewPw.Name = "TxtVNewPw";
+            this.TxtVNewPw.PasswordChar = '*';
+            this.TxtVNewPw.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtVNewPw.SelectedText = "";
+            this.TxtVNewPw.SelectionLength = 0;
+            this.TxtVNewPw.SelectionStart = 0;
+            this.TxtVNewPw.ShortcutsEnabled = true;
+            this.TxtVNewPw.Size = new System.Drawing.Size(185, 28);
+            this.TxtVNewPw.TabIndex = 14;
+            this.TxtVNewPw.UseSelectable = true;
+            this.TxtVNewPw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtVNewPw.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BtnSaveUpdates
+            // 
+            this.BtnSaveUpdates.Location = new System.Drawing.Point(118, 596);
+            this.BtnSaveUpdates.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSaveUpdates.Name = "BtnSaveUpdates";
+            this.BtnSaveUpdates.Size = new System.Drawing.Size(149, 37);
+            this.BtnSaveUpdates.TabIndex = 15;
+            this.BtnSaveUpdates.Text = "Guardar Cambios";
+            this.BtnSaveUpdates.UseSelectable = true;
+            this.BtnSaveUpdates.Click += new System.EventHandler(this.BtnSaveUpdates_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(249, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // CbxConfigSee1
+            // 
+            this.CbxConfigSee1.AutoSize = true;
+            this.CbxConfigSee1.Location = new System.Drawing.Point(443, 436);
+            this.CbxConfigSee1.Name = "CbxConfigSee1";
+            this.CbxConfigSee1.Size = new System.Drawing.Size(39, 15);
+            this.CbxConfigSee1.TabIndex = 17;
+            this.CbxConfigSee1.Text = "Ver";
+            this.CbxConfigSee1.UseSelectable = true;
+            this.CbxConfigSee1.CheckedChanged += new System.EventHandler(this.CbxConfigSee1_CheckedChanged);
+            // 
+            // CbxConfigSee2
+            // 
+            this.CbxConfigSee2.AutoSize = true;
+            this.CbxConfigSee2.Location = new System.Drawing.Point(443, 476);
+            this.CbxConfigSee2.Name = "CbxConfigSee2";
+            this.CbxConfigSee2.Size = new System.Drawing.Size(39, 15);
+            this.CbxConfigSee2.TabIndex = 18;
+            this.CbxConfigSee2.Text = "Ver";
+            this.CbxConfigSee2.UseSelectable = true;
+            this.CbxConfigSee2.CheckedChanged += new System.EventHandler(this.CbxConfigSee2_CheckedChanged);
+            // 
+            // CbxConfigSee3
+            // 
+            this.CbxConfigSee3.AutoSize = true;
+            this.CbxConfigSee3.Location = new System.Drawing.Point(443, 521);
+            this.CbxConfigSee3.Name = "CbxConfigSee3";
+            this.CbxConfigSee3.Size = new System.Drawing.Size(39, 15);
+            this.CbxConfigSee3.TabIndex = 19;
+            this.CbxConfigSee3.Text = "Ver";
+            this.CbxConfigSee3.UseSelectable = true;
+            this.CbxConfigSee3.CheckedChanged += new System.EventHandler(this.CbxConfigSee3_CheckedChanged);
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.Location = new System.Drawing.Point(303, 596);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(149, 37);
+            this.BtnCancel.TabIndex = 20;
+            this.BtnCancel.Text = "Cancelar";
+            this.BtnCancel.UseSelectable = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
             // UsuarioConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 686);
+            this.Controls.Add(this.BtnCancel);
+            this.Controls.Add(this.CbxConfigSee3);
+            this.Controls.Add(this.CbxConfigSee2);
+            this.Controls.Add(this.CbxConfigSee1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.metroTextBox4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroTextBox3);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.LblContrasena);
-            this.Controls.Add(this.metroTextBox1);
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.TxtActualizarApellido);
-            this.Controls.Add(this.TxtActualizarNombr);
-            this.Controls.Add(this.DteBirthdayActualizar);
-            this.Controls.Add(this.LblBirthDateActualizar);
-            this.Controls.Add(this.LblAplldoActualizar);
-            this.Controls.Add(this.LblNombActualizar);
-            this.Controls.Add(this.LblActualizarDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.BtnSaveUpdates);
+            this.Controls.Add(this.TxtVNewPw);
+            this.Controls.Add(this.LblVNewPw);
+            this.Controls.Add(this.TxtNewPw);
+            this.Controls.Add(this.LblNewPw);
+            this.Controls.Add(this.TxtUpdateAPw);
+            this.Controls.Add(this.LblUpdateAPw);
+            this.Controls.Add(this.TxtUpdateEmail);
+            this.Controls.Add(this.LblUpdateEmail);
+            this.Controls.Add(this.TxtUpdateLastName);
+            this.Controls.Add(this.TxtUpdateName);
+            this.Controls.Add(this.DtpUpdateBirthDate);
+            this.Controls.Add(this.LblUpdateBirthDate);
+            this.Controls.Add(this.LblUpdateLastName);
+            this.Controls.Add(this.LblUpdateName);
+            this.Controls.Add(this.LblUpdateData);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsuarioConfig";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Configuracion de Usuario";
@@ -389,22 +440,26 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroLabel LblActualizarDatos;
-        private MetroFramework.Controls.MetroLabel LblNombActualizar;
-        private MetroFramework.Controls.MetroLabel LblAplldoActualizar;
-        private MetroFramework.Controls.MetroLabel LblBirthDateActualizar;
-        private MetroFramework.Controls.MetroDateTime DteBirthdayActualizar;
-        private MetroFramework.Controls.MetroTextBox TxtActualizarNombr;
-        private MetroFramework.Controls.MetroTextBox TxtActualizarApellido;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroLabel LblContrasena;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroLabel LblUpdateData;
+        private MetroFramework.Controls.MetroLabel LblUpdateName;
+        private MetroFramework.Controls.MetroLabel LblUpdateLastName;
+        private MetroFramework.Controls.MetroLabel LblUpdateBirthDate;
+        private MetroFramework.Controls.MetroDateTime DtpUpdateBirthDate;
+        private MetroFramework.Controls.MetroTextBox TxtUpdateName;
+        private MetroFramework.Controls.MetroTextBox TxtUpdateLastName;
+        private MetroFramework.Controls.MetroLabel LblUpdateEmail;
+        private MetroFramework.Controls.MetroTextBox TxtUpdateEmail;
+        private MetroFramework.Controls.MetroLabel LblUpdateAPw;
+        private MetroFramework.Controls.MetroTextBox TxtUpdateAPw;
+        private MetroFramework.Controls.MetroLabel LblNewPw;
+        private MetroFramework.Controls.MetroTextBox TxtNewPw;
+        private MetroFramework.Controls.MetroLabel LblVNewPw;
+        private MetroFramework.Controls.MetroTextBox TxtVNewPw;
+        private MetroFramework.Controls.MetroButton BtnSaveUpdates;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroCheckBox CbxConfigSee1;
+        private MetroFramework.Controls.MetroCheckBox CbxConfigSee2;
+        private MetroFramework.Controls.MetroCheckBox CbxConfigSee3;
+        private MetroFramework.Controls.MetroButton BtnCancel;
     }
 }

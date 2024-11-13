@@ -95,7 +95,7 @@ namespace DoltSharp
             {
                 MetroFramework.MetroMessageBox.Show(this, "Correo o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }@
+        }
 
         // Mostrar u ocultar contraseña
         private void CbxSee_CheckedChanged(object sender, EventArgs e)
