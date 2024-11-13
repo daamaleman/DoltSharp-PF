@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,18 @@ namespace DoltSharp
             LogIn logIn = new LogIn();
             logIn.Show();
             this.Hide();
+
+            // Guardar los datos en un archivo de texto bloc de notas en carpeta debug: Hecho por David Espinoza 13/11/2024
+            string filePath = "registro_usuarios_DoltSharp.txt";
+            using (StreamWriter writer = new StreamWriter(filePath, true))
+            {
+                writer.WriteLine("-------------------------------");
+                writer.WriteLine("Nombre: " + TxtRegisterName.Text);
+                writer.WriteLine("Apellido: " + TxtRegisterLastName.Text);
+                writer.WriteLine("Correo: " + TxtRegisterEmail.Text);
+                writer.WriteLine("Fecha de nacimiento: " + DtpBirthDate.Value.ToShortDateString());
+                writer.WriteLine("-------------------------------");
+            }
         }
 
         // 6. No puede contener numeros 
