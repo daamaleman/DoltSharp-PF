@@ -1,42 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\",
+  "WorkspaceRootPath": "C:\\Users\\itsda\\Desktop\\Proyecto\\DoltSharp-ProyectoFinal\\DoltSharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|c:\\users\\itsda\\desktop\\new folder (3)\\doltsharp-proyectofinal\\doltsharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\Proyecto\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|c:\\users\\itsda\\desktop\\proyecto\\doltsharp-proyectofinal\\doltsharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,113 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Program.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\Program.cs",
-              "ToolTip": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Program.cs",
-              "RelativeToolTip": "DoltSharp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T20:11:36.165Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioConfig.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\UsuarioConfig.cs",
-              "ToolTip": "C:\\Users\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:48:10.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainPage.cs",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\MainPage.cs",
-              "ToolTip": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
-              "RelativeToolTip": "DoltSharp\\MainPage.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAtwBwAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T03:13:55.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainPage.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\MainPage.cs",
-              "ToolTip": "C:\\Users\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T03:13:11.946Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\Register.cs",
-              "ToolTip": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs [Design]",
-              "RelativeToolTip": "DoltSharp\\Register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T14:23:01.07Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioConfig.cs",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\UsuarioConfig.cs",
-              "ToolTip": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs",
-              "RelativeToolTip": "DoltSharp\\UsuarioConfig.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAawBUAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:48:18.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LogIn.cs",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\LogIn.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\LogIn.cs",
-              "ToolTip": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\LogIn.cs",
-              "RelativeToolTip": "DoltSharp\\LogIn.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:18:51.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Register.cs",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
+              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\Proyecto\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
               "RelativeDocumentMoniker": "DoltSharp\\Register.cs",
-              "ToolTip": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
+              "ToolTip": "C:\\Users\\itsda\\Desktop\\Proyecto\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
               "RelativeToolTip": "DoltSharp\\Register.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAmwEwAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAiwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T09:19:54.825Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LogIn.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\New folder (3)\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\LogIn.cs",
+              "DocumentIndex": 0,
+              "Title": "LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\itsda\\Desktop\\Proyecto\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\LogIn.cs",
               "RelativeDocumentMoniker": "DoltSharp\\LogIn.cs",
-              "ToolTip": "C:\\Users\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\LogIn.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\diede\\Desktop\\Metodolog\u00EDa\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\LogIn.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\itsda\\Desktop\\Proyecto\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\LogIn.cs",
+              "RelativeToolTip": "DoltSharp\\LogIn.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAmwEMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:18:48.102Z"
+              "WhenOpened": "2024-11-12T17:18:51.948Z",
+              "EditorCaption": ""
             }
           ]
         }

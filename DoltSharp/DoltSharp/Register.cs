@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace DoltSharp
 {
     public partial class Register : MetroFramework.Forms.MetroForm
@@ -58,14 +60,16 @@ namespace DoltSharp
                 return;
             }
 
+            // Encriptar la contraseña en Base64
+            string encryptedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(TxtRegisterPw.Text));
+
             MetroFramework.MetroMessageBox.Show(this, "Usuario registrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Hacer que cuando de click en el ok del mensaje se regrese a la ventana de LogIn nuevamente
             LogIn logIn = new LogIn();
             logIn.Show();
             this.Hide();
 
-            // Guardar los datos en un archivo de texto bloc de notas en carpeta debug: Hecho por David Espinoza 13/11/2024
+            // Guardar los datos en un archivo de texto
             string filePath = "registro_usuarios_DoltSharp.txt";
             using (StreamWriter writer = new StreamWriter(filePath, true))
             {
@@ -74,6 +78,7 @@ namespace DoltSharp
                 writer.WriteLine("Apellido: " + TxtRegisterLastName.Text);
                 writer.WriteLine("Correo: " + TxtRegisterEmail.Text);
                 writer.WriteLine("Fecha de nacimiento: " + DtpBirthDate.Value.ToShortDateString());
+                writer.WriteLine("Contraseña: " + encryptedPassword);
                 writer.WriteLine("-------------------------------");
             }
         }
