@@ -13,5 +13,7 @@ namespace DoltSharp.Models
         public string ProjectDescription { get; set; }
         public DateTime ProjectDueDate { get; set; }
         public bool IsCompleteProject { get; set; }
+        public string Name { get; internal set; }
+        public string Description { get; internal set; }
     }
 }

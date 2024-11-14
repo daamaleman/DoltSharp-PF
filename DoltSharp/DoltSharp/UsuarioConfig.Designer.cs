@@ -70,7 +70,7 @@
             this.LblUpdateName.Location = new System.Drawing.Point(141, 249);
             this.LblUpdateName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateName.Name = "LblUpdateName";
-            this.LblUpdateName.Size = new System.Drawing.Size(62, 19);
+            this.LblUpdateName.Size = new System.Drawing.Size(64, 20);
             this.LblUpdateName.TabIndex = 1;
             this.LblUpdateName.Text = "Nombre:";
             // 
@@ -80,7 +80,7 @@
             this.LblUpdateLastName.Location = new System.Drawing.Point(136, 295);
             this.LblUpdateLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateLastName.Name = "LblUpdateLastName";
-            this.LblUpdateLastName.Size = new System.Drawing.Size(66, 19);
+            this.LblUpdateLastName.Size = new System.Drawing.Size(68, 20);
             this.LblUpdateLastName.TabIndex = 2;
             this.LblUpdateLastName.Text = "Apellidos:";
             // 
@@ -90,7 +90,7 @@
             this.LblUpdateBirthDate.Location = new System.Drawing.Point(43, 343);
             this.LblUpdateBirthDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateBirthDate.Name = "LblUpdateBirthDate";
-            this.LblUpdateBirthDate.Size = new System.Drawing.Size(136, 19);
+            this.LblUpdateBirthDate.Size = new System.Drawing.Size(144, 20);
             this.LblUpdateBirthDate.TabIndex = 3;
             this.LblUpdateBirthDate.Text = "Fecha de Nacimiento:";
             // 
@@ -98,7 +98,7 @@
             // 
             this.DtpUpdateBirthDate.Location = new System.Drawing.Point(249, 337);
             this.DtpUpdateBirthDate.Margin = new System.Windows.Forms.Padding(4);
-            this.DtpUpdateBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtpUpdateBirthDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.DtpUpdateBirthDate.Name = "DtpUpdateBirthDate";
             this.DtpUpdateBirthDate.Size = new System.Drawing.Size(252, 30);
             this.DtpUpdateBirthDate.TabIndex = 4;
@@ -173,7 +173,7 @@
             this.LblUpdateEmail.Location = new System.Drawing.Point(161, 396);
             this.LblUpdateEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateEmail.Name = "LblUpdateEmail";
-            this.LblUpdateEmail.Size = new System.Drawing.Size(44, 19);
+            this.LblUpdateEmail.Size = new System.Drawing.Size(45, 20);
             this.LblUpdateEmail.TabIndex = 7;
             this.LblUpdateEmail.Text = "Email:";
             // 
@@ -215,7 +215,7 @@
             this.LblUpdateAPw.Location = new System.Drawing.Point(65, 436);
             this.LblUpdateAPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateAPw.Name = "LblUpdateAPw";
-            this.LblUpdateAPw.Size = new System.Drawing.Size(116, 19);
+            this.LblUpdateAPw.Size = new System.Drawing.Size(122, 20);
             this.LblUpdateAPw.TabIndex = 9;
             this.LblUpdateAPw.Text = "Contraseña actual:";
             // 
@@ -257,7 +257,7 @@
             this.LblNewPw.Location = new System.Drawing.Point(61, 476);
             this.LblNewPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNewPw.Name = "LblNewPw";
-            this.LblNewPw.Size = new System.Drawing.Size(119, 19);
+            this.LblNewPw.Size = new System.Drawing.Size(127, 20);
             this.LblNewPw.TabIndex = 11;
             this.LblNewPw.Text = "Nueva Contraseña:";
             // 
@@ -299,7 +299,7 @@
             this.LblVNewPw.Location = new System.Drawing.Point(31, 514);
             this.LblVNewPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblVNewPw.Name = "LblVNewPw";
-            this.LblVNewPw.Size = new System.Drawing.Size(142, 19);
+            this.LblVNewPw.Size = new System.Drawing.Size(147, 20);
             this.LblVNewPw.TabIndex = 13;
             this.LblVNewPw.Text = "Confirmar Contraseña:";
             // 
@@ -362,7 +362,7 @@
             this.CbxConfigSee1.AutoSize = true;
             this.CbxConfigSee1.Location = new System.Drawing.Point(443, 436);
             this.CbxConfigSee1.Name = "CbxConfigSee1";
-            this.CbxConfigSee1.Size = new System.Drawing.Size(39, 15);
+            this.CbxConfigSee1.Size = new System.Drawing.Size(43, 17);
             this.CbxConfigSee1.TabIndex = 17;
             this.CbxConfigSee1.Text = "Ver";
             this.CbxConfigSee1.UseSelectable = true;
@@ -373,7 +373,7 @@
             this.CbxConfigSee2.AutoSize = true;
             this.CbxConfigSee2.Location = new System.Drawing.Point(443, 476);
             this.CbxConfigSee2.Name = "CbxConfigSee2";
-            this.CbxConfigSee2.Size = new System.Drawing.Size(39, 15);
+            this.CbxConfigSee2.Size = new System.Drawing.Size(43, 17);
             this.CbxConfigSee2.TabIndex = 18;
             this.CbxConfigSee2.Text = "Ver";
             this.CbxConfigSee2.UseSelectable = true;
@@ -384,7 +384,7 @@
             this.CbxConfigSee3.AutoSize = true;
             this.CbxConfigSee3.Location = new System.Drawing.Point(443, 521);
             this.CbxConfigSee3.Name = "CbxConfigSee3";
-            this.CbxConfigSee3.Size = new System.Drawing.Size(39, 15);
+            this.CbxConfigSee3.Size = new System.Drawing.Size(43, 17);
             this.CbxConfigSee3.TabIndex = 19;
             this.CbxConfigSee3.Text = "Ver";
             this.CbxConfigSee3.UseSelectable = true;
