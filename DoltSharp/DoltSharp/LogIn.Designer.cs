@@ -104,7 +104,7 @@
             this.TxtEmail.SelectionStart = 0;
             this.TxtEmail.ShortcutsEnabled = true;
             this.TxtEmail.Size = new System.Drawing.Size(202, 23);
-            this.TxtEmail.TabIndex = 4;
+            this.TxtEmail.TabIndex = 1;
             this.TxtEmail.UseSelectable = true;
             this.TxtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -134,7 +134,7 @@
             this.TxtPw.SelectionStart = 0;
             this.TxtPw.ShortcutsEnabled = true;
             this.TxtPw.Size = new System.Drawing.Size(202, 23);
-            this.TxtPw.TabIndex = 5;
+            this.TxtPw.TabIndex = 2;
             this.TxtPw.UseSelectable = true;
             this.TxtPw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtPw.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -144,7 +144,7 @@
             this.BtnLogin.Location = new System.Drawing.Point(288, 354);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(136, 36);
-            this.BtnLogin.TabIndex = 6;
+            this.BtnLogin.TabIndex = 3;
             this.BtnLogin.Text = "Iniciar Sesion";
             this.BtnLogin.UseSelectable = true;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
@@ -154,7 +154,7 @@
             this.BtnRegister.Location = new System.Drawing.Point(327, 483);
             this.BtnRegister.Name = "BtnRegister";
             this.BtnRegister.Size = new System.Drawing.Size(142, 23);
-            this.BtnRegister.TabIndex = 7;
+            this.BtnRegister.TabIndex = 5;
             this.BtnRegister.Text = "Registrarse";
             this.BtnRegister.UseSelectable = true;
             this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
@@ -164,7 +164,7 @@
             this.BtnResetPw.Location = new System.Drawing.Point(327, 422);
             this.BtnResetPw.Name = "BtnResetPw";
             this.BtnResetPw.Size = new System.Drawing.Size(175, 23);
-            this.BtnResetPw.TabIndex = 8;
+            this.BtnResetPw.TabIndex = 4;
             this.BtnResetPw.Text = "Recuperar Contraseña";
             this.BtnResetPw.UseSelectable = true;
             // 

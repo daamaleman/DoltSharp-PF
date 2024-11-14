@@ -165,5 +165,14 @@
   <ItemGroup>
     <None Include="Resources\Logo_DoltSharp-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

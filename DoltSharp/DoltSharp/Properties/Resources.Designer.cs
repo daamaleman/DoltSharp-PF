@@ -73,6 +73,16 @@ namespace DoltSharp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _return {
+            get {
+                object obj = ResourceManager.GetObject("_return", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d97bbb08017ac2309307f0822e63d082 {
             get {
                 object obj = ResourceManager.GetObject("d97bbb08017ac2309307f0822e63d082", resourceCulture);
