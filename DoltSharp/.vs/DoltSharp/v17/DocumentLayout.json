@@ -1,46 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\",
+  "WorkspaceRootPath": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|c:\\users\\elias\\onedrive\\documentos\\proyecto de doltsharp\\doltsharp-proyectofinal\\doltsharp\\doltsharp\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|c:\\users\\valde\\onedrive\\documentos\\2do semestre\\analizis y diseno\\doltsharp code\\doltsharp-proyectofinal\\doltsharp-proyectofinal\\doltsharp\\doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\usuarioconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7601779A-2990-468A-8FBB-0BEBC302F73A}|DoltSharp\\DoltSharp.csproj|solutionrelative:doltsharp\\mainpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,141 +38,91 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MainPage.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
+              "Title": "MainPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
               "RelativeDocumentMoniker": "DoltSharp\\MainPage.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
-              "RelativeToolTip": "DoltSharp\\MainPage.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAACoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T20:39:19.616Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainPage.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\MainPage.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs [Dise\u00F1o]",
-              "RelativeToolTip": "DoltSharp\\MainPage.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs [Design]",
+              "RelativeToolTip": "DoltSharp\\MainPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T22:51:40.515Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Project.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Project.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\Project.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Project.cs [Dise\u00F1o]",
-              "RelativeToolTip": "DoltSharp\\Project.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T22:22:54.08Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Task.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Task.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\Task.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Task.cs [Dise\u00F1o]",
-              "RelativeToolTip": "DoltSharp\\Task.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T21:47:03.237Z",
               "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Project.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\Project.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Project.cs",
-              "RelativeToolTip": "DoltSharp\\Project.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAApwB0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T00:01:34.281Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Task.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\Task.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Task.cs",
-              "RelativeToolTip": "DoltSharp\\Task.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAApwBwAAAAYAAAAAAAAAA==",
+              "Title": "MainPage.cs",
+              "DocumentMoniker": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
+              "RelativeDocumentMoniker": "DoltSharp\\MainPage.cs",
+              "ToolTip": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\MainPage.cs",
+              "RelativeToolTip": "DoltSharp\\MainPage.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T23:42:23.136Z",
+              "WhenOpened": "2024-11-14T07:12:55.065Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuarioConfig.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs",
-              "RelativeDocumentMoniker": "DoltSharp\\UsuarioConfig.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs",
-              "RelativeToolTip": "DoltSharp\\UsuarioConfig.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAowJ8AAAAYAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Config.cs",
+              "RelativeDocumentMoniker": "DoltSharp\\Config.cs",
+              "ToolTip": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Config.cs",
+              "RelativeToolTip": "DoltSharp\\Config.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T00:28:14.87Z"
+              "WhenOpened": "2024-11-14T05:26:50.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Config.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Config.cs",
+              "RelativeDocumentMoniker": "DoltSharp\\Config.cs",
+              "ToolTip": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Config.cs [Dise\u00F1o]",
+              "RelativeToolTip": "DoltSharp\\Config.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T05:15:46.075Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "UsuarioConfig.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs",
+              "DocumentMoniker": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs",
               "RelativeDocumentMoniker": "DoltSharp\\UsuarioConfig.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\UsuarioConfig.cs [Dise\u00F1o]",
               "RelativeToolTip": "DoltSharp\\UsuarioConfig.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T00:28:12.671Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Register.cs",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
+              "DocumentMoniker": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
               "RelativeDocumentMoniker": "DoltSharp\\Register.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
+              "ToolTip": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
               "RelativeToolTip": "DoltSharp\\Register.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T00:27:28.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Register.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
+              "DocumentMoniker": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs",
               "RelativeDocumentMoniker": "DoltSharp\\Register.cs",
-              "ToolTip": "C:\\Users\\elias\\OneDrive\\Documentos\\Proyecto de doltsharp\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\valde\\OneDrive\\Documentos\\2do Semestre\\Analizis y diseno\\DoltSharp Code\\DoltSharp-ProyectoFinal\\DoltSharp-ProyectoFinal\\DoltSharp\\DoltSharp\\Register.cs [Dise\u00F1o]",
               "RelativeToolTip": "DoltSharp\\Register.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T00:27:22.759Z"

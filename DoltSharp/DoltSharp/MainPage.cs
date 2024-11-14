@@ -45,6 +45,12 @@ namespace DoltSharp
             this.Hide();
         }
 
+        private void BtnConfiguration_Click(object sender, EventArgs e)
+        {
+            ConfigPersonalizacion configPersonalizacion = new ConfigPersonalizacion();
+            configPersonalizacion.Show();
+            this.Hide();
+        }
     }
 }
 

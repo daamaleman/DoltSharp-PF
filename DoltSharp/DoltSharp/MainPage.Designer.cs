@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.LblWelcome = new MetroFramework.Controls.MetroLabel();
             this.LblTaskView = new MetroFramework.Controls.MetroLabel();
             this.LlblProjectsView = new MetroFramework.Controls.MetroLabel();
             this.BtnNewTask = new MetroFramework.Controls.MetroButton();
             this.BtnNewProject = new MetroFramework.Controls.MetroButton();
+            this.DgvTaskList = new MetroFramework.Controls.MetroGrid();
+            this.DgvProjectsList = new MetroFramework.Controls.MetroGrid();
+            this.PbLogo = new System.Windows.Forms.PictureBox();
             this.BtnEditInformation = new MetroFramework.Controls.MetroButton();
             this.BtnLeave = new MetroFramework.Controls.MetroButton();
             this.BtnConfiguration = new MetroFramework.Controls.MetroButton();
-            this.PbLogo = new System.Windows.Forms.PictureBox();
-            this.DgvTaskList = new MetroFramework.Controls.MetroGrid();
-            this.DgvProjectsList = new MetroFramework.Controls.MetroGrid();
-            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTaskList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProjectsList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // LblWelcome
@@ -56,8 +56,7 @@
             this.LblWelcome.AutoSize = true;
             this.LblWelcome.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblWelcome.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblWelcome.Location = new System.Drawing.Point(387, 74);
-            this.LblWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblWelcome.Location = new System.Drawing.Point(290, 60);
             this.LblWelcome.Name = "LblWelcome";
             this.LblWelcome.Size = new System.Drawing.Size(206, 25);
             this.LblWelcome.TabIndex = 0;
@@ -66,30 +65,27 @@
             // LblTaskView
             // 
             this.LblTaskView.AutoSize = true;
-            this.LblTaskView.Location = new System.Drawing.Point(88, 293);
-            this.LblTaskView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTaskView.Location = new System.Drawing.Point(66, 238);
             this.LblTaskView.Name = "LblTaskView";
-            this.LblTaskView.Size = new System.Drawing.Size(99, 20);
+            this.LblTaskView.Size = new System.Drawing.Size(93, 19);
             this.LblTaskView.TabIndex = 3;
             this.LblTaskView.Text = "Lista de Tareas";
             // 
             // LlblProjectsView
             // 
             this.LlblProjectsView.AutoSize = true;
-            this.LlblProjectsView.Location = new System.Drawing.Point(583, 293);
-            this.LlblProjectsView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LlblProjectsView.Location = new System.Drawing.Point(437, 238);
             this.LlblProjectsView.Name = "LlblProjectsView";
-            this.LlblProjectsView.Size = new System.Drawing.Size(121, 20);
+            this.LlblProjectsView.Size = new System.Drawing.Size(114, 19);
             this.LlblProjectsView.TabIndex = 5;
             this.LlblProjectsView.Text = "Lista de Proyectos";
             // 
             // BtnNewTask
             // 
             this.BtnNewTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewTask.Location = new System.Drawing.Point(132, 508);
-            this.BtnNewTask.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnNewTask.Location = new System.Drawing.Point(99, 413);
             this.BtnNewTask.Name = "BtnNewTask";
-            this.BtnNewTask.Size = new System.Drawing.Size(167, 37);
+            this.BtnNewTask.Size = new System.Drawing.Size(125, 30);
             this.BtnNewTask.TabIndex = 7;
             this.BtnNewTask.Text = "Agregar nueva Tarea";
             this.BtnNewTask.UseSelectable = true;
@@ -98,65 +94,13 @@
             // BtnNewProject
             // 
             this.BtnNewProject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewProject.Location = new System.Drawing.Point(608, 508);
-            this.BtnNewProject.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnNewProject.Location = new System.Drawing.Point(456, 413);
             this.BtnNewProject.Name = "BtnNewProject";
-            this.BtnNewProject.Size = new System.Drawing.Size(189, 37);
+            this.BtnNewProject.Size = new System.Drawing.Size(142, 30);
             this.BtnNewProject.TabIndex = 8;
             this.BtnNewProject.Text = "Agregar nuevo Proyecto";
             this.BtnNewProject.UseSelectable = true;
             this.BtnNewProject.Click += new System.EventHandler(this.BtnNewProject_Click);
-            // 
-            // BtnEditInformation
-            // 
-            this.BtnEditInformation.BackgroundImage = global::DoltSharp.Properties.Resources.d97bbb08017ac2309307f0822e63d082;
-            this.BtnEditInformation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnEditInformation.Location = new System.Drawing.Point(724, 37);
-            this.BtnEditInformation.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEditInformation.Name = "BtnEditInformation";
-            this.BtnEditInformation.Size = new System.Drawing.Size(73, 73);
-            this.BtnEditInformation.TabIndex = 11;
-            this.BtnEditInformation.UseSelectable = true;
-            this.BtnEditInformation.Click += new System.EventHandler(this.BtnEditarInformarcion_Click);
-            // 
-            // BtnLeave
-            // 
-            this.BtnLeave.BackgroundImage = global::DoltSharp.Properties.Resources._59801;
-            this.BtnLeave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnLeave.Location = new System.Drawing.Point(893, 37);
-            this.BtnLeave.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnLeave.Name = "BtnLeave";
-            this.BtnLeave.Size = new System.Drawing.Size(89, 73);
-            this.BtnLeave.TabIndex = 10;
-            this.BtnLeave.UseSelectable = true;
-            this.BtnLeave.Click += new System.EventHandler(this.BtnSalida_Click);
-            // 
-            // BtnConfiguration
-            // 
-            this.BtnConfiguration.BackColor = System.Drawing.Color.White;
-            this.BtnConfiguration.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnConfiguration.BackgroundImage")));
-            this.BtnConfiguration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnConfiguration.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnConfiguration.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.BtnConfiguration.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnConfiguration.ForeColor = System.Drawing.Color.White;
-            this.BtnConfiguration.Location = new System.Drawing.Point(805, 37);
-            this.BtnConfiguration.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnConfiguration.Name = "BtnConfiguration";
-            this.BtnConfiguration.Size = new System.Drawing.Size(80, 73);
-            this.BtnConfiguration.TabIndex = 9;
-            this.BtnConfiguration.UseSelectable = true;
-            // 
-            // PbLogo
-            // 
-            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
-            this.PbLogo.Location = new System.Drawing.Point(387, 113);
-            this.PbLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.PbLogo.Name = "PbLogo";
-            this.PbLogo.Size = new System.Drawing.Size(195, 158);
-            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbLogo.TabIndex = 12;
-            this.PbLogo.TabStop = false;
             // 
             // DgvTaskList
             // 
@@ -185,8 +129,7 @@
             this.DgvTaskList.EnableHeadersVisualStyles = false;
             this.DgvTaskList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DgvTaskList.GridColor = System.Drawing.Color.Black;
-            this.DgvTaskList.Location = new System.Drawing.Point(88, 336);
-            this.DgvTaskList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvTaskList.Location = new System.Drawing.Point(66, 273);
             this.DgvTaskList.Name = "DgvTaskList";
             this.DgvTaskList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -200,7 +143,7 @@
             this.DgvTaskList.RowHeadersWidth = 51;
             this.DgvTaskList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvTaskList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvTaskList.Size = new System.Drawing.Size(279, 128);
+            this.DgvTaskList.Size = new System.Drawing.Size(209, 104);
             this.DgvTaskList.TabIndex = 13;
             // 
             // DgvProjectsList
@@ -230,8 +173,7 @@
             this.DgvProjectsList.EnableHeadersVisualStyles = false;
             this.DgvProjectsList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DgvProjectsList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DgvProjectsList.Location = new System.Drawing.Point(583, 336);
-            this.DgvProjectsList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvProjectsList.Location = new System.Drawing.Point(437, 273);
             this.DgvProjectsList.Name = "DgvProjectsList";
             this.DgvProjectsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -245,14 +187,62 @@
             this.DgvProjectsList.RowHeadersWidth = 51;
             this.DgvProjectsList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvProjectsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvProjectsList.Size = new System.Drawing.Size(271, 128);
+            this.DgvProjectsList.Size = new System.Drawing.Size(203, 104);
             this.DgvProjectsList.TabIndex = 14;
+            // 
+            // PbLogo
+            // 
+            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
+            this.PbLogo.Location = new System.Drawing.Point(290, 92);
+            this.PbLogo.Name = "PbLogo";
+            this.PbLogo.Size = new System.Drawing.Size(146, 128);
+            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbLogo.TabIndex = 12;
+            this.PbLogo.TabStop = false;
+            // 
+            // BtnEditInformation
+            // 
+            this.BtnEditInformation.BackgroundImage = global::DoltSharp.Properties.Resources.d97bbb08017ac2309307f0822e63d082;
+            this.BtnEditInformation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnEditInformation.Location = new System.Drawing.Point(543, 30);
+            this.BtnEditInformation.Name = "BtnEditInformation";
+            this.BtnEditInformation.Size = new System.Drawing.Size(55, 59);
+            this.BtnEditInformation.TabIndex = 11;
+            this.BtnEditInformation.UseSelectable = true;
+            this.BtnEditInformation.Click += new System.EventHandler(this.BtnEditarInformarcion_Click);
+            // 
+            // BtnLeave
+            // 
+            this.BtnLeave.BackgroundImage = global::DoltSharp.Properties.Resources._59801;
+            this.BtnLeave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnLeave.Location = new System.Drawing.Point(670, 30);
+            this.BtnLeave.Name = "BtnLeave";
+            this.BtnLeave.Size = new System.Drawing.Size(67, 59);
+            this.BtnLeave.TabIndex = 10;
+            this.BtnLeave.UseSelectable = true;
+            this.BtnLeave.Click += new System.EventHandler(this.BtnSalida_Click);
+            // 
+            // BtnConfiguration
+            // 
+            this.BtnConfiguration.BackColor = System.Drawing.Color.White;
+            this.BtnConfiguration.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnConfiguration.BackgroundImage")));
+            this.BtnConfiguration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnConfiguration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnConfiguration.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.BtnConfiguration.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.BtnConfiguration.ForeColor = System.Drawing.Color.White;
+            this.BtnConfiguration.Location = new System.Drawing.Point(604, 30);
+            this.BtnConfiguration.Name = "BtnConfiguration";
+            this.BtnConfiguration.Size = new System.Drawing.Size(60, 59);
+            this.BtnConfiguration.TabIndex = 9;
+            this.BtnConfiguration.UseSelectable = true;
+            this.BtnConfiguration.Click += new System.EventHandler(this.BtnConfiguration_Click);
             // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 658);
+            this.ClientSize = new System.Drawing.Size(729, 535);
             this.Controls.Add(this.DgvProjectsList);
             this.Controls.Add(this.DgvTaskList);
             this.Controls.Add(this.PbLogo);
@@ -264,14 +254,12 @@
             this.Controls.Add(this.LlblProjectsView);
             this.Controls.Add(this.LblTaskView);
             this.Controls.Add(this.LblWelcome);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainPage";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Principal";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
-            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTaskList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProjectsList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
