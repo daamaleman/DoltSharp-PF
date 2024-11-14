@@ -144,7 +144,7 @@
             this.BtnLogin.Location = new System.Drawing.Point(288, 354);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(136, 36);
-            this.BtnLogin.TabIndex = 3;
+            this.BtnLogin.TabIndex = 4;
             this.BtnLogin.Text = "Iniciar Sesion";
             this.BtnLogin.UseSelectable = true;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
@@ -154,7 +154,7 @@
             this.BtnRegister.Location = new System.Drawing.Point(327, 483);
             this.BtnRegister.Name = "BtnRegister";
             this.BtnRegister.Size = new System.Drawing.Size(142, 23);
-            this.BtnRegister.TabIndex = 5;
+            this.BtnRegister.TabIndex = 6;
             this.BtnRegister.Text = "Registrarse";
             this.BtnRegister.UseSelectable = true;
             this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
@@ -164,7 +164,7 @@
             this.BtnResetPw.Location = new System.Drawing.Point(327, 422);
             this.BtnResetPw.Name = "BtnResetPw";
             this.BtnResetPw.Size = new System.Drawing.Size(175, 23);
-            this.BtnResetPw.TabIndex = 4;
+            this.BtnResetPw.TabIndex = 5;
             this.BtnResetPw.Text = "Recuperar Contraseña";
             this.BtnResetPw.UseSelectable = true;
             // 
@@ -184,7 +184,7 @@
             this.CbxSee.Location = new System.Drawing.Point(488, 303);
             this.CbxSee.Name = "CbxSee";
             this.CbxSee.Size = new System.Drawing.Size(43, 17);
-            this.CbxSee.TabIndex = 10;
+            this.CbxSee.TabIndex = 3;
             this.CbxSee.Text = "Ver";
             this.CbxSee.UseSelectable = true;
             this.CbxSee.CheckedChanged += new System.EventHandler(this.CbxSee_CheckedChanged);

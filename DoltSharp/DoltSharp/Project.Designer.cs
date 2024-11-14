@@ -41,8 +41,8 @@
             this.TxtProjectDescription = new MetroFramework.Controls.MetroTextBox();
             this.DtpProjectStartDate = new MetroFramework.Controls.MetroDateTime();
             this.DtpProjectDeadLine = new MetroFramework.Controls.MetroDateTime();
-            this.CmbProjectResources = new MetroFramework.Controls.MetroComboBox();
             this.BtnReturn = new MetroFramework.Controls.MetroButton();
+            this.TxtProjectResources = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,7 +144,7 @@
             this.TxtProjectName.SelectionStart = 0;
             this.TxtProjectName.ShortcutsEnabled = true;
             this.TxtProjectName.Size = new System.Drawing.Size(219, 23);
-            this.TxtProjectName.TabIndex = 8;
+            this.TxtProjectName.TabIndex = 1;
             this.TxtProjectName.UseSelectable = true;
             this.TxtProjectName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtProjectName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -174,7 +174,7 @@
             this.TxtProjectDescription.SelectionStart = 0;
             this.TxtProjectDescription.ShortcutsEnabled = true;
             this.TxtProjectDescription.Size = new System.Drawing.Size(219, 23);
-            this.TxtProjectDescription.TabIndex = 9;
+            this.TxtProjectDescription.TabIndex = 2;
             this.TxtProjectDescription.UseSelectable = true;
             this.TxtProjectDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtProjectDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -185,7 +185,7 @@
             this.DtpProjectStartDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.DtpProjectStartDate.Name = "DtpProjectStartDate";
             this.DtpProjectStartDate.Size = new System.Drawing.Size(219, 30);
-            this.DtpProjectStartDate.TabIndex = 10;
+            this.DtpProjectStartDate.TabIndex = 3;
             // 
             // DtpProjectDeadLine
             // 
@@ -193,17 +193,7 @@
             this.DtpProjectDeadLine.MinimumSize = new System.Drawing.Size(0, 30);
             this.DtpProjectDeadLine.Name = "DtpProjectDeadLine";
             this.DtpProjectDeadLine.Size = new System.Drawing.Size(219, 30);
-            this.DtpProjectDeadLine.TabIndex = 11;
-            // 
-            // CmbProjectResources
-            // 
-            this.CmbProjectResources.FormattingEnabled = true;
-            this.CmbProjectResources.ItemHeight = 24;
-            this.CmbProjectResources.Location = new System.Drawing.Point(350, 438);
-            this.CmbProjectResources.Name = "CmbProjectResources";
-            this.CmbProjectResources.Size = new System.Drawing.Size(219, 30);
-            this.CmbProjectResources.TabIndex = 12;
-            this.CmbProjectResources.UseSelectable = true;
+            this.DtpProjectDeadLine.TabIndex = 4;
             // 
             // BtnReturn
             // 
@@ -215,13 +205,43 @@
             this.BtnReturn.UseSelectable = true;
             this.BtnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
             // 
+            // TxtProjectResources
+            // 
+            // 
+            // 
+            // 
+            this.TxtProjectResources.CustomButton.Image = null;
+            this.TxtProjectResources.CustomButton.Location = new System.Drawing.Point(197, 1);
+            this.TxtProjectResources.CustomButton.Name = "";
+            this.TxtProjectResources.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtProjectResources.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtProjectResources.CustomButton.TabIndex = 1;
+            this.TxtProjectResources.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtProjectResources.CustomButton.UseSelectable = true;
+            this.TxtProjectResources.CustomButton.Visible = false;
+            this.TxtProjectResources.Lines = new string[0];
+            this.TxtProjectResources.Location = new System.Drawing.Point(350, 438);
+            this.TxtProjectResources.MaxLength = 32767;
+            this.TxtProjectResources.Name = "TxtProjectResources";
+            this.TxtProjectResources.PasswordChar = '\0';
+            this.TxtProjectResources.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtProjectResources.SelectedText = "";
+            this.TxtProjectResources.SelectionLength = 0;
+            this.TxtProjectResources.SelectionStart = 0;
+            this.TxtProjectResources.ShortcutsEnabled = true;
+            this.TxtProjectResources.Size = new System.Drawing.Size(219, 23);
+            this.TxtProjectResources.TabIndex = 14;
+            this.TxtProjectResources.UseSelectable = true;
+            this.TxtProjectResources.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtProjectResources.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 587);
+            this.Controls.Add(this.TxtProjectResources);
             this.Controls.Add(this.BtnReturn);
-            this.Controls.Add(this.CmbProjectResources);
             this.Controls.Add(this.DtpProjectDeadLine);
             this.Controls.Add(this.DtpProjectStartDate);
             this.Controls.Add(this.TxtProjectDescription);
@@ -257,7 +277,7 @@
         private MetroFramework.Controls.MetroTextBox TxtProjectDescription;
         private MetroFramework.Controls.MetroDateTime DtpProjectStartDate;
         private MetroFramework.Controls.MetroDateTime DtpProjectDeadLine;
-        private MetroFramework.Controls.MetroComboBox CmbProjectResources;
         private MetroFramework.Controls.MetroButton BtnReturn;
+        private MetroFramework.Controls.MetroTextBox TxtProjectResources;
     }
 }
