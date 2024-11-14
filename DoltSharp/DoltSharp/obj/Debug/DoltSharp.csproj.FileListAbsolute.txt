@@ -45,6 +45,23 @@ C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.UsuarioConfig.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Design.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.AssemblyReference.cache
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.UsuarioConfig.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.LogIn.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.MainPage.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Properties.Resources.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Register.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.GenerateResource.cache
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.CoreCompileInputs.cache
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
 C:\Users\itsda\Desktop\New folder (3)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
 C:\Users\itsda\Desktop\New folder (3)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
 C:\Users\itsda\Desktop\New folder (3)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
@@ -98,25 +115,3 @@ C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal
 C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
 C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
-<<<<<<< HEAD
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Design.dll
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.dll
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.AssemblyReference.cache
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Project.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Task.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.UsuarioConfig.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.LogIn.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.MainPage.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Properties.Resources.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Register.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.GenerateResource.cache
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.CoreCompileInputs.cache
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
-=======
->>>>>>> 4aa385153075d94759c73e1ffa88ad5866aa0460
