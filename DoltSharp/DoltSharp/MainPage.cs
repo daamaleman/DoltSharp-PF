@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoltSharp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,5 +29,23 @@ namespace DoltSharp
             usuarioConfig.Show();
             this.Hide();
         }
+
+        private void BtnNewTask_Click(object sender, EventArgs e)
+        {
+            Task task = new Task();
+            task.Show();
+            this.Hide();
+
+        }
+
+        private void BtnNewProject_Click(object sender, EventArgs e)
+        {
+            Project project = new Project();
+            project.Show();
+            this.Hide();
+        }
+
     }
 }
+
+
