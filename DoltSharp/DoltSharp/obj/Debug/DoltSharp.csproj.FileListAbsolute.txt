@@ -98,6 +98,7 @@ C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal
 C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
 C:\Users\elias\OneDrive\Documentos\Proyecto de doltsharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
+<<<<<<< HEAD
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
@@ -117,3 +118,5 @@ C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFi
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
+=======
+>>>>>>> 4aa385153075d94759c73e1ffa88ad5866aa0460
