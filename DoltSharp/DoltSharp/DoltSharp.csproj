@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\59801.png" />
