@@ -34,7 +34,7 @@ namespace DoltSharp
         {
             Task task = new Task();
             task.Show();
-            this.Hide();
+            this.Close();   
 
         }
 

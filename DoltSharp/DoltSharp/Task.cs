@@ -26,7 +26,19 @@ namespace DoltSharp
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void close()
+        {
+            
+        }
+
+        private void Task_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+           // this.Close();
         }
     }
 }
