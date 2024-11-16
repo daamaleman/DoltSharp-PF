@@ -117,7 +117,6 @@
             this.BtnSave.TabIndex = 7;
             this.BtnSave.Text = "Guardar";
             this.BtnSave.UseSelectable = true;
-            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // TxtProjectName
             // 

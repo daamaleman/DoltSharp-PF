@@ -1,14 +1,24 @@
 -------------------------------
-Nombre: David
-Apellido: Espinoza
-Correo: david@gmail.com
-Fecha de nacimiento: 25/08/2005
-Contraseña: MTIzNDU2Nzg5MA==
+ID: USR90977
+Nombre: David Alejandro
+Apellido: Espinoza Largaespada
+Correo: david@uamv.edu
+Fecha de nacimiento: 25/08/2004
+Contraseña: MTIzNDU2Nzg5
 -------------------------------
 -------------------------------
-Nombre: Diedereich
-Apellido: Alemán
-Correo: diedereich@gmail.com
-Fecha de nacimiento: 30/11/2006
+ID: USR47528
+Nombre: UserA UserA
+Apellido: UserA UserA
+Correo: usera@gmail.com
+Fecha de nacimiento: 26/12/1988
+Contraseña: MTIzNDU2Nzg5
+-------------------------------
+-------------------------------
+ID: USR69181
+Nombre: UserB
+Apellido: UserB
+Correo: userb@gmail.com
+Fecha de nacimiento: 31/01/2000
 Contraseña: MTIzNDU2Nzg=
 -------------------------------

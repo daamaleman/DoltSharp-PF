@@ -18,10 +18,7 @@ namespace DoltSharp
             InitializeComponent();
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void BtnReturn_Click(object sender, EventArgs e)
         {
