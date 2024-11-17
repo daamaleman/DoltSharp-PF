@@ -55,29 +55,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs">
+    <Compile Include="Forms\Config.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Config.Designer.cs">
+    <Compile Include="Forms\Config.Designer.cs">
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
     <Compile Include="Dao\UserDao.cs" />
-    <Compile Include="Project.cs">
+    <Compile Include="Forms\Project.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Project.Designer.cs">
+    <Compile Include="Forms\Project.Designer.cs">
       <DependentUpon>Project.cs</DependentUpon>
     </Compile>
-    <Compile Include="Task.cs">
+    <Compile Include="Forms\Task.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Task.Designer.cs">
+    <Compile Include="Forms\Task.Designer.cs">
       <DependentUpon>Task.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioConfig.cs">
+    <Compile Include="Forms\UsuarioConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioConfig.Designer.cs">
+    <Compile Include="Forms\UsuarioConfig.Designer.cs">
       <DependentUpon>UsuarioConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn.cs">
@@ -86,10 +86,10 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
+    <Compile Include="Forms\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Projects.cs" />
@@ -97,28 +97,28 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.cs">
+    <Compile Include="Forms\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
+    <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Config.resx">
+    <EmbeddedResource Include="Forms\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Project.resx">
+    <EmbeddedResource Include="Forms\Project.resx">
       <DependentUpon>Project.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Task.resx">
+    <EmbeddedResource Include="Forms\Task.resx">
       <DependentUpon>Task.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioConfig.resx">
+    <EmbeddedResource Include="Forms\UsuarioConfig.resx">
       <DependentUpon>UsuarioConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
+    <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -131,7 +131,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
+    <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
