@@ -9,19 +9,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoltSharp.Services;
 
-namespace DoltSharp{
+
+namespace DoltSharp
+{
     public partial class Register : MetroFramework.Forms.MetroForm
     {
+        private readonly UserRegisterFile _userRegisterFile;
+
         public Register()
         {
             InitializeComponent();
+            _userRegisterFile = new UserRegisterFile("registro_usuarios_DoltSharp.txt");
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
             // Validaciones
-            // 1. Verificar que ningún campo esté vacío
             if (string.IsNullOrWhiteSpace(TxtRegisterName.Text) || string.IsNullOrWhiteSpace(TxtRegisterLastName.Text) ||
                 string.IsNullOrWhiteSpace(TxtRegisterEmail.Text) || string.IsNullOrWhiteSpace(TxtRegisterPw.Text) ||
                 string.IsNullOrWhiteSpace(TxtRegisterVPw.Text))
@@ -30,70 +35,44 @@ namespace DoltSharp{
                 return;
             }
 
-            // 2. Validar que la fecha de nacimiento no sea mayor al año 2006
             if (DtpBirthDate.Value.Year > 2006)
             {
                 MetroFramework.MetroMessageBox.Show(this, "La fecha no puede ser mayor al año 2006", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // 3. Verificar el formato del correo
             if (!TxtRegisterEmail.Text.Contains("@") || !TxtRegisterEmail.Text.Contains("."))
             {
                 MetroFramework.MetroMessageBox.Show(this, "El correo no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // 4. Validar la longitud mínima de la contraseña
             if (TxtRegisterPw.Text.Length < 8)
             {
                 MetroFramework.MetroMessageBox.Show(this, "La contraseña debe tener al menos 8 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // 5. Validar que ambas contraseñas coincidan
             if (TxtRegisterPw.Text != TxtRegisterVPw.Text)
             {
                 MetroFramework.MetroMessageBox.Show(this, "Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Ruta del archivo
-            string filePath = "registro_usuarios_DoltSharp.txt";
-
-            // 6. Validar que el correo no esté registrado previamente
-            if (File.Exists(filePath) && File.ReadAllLines(filePath).Any(line => line.Contains("Correo: " + TxtRegisterEmail.Text.Trim())))
+            if (_userRegisterFile.IsEmailRegistered(TxtRegisterEmail.Text))
             {
                 MetroFramework.MetroMessageBox.Show(this, "El correo ya está registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Encriptar la contraseña usando Base64
-            string encryptedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(TxtRegisterPw.Text));
+            // Generar ID único y encriptar la contraseña
+            string userId = _userRegisterFile.GenerateUniqueUserId();
+            string encryptedPassword = _userRegisterFile.EncryptPassword(TxtRegisterPw.Text);
 
-            // Generar un ID único corto
-            Random random = new Random();
-            string userId;
-            do
-            {
-                userId = "USR" + random.Next(10000, 99999);
-            } while (File.Exists(filePath) && File.ReadAllLines(filePath).Any(line => line.Contains("ID: " + userId)));
-
-            // Guardar los datos en el archivo
+            // Guardar datos
             try
             {
-                using (StreamWriter writer = new StreamWriter(filePath, true))
-                {
-                    writer.WriteLine("-------------------------------");
-                    writer.WriteLine("ID: " + userId); // Guardar el ID único
-                    writer.WriteLine("Nombre: " + TxtRegisterName.Text.Trim());
-                    writer.WriteLine("Apellido: " + TxtRegisterLastName.Text.Trim());
-                    writer.WriteLine("Correo: " + TxtRegisterEmail.Text.Trim());
-                    writer.WriteLine("Fecha de nacimiento: " + DtpBirthDate.Value.ToShortDateString());
-                    writer.WriteLine("Contraseña: " + encryptedPassword); // Contraseña encriptada
-                    writer.WriteLine("-------------------------------");
-                }
-
+                _userRegisterFile.SaveUser(userId, TxtRegisterName.Text, TxtRegisterLastName.Text, TxtRegisterEmail.Text, DtpBirthDate.Value, encryptedPassword);
                 MetroFramework.MetroMessageBox.Show(this, "Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Redirigir al Login
@@ -103,12 +82,10 @@ namespace DoltSharp{
             }
             catch (Exception ex)
             {
-                // Manejo de errores al guardar el archivo
                 MetroFramework.MetroMessageBox.Show(this, $"Error al guardar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // No permitir números en el campo de nombre
         private void TxtRegisterName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar))
@@ -118,7 +95,6 @@ namespace DoltSharp{
             }
         }
 
-        // No permitir números en el campo de apellido
         private void TxtRegisterLastName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar))
@@ -128,14 +104,12 @@ namespace DoltSharp{
             }
         }
 
-        // Mostrar u ocultar la contraseña principal
         private void CbxRegisterSeePw_CheckedChanged(object sender, EventArgs e)
         {
             TxtRegisterPw.PasswordChar = CbxRegisterSeePw.Checked ? '\0' : '*';
             CbxRegisterSeePw.Text = CbxRegisterSeePw.Checked ? "Ocultar" : "Ver";
         }
 
-        // Mostrar u ocultar la confirmación de contraseña
         private void CbxRegisterSeePw2_CheckedChanged(object sender, EventArgs e)
         {
             TxtRegisterVPw.PasswordChar = CbxRegisterSeePw2.Checked ? '\0' : '*';
