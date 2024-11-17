@@ -103,6 +103,7 @@
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\UserRegisterFile.cs" />
     <EmbeddedResource Include="Forms\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\59801.png" />

@@ -1,24 +1,24 @@
 -------------------------------
-ID: USR90977
+ID: USR12074
 Nombre: David Alejandro
 Apellido: Espinoza Largaespada
-Correo: david@uamv.edu
+Correo: david@uamv.com
 Fecha de nacimiento: 25/08/2004
 Contraseña: MTIzNDU2Nzg5
 -------------------------------
 -------------------------------
-ID: USR47528
-Nombre: UserA UserA
-Apellido: UserA UserA
-Correo: usera@gmail.com
-Fecha de nacimiento: 26/12/1988
-Contraseña: MTIzNDU2Nzg5
+ID: USR12239
+Nombre: UserA
+Apellido: UserA
+Correo: user@gmail.com
+Fecha de nacimiento: 04/01/1999
+Contraseña: MTIzNDU2Nzg=
 -------------------------------
 -------------------------------
-ID: USR69181
+ID: USR87394
 Nombre: UserB
 Apellido: UserB
 Correo: userb@gmail.com
-Fecha de nacimiento: 31/01/2000
+Fecha de nacimiento: 02/02/2000
 Contraseña: MTIzNDU2Nzg=
 -------------------------------
