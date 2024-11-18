@@ -54,7 +54,7 @@ namespace DoltSharp
                             else if (lines[j].StartsWith("Contraseña: "))
                                 password = lines[j].Substring(12).Trim(); // Extrae la contraseña
                         }
-
+                                                                                                             ////Simplificar que solo saque el ID para tener en segundo plano 
                         if (email == TxtEmail.Text.Trim() && password == encodedPassword)
                         {
                             loginSuccessful = true;
