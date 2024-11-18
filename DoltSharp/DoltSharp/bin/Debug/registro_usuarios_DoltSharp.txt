@@ -1,8 +1,16 @@
 -------------------------------
-ID: USR76254
+ID: USR20166
 Nombre: David
-Apellido: Espinzoa
+Apellido: Espinoza
 Correo: david@gmail.com
-Fecha de nacimiento: 14/07/2005
+Fecha de nacimiento: 25/08/2005
+Contraseña: MTIzNDU2Nzg=
+-------------------------------
+-------------------------------
+ID: USR36104
+Nombre: user
+Apellido: user
+Correo: user@gmail.com
+Fecha de nacimiento: 05/01/1999
 Contraseña: MTIzNDU2Nzg=
 -------------------------------

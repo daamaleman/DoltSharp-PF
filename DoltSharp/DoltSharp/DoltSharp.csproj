@@ -103,6 +103,8 @@
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\ProyectFile.cs" />
+    <Compile Include="Services\TaskFile.cs" />
     <Compile Include="Services\UserRegisterFile.cs" />
     <EmbeddedResource Include="Forms\Config.resx">
       <DependentUpon>Config.cs</DependentUpon>

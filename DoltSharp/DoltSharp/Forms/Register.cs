@@ -20,8 +20,7 @@ namespace DoltSharp
         public Register()
         {
             InitializeComponent();
-            // Cambiamos la inicialización para usar una carpeta válida
-            _userRegisterFile = new UserRegisterFile("C:\\UsuariosDoltSharp");
+            _userRegisterFile = new UserRegisterFile("registro_usuarios_DoltSharp.txt");
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
@@ -68,14 +67,7 @@ namespace DoltSharp
             // Guardar datos usando UserRegisterFile
             try
             {
-                _userRegisterFile.RegisterUser(
-                    TxtRegisterName.Text,
-                    TxtRegisterLastName.Text,
-                    TxtRegisterEmail.Text,
-                    DtpBirthDate.Value,
-                    TxtRegisterPw.Text
-                );
-
+                _userRegisterFile.RegisterUser(TxtRegisterName.Text, TxtRegisterLastName.Text, TxtRegisterEmail.Text, DtpBirthDate.Value, TxtRegisterPw.Text);
                 MetroFramework.MetroMessageBox.Show(this, "Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Redirigir al Login
