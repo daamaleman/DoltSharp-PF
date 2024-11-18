@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DoltSharp.Models;
 
 namespace DoltSharp.Dao
 {
-    internal class TaskDao
+    public class TaskDao
     {
         private List<Task> tasks;
 
@@ -31,13 +31,13 @@ namespace DoltSharp.Dao
         // Busca una tarea por ID
         public Task FindTaskById(int id)
         {
-            return tasks.Find(task => task.ID == id);
+            return tasks.Find(task => task.Id == id);
         }
 
         // Busca tareas por ID de proyecto
-        public List<Task> FindTasksByProjectId(int projectId)
+        public List<Task> FindTasksByProjectId(int taskId)
         {
-            return tasks.FindAll(task => task.projectID == projectId);
+            return tasks.FindAll(task => task.TaskId == taskId);
         }
 
         // Elimina una tarea por ID
@@ -53,11 +53,13 @@ namespace DoltSharp.Dao
         // Actualiza una tarea
         public void UpdateTask(int id, Task updatedTask)
         {
-            int index = tasks.FindIndex(task => task.ID == id);
+            int index = tasks.FindIndex(task => task.Id == id);
 
             if (index != -1)
             {
                 tasks[index] = updatedTask;
             }
         }
+    }
+
 }
