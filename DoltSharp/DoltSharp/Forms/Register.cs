@@ -65,14 +65,10 @@ namespace DoltSharp
                 return;
             }
 
-            // Generar ID único y encriptar la contraseña
-            string userId = _userRegisterFile.GenerateUniqueUserId();
-            string encryptedPassword = _userRegisterFile.EncryptPassword(TxtRegisterPw.Text);
-
-            // Guardar datos
+            // Guardar datos usando UserRegisterFile
             try
             {
-                _userRegisterFile.SaveUser(userId, TxtRegisterName.Text, TxtRegisterLastName.Text, TxtRegisterEmail.Text, DtpBirthDate.Value, encryptedPassword);
+                _userRegisterFile.RegisterUser(TxtRegisterName.Text, TxtRegisterLastName.Text, TxtRegisterEmail.Text, DtpBirthDate.Value, TxtRegisterPw.Text);
                 MetroFramework.MetroMessageBox.Show(this, "Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Redirigir al Login
@@ -83,24 +79,6 @@ namespace DoltSharp
             catch (Exception ex)
             {
                 MetroFramework.MetroMessageBox.Show(this, $"Error al guardar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void TxtRegisterName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MetroFramework.MetroMessageBox.Show(this, "No puede poner números en el nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void TxtRegisterLastName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MetroFramework.MetroMessageBox.Show(this, "No puede poner números en el apellido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

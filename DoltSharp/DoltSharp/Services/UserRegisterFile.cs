@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DoltSharp.Services
 {
@@ -25,8 +26,21 @@ namespace DoltSharp.Services
             return File.ReadAllLines(_filePath).Any(line => line.Contains("Correo: " + email.Trim()));
         }
 
+        /// Registra un usuario en el archivo.
+        public void RegisterUser(string name, string lastName, string email, DateTime birthDate, string password)
+        {
+            // Generar ID único
+            string userId = GenerateUniqueUserId();
+
+            // Encriptar contraseña
+            string encryptedPassword = EncryptPassword(password);
+
+            // Guardar datos
+            SaveUser(userId, name, lastName, email, birthDate, encryptedPassword);
+        }
+
         /// Genera un ID único para el usuario.
-        public string GenerateUniqueUserId()
+        private string GenerateUniqueUserId()
         {
             Random random = new Random();
             string userId;
@@ -38,8 +52,14 @@ namespace DoltSharp.Services
             return userId;
         }
 
+        /// Encripta una contraseña usando Base64.
+        private string EncryptPassword(string password)
+        {
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(password));
+        }
+
         /// Guarda los datos del usuario en el archivo.
-        public void SaveUser(string userId, string name, string lastName, string email, DateTime birthDate, string encryptedPassword)
+        private void SaveUser(string userId, string name, string lastName, string email, DateTime birthDate, string encryptedPassword)
         {
             using (StreamWriter writer = new StreamWriter(_filePath, true))
             {
@@ -52,12 +72,6 @@ namespace DoltSharp.Services
                 writer.WriteLine("Contraseña: " + encryptedPassword); // Contraseña encriptada
                 writer.WriteLine("-------------------------------");
             }
-        }
-
-        /// Encripta una contraseña usando Base64.
-        public string EncryptPassword(string password)
-        {
-            return Convert.ToBase64String(Encoding.UTF8.GetBytes(password));
         }
     }
 }

@@ -99,7 +99,6 @@
             this.TxtRegisterName.UseSelectable = true;
             this.TxtRegisterName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtRegisterName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.TxtRegisterName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRegisterName_KeyPress);
             // 
             // LblRegisterEmail
             // 
@@ -252,7 +251,6 @@
             this.TxtRegisterLastName.UseSelectable = true;
             this.TxtRegisterLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtRegisterLastName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.TxtRegisterLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRegisterLastName_KeyPress);
             // 
             // LblRegisterVPw
             // 

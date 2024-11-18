@@ -1,0 +1,8 @@
+-------------------------------
+ID: USR41155
+Nombre: David
+Apellido: Espinoza
+Correo: david@gmail.com
+Fecha de nacimiento: 12/07/2000
+Contraseña: MTIzNDU2Nzg=
+-------------------------------
