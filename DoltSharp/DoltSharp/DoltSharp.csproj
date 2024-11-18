@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\ProjectDao.cs" />
+    <Compile Include="Dao\TaskDao.cs" />
     <Compile Include="Forms\Config.cs">
       <SubType>Form</SubType>
     </Compile>
