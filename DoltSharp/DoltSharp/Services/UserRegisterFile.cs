@@ -10,68 +10,98 @@ namespace DoltSharp.Services
 {
     internal class UserRegisterFile
     {
-        private readonly string _filePath;
+        private readonly string _directoryPath;
 
-        public UserRegisterFile(string filePath)
+        public UserRegisterFile(string directoryPath)
         {
-            _filePath = filePath;
+            _directoryPath = directoryPath;
+
+            // Crear la carpeta si no existe
+            if (!Directory.Exists(_directoryPath))
+            {
+                Directory.CreateDirectory(_directoryPath);
+            }
         }
 
-        /// Verifica si un correo ya está registrado en el archivo.
+        /// <summary>
+        /// Verifica si un correo ya está registrado.
+        /// </summary>
         public bool IsEmailRegistered(string email)
         {
-            if (!File.Exists(_filePath))
-                return false;
-
-            return File.ReadAllLines(_filePath).Any(line => line.Contains("Correo: " + email.Trim()));
-        }
-
-        /// Registra un usuario en el archivo.
-        public void RegisterUser(string name, string lastName, string email, DateTime birthDate, string password)
-        {
-            // Generar ID único
-            string userId = GenerateUniqueUserId();
-
-            // Encriptar contraseña
-            string encryptedPassword = EncryptPassword(password);
-
-            // Guardar datos
-            SaveUser(userId, name, lastName, email, birthDate, encryptedPassword);
-        }
-
-        /// Genera un ID único para el usuario.
-        private string GenerateUniqueUserId()
-        {
-            Random random = new Random();
-            string userId;
-            do
+            foreach (var filePath in Directory.GetFiles(_directoryPath, "*.txt"))
             {
-                userId = "USR" + random.Next(10000, 99999);
-            } while (File.Exists(_filePath) && File.ReadAllLines(_filePath).Any(line => line.Contains("ID: " + userId)));
-
-            return userId;
+                var lines = File.ReadAllLines(filePath);
+                if (lines.Any(line => line.Contains($"Correo: {email.Trim()}")))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
-        /// Encripta una contraseña usando Base64.
-        private string EncryptPassword(string password)
+        /// <summary>
+        /// Obtiene los datos del usuario basado en su ID.
+        /// </summary>
+        public Dictionary<string, string> GetUserDataById(string userId)
         {
-            return Convert.ToBase64String(Encoding.UTF8.GetBytes(password));
+            string userFilePath = Path.Combine(_directoryPath, $"{userId}.txt");
+
+            if (!File.Exists(userFilePath))
+                throw new FileNotFoundException("El archivo del usuario no existe.");
+
+            var userData = new Dictionary<string, string>();
+            foreach (var line in File.ReadAllLines(userFilePath))
+            {
+                if (line.Contains(":"))
+                {
+                    var parts = line.Split(new[] { ':' }, 2);
+                    if (parts.Length == 2)
+                    {
+                        userData[parts[0].Trim()] = parts[1].Trim();
+                    }
+                }
+            }
+            return userData;
         }
 
-        /// Guarda los datos del usuario en el archivo.
-        private void SaveUser(string userId, string name, string lastName, string email, DateTime birthDate, string encryptedPassword)
+        /// <summary>
+        /// Actualiza los datos del usuario.
+        /// </summary>
+        public void UpdateUserData(string userId, string name, string lastName, string email, DateTime birthDate, string password)
         {
-            using (StreamWriter writer = new StreamWriter(_filePath, true))
+            string userFilePath = Path.Combine(_directoryPath, $"{userId}.txt");
+
+            if (!File.Exists(userFilePath))
+                throw new FileNotFoundException("El archivo del usuario no existe.");
+
+            string encryptedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(password));
+
+            using (var writer = new StreamWriter(userFilePath, false))
             {
                 writer.WriteLine("-------------------------------");
-                writer.WriteLine("ID: " + userId); // Guardar el ID único
-                writer.WriteLine("Nombre: " + name.Trim());
-                writer.WriteLine("Apellido: " + lastName.Trim());
-                writer.WriteLine("Correo: " + email.Trim());
-                writer.WriteLine("Fecha de nacimiento: " + birthDate.ToShortDateString());
-                writer.WriteLine("Contraseña: " + encryptedPassword); // Contraseña encriptada
+                writer.WriteLine($"ID: {userId}");
+                writer.WriteLine($"Nombre: {name}");
+                writer.WriteLine($"Apellido: {lastName}");
+                writer.WriteLine($"Correo: {email}");
+                writer.WriteLine($"Fecha de nacimiento: {birthDate:dd/MM/yyyy}");
+                writer.WriteLine($"Contraseña: {encryptedPassword}");
                 writer.WriteLine("-------------------------------");
             }
+        }
+
+        /// <summary>
+        /// Valida si una contraseña coincide con la almacenada para un usuario.
+        /// </summary>
+        public bool ValidateUserPassword(string userId, string inputPassword)
+        {
+            var userData = GetUserDataById(userId);
+
+            if (!userData.TryGetValue("Contraseña", out var encodedPassword))
+                throw new InvalidOperationException("No se encontró la contraseña en los datos del usuario.");
+
+            string decodedPassword = Encoding.UTF8.GetString(Convert.FromBase64String(encodedPassword));
+
+            return decodedPassword == inputPassword;
         }
     }
 }
