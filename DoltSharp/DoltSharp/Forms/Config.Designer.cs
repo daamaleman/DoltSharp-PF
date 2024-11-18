@@ -272,6 +272,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConfigPersonalizacion";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Resizable = false;
             this.Text = "Configuracion y Personalización";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace DoltSharp
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)

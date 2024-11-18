@@ -429,6 +429,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsuarioConfig";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Resizable = false;
             this.Text = "Configuracion de Usuario";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Default;

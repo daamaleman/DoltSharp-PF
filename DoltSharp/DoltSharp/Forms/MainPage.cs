@@ -20,21 +20,21 @@ namespace DoltSharp
 
         private void BtnSalida_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void BtnEditarInformarcion_Click(object sender, EventArgs e)
         {
             UsuarioConfig usuarioConfig = new UsuarioConfig();
             usuarioConfig.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void BtnNewTask_Click(object sender, EventArgs e)
         {
             Task task = new Task();
             task.Show();
-            this.Close();   
+            this.Hide();   
 
         }
 
@@ -49,7 +49,7 @@ namespace DoltSharp
         {
             ConfigPersonalizacion configPersonalizacion = new ConfigPersonalizacion();
             configPersonalizacion.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

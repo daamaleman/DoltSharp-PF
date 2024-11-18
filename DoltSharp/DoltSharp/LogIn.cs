@@ -99,7 +99,7 @@ namespace DoltSharp
             }
         }
 
-        private void BtnRegister_Click(object sender, EventArgs e)
+        private void LnRegister_Click(object sender, EventArgs e)
         {
             // Redirige a la ventana de registro y oculta la ventana actual
             Register register = new Register();

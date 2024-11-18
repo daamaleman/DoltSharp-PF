@@ -169,7 +169,7 @@ namespace DoltSharp
                 // Regresar a la página principal
                 MainPage mainPage = new MainPage();
                 mainPage.Show();
-                this.Hide();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -204,7 +204,7 @@ namespace DoltSharp
             // Regresar a la página principal
             MainPage mainPage = new MainPage();
             mainPage.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

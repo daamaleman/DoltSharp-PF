@@ -365,6 +365,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Register";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Resizable = false;
             this.Text = "Registro";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -36,10 +36,10 @@
             this.TxtEmail = new MetroFramework.Controls.MetroTextBox();
             this.TxtPw = new MetroFramework.Controls.MetroTextBox();
             this.BtnLogin = new MetroFramework.Controls.MetroButton();
-            this.BtnRegister = new MetroFramework.Controls.MetroButton();
-            this.BtnResetPw = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CbxSee = new MetroFramework.Controls.MetroCheckBox();
+            this.LnResetPw = new MetroFramework.Controls.MetroLink();
+            this.LnRegister = new MetroFramework.Controls.MetroLink();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,20 +64,20 @@
             // LblResetPw
             // 
             this.LblResetPw.AutoSize = true;
-            this.LblResetPw.Location = new System.Drawing.Point(113, 425);
+            this.LblResetPw.Location = new System.Drawing.Point(155, 425);
             this.LblResetPw.Name = "LblResetPw";
-            this.LblResetPw.Size = new System.Drawing.Size(160, 20);
+            this.LblResetPw.Size = new System.Drawing.Size(166, 20);
             this.LblResetPw.TabIndex = 2;
-            this.LblResetPw.Text = "Olvidaste tu contraseña?";
+            this.LblResetPw.Text = "¿Olvidaste tu contraseña?";
             // 
             // LblNoAccount
             // 
             this.LblNoAccount.AutoSize = true;
-            this.LblNoAccount.Location = new System.Drawing.Point(125, 486);
+            this.LblNoAccount.Location = new System.Drawing.Point(165, 483);
             this.LblNoAccount.Name = "LblNoAccount";
-            this.LblNoAccount.Size = new System.Drawing.Size(148, 20);
+            this.LblNoAccount.Size = new System.Drawing.Size(154, 20);
             this.LblNoAccount.TabIndex = 3;
-            this.LblNoAccount.Text = "No tienes una cuenta?";
+            this.LblNoAccount.Text = "¿No tienes una cuenta?";
             // 
             // TxtEmail
             // 
@@ -149,25 +149,6 @@
             this.BtnLogin.UseSelectable = true;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
-            // BtnRegister
-            // 
-            this.BtnRegister.Location = new System.Drawing.Point(327, 483);
-            this.BtnRegister.Name = "BtnRegister";
-            this.BtnRegister.Size = new System.Drawing.Size(142, 23);
-            this.BtnRegister.TabIndex = 6;
-            this.BtnRegister.Text = "Registrarse";
-            this.BtnRegister.UseSelectable = true;
-            this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
-            // 
-            // BtnResetPw
-            // 
-            this.BtnResetPw.Location = new System.Drawing.Point(327, 422);
-            this.BtnResetPw.Name = "BtnResetPw";
-            this.BtnResetPw.Size = new System.Drawing.Size(175, 23);
-            this.BtnResetPw.TabIndex = 5;
-            this.BtnResetPw.Text = "Recuperar Contraseña";
-            this.BtnResetPw.UseSelectable = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -189,15 +170,34 @@
             this.CbxSee.UseSelectable = true;
             this.CbxSee.CheckedChanged += new System.EventHandler(this.CbxSee_CheckedChanged);
             // 
+            // LnResetPw
+            // 
+            this.LnResetPw.Location = new System.Drawing.Point(361, 425);
+            this.LnResetPw.Name = "LnResetPw";
+            this.LnResetPw.Size = new System.Drawing.Size(199, 23);
+            this.LnResetPw.TabIndex = 10;
+            this.LnResetPw.Text = "Recuperar Contraseña";
+            this.LnResetPw.UseSelectable = true;
+            // 
+            // LnRegister
+            // 
+            this.LnRegister.Location = new System.Drawing.Point(372, 483);
+            this.LnRegister.Name = "LnRegister";
+            this.LnRegister.Size = new System.Drawing.Size(98, 23);
+            this.LnRegister.TabIndex = 11;
+            this.LnRegister.Text = "Regístrate";
+            this.LnRegister.UseSelectable = true;
+            this.LnRegister.Click += new System.EventHandler(this.LnRegister_Click);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 549);
+            this.Controls.Add(this.LnRegister);
+            this.Controls.Add(this.LnResetPw);
             this.Controls.Add(this.CbxSee);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.BtnResetPw);
-            this.Controls.Add(this.BtnRegister);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.TxtPw);
             this.Controls.Add(this.TxtEmail);
@@ -208,6 +208,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LogIn";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Resizable = false;
             this.Text = "Iniciar Sesion";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -225,10 +226,10 @@
         private MetroFramework.Controls.MetroTextBox TxtEmail;
         private MetroFramework.Controls.MetroTextBox TxtPw;
         private MetroFramework.Controls.MetroButton BtnLogin;
-        private MetroFramework.Controls.MetroButton BtnRegister;
-        private MetroFramework.Controls.MetroButton BtnResetPw;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroCheckBox CbxSee;
+        private MetroFramework.Controls.MetroLink LnResetPw;
+        private MetroFramework.Controls.MetroLink LnRegister;
     }
 }
 

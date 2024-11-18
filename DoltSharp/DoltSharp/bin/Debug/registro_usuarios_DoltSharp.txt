@@ -14,3 +14,11 @@ Correo: user@gmail.com
 Fecha de nacimiento: 05/01/1999
 Contraseña: MTIzNDU2Nzg=
 -------------------------------
+-------------------------------
+ID: USR97086
+Nombre: Diedereich
+Apellido: Aleman
+Correo: diedereich@gmail.com
+Fecha de nacimiento: 31/12/2006
+Contraseña: MTIzNDU2Nzg=
+-------------------------------

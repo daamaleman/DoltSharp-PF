@@ -70,10 +70,10 @@ namespace DoltSharp
                 _userRegisterFile.RegisterUser(TxtRegisterName.Text, TxtRegisterLastName.Text, TxtRegisterEmail.Text, DtpBirthDate.Value, TxtRegisterPw.Text);
                 MetroFramework.MetroMessageBox.Show(this, "Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Redirigir al Login
-                LogIn logIn = new LogIn();
-                logIn.Show();
-                this.Hide();
+                //// Redirigir al Login
+                //LogIn logIn = new LogIn();
+                //logIn.ShowDialog();
+                //this.Close();
             }
             catch (Exception ex)
             {
@@ -97,7 +97,7 @@ namespace DoltSharp
         {
             LogIn logIn = new LogIn();
             logIn.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
