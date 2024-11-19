@@ -38,7 +38,12 @@ namespace DoltSharp
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
-           // this.Close();
+            this.Close();
+        }
+
+        private void Task_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

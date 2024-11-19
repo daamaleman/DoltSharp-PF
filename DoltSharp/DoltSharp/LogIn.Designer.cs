@@ -46,36 +46,42 @@
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(192, 262);
+            this.LblEmail.Location = new System.Drawing.Point(79, 212);
+            this.LblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(45, 20);
+            this.LblEmail.Size = new System.Drawing.Size(44, 19);
             this.LblEmail.TabIndex = 0;
             this.LblEmail.Text = "Email:";
             // 
             // LblPw
             // 
             this.LblPw.AutoSize = true;
-            this.LblPw.Location = new System.Drawing.Point(155, 306);
+            this.LblPw.Location = new System.Drawing.Point(51, 248);
+            this.LblPw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblPw.Name = "LblPw";
-            this.LblPw.Size = new System.Drawing.Size(82, 20);
+            this.LblPw.Size = new System.Drawing.Size(78, 19);
             this.LblPw.TabIndex = 1;
             this.LblPw.Text = "Contraseña:";
             // 
             // LblResetPw
             // 
             this.LblResetPw.AutoSize = true;
-            this.LblResetPw.Location = new System.Drawing.Point(155, 425);
+            this.LblResetPw.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LblResetPw.Location = new System.Drawing.Point(51, 344);
+            this.LblResetPw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblResetPw.Name = "LblResetPw";
-            this.LblResetPw.Size = new System.Drawing.Size(166, 20);
+            this.LblResetPw.Size = new System.Drawing.Size(157, 19);
             this.LblResetPw.TabIndex = 2;
             this.LblResetPw.Text = "¿Olvidaste tu contraseña?";
             // 
             // LblNoAccount
             // 
             this.LblNoAccount.AutoSize = true;
-            this.LblNoAccount.Location = new System.Drawing.Point(165, 483);
+            this.LblNoAccount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LblNoAccount.Location = new System.Drawing.Point(59, 391);
+            this.LblNoAccount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblNoAccount.Name = "LblNoAccount";
-            this.LblNoAccount.Size = new System.Drawing.Size(154, 20);
+            this.LblNoAccount.Size = new System.Drawing.Size(143, 19);
             this.LblNoAccount.TabIndex = 3;
             this.LblNoAccount.Text = "¿No tienes una cuenta?";
             // 
@@ -85,16 +91,18 @@
             // 
             // 
             this.TxtEmail.CustomButton.Image = null;
-            this.TxtEmail.CustomButton.Location = new System.Drawing.Point(180, 1);
+            this.TxtEmail.CustomButton.Location = new System.Drawing.Point(100, 1);
+            this.TxtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtEmail.CustomButton.Name = "";
-            this.TxtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtEmail.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.TxtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtEmail.CustomButton.TabIndex = 1;
             this.TxtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtEmail.CustomButton.UseSelectable = true;
             this.TxtEmail.CustomButton.Visible = false;
             this.TxtEmail.Lines = new string[0];
-            this.TxtEmail.Location = new System.Drawing.Point(259, 259);
+            this.TxtEmail.Location = new System.Drawing.Point(129, 209);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtEmail.MaxLength = 32767;
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.PasswordChar = '\0';
@@ -103,7 +111,7 @@
             this.TxtEmail.SelectionLength = 0;
             this.TxtEmail.SelectionStart = 0;
             this.TxtEmail.ShortcutsEnabled = true;
-            this.TxtEmail.Size = new System.Drawing.Size(202, 23);
+            this.TxtEmail.Size = new System.Drawing.Size(152, 19);
             this.TxtEmail.TabIndex = 1;
             this.TxtEmail.UseSelectable = true;
             this.TxtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -115,16 +123,18 @@
             // 
             // 
             this.TxtPw.CustomButton.Image = null;
-            this.TxtPw.CustomButton.Location = new System.Drawing.Point(180, 1);
+            this.TxtPw.CustomButton.Location = new System.Drawing.Point(100, 1);
+            this.TxtPw.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPw.CustomButton.Name = "";
-            this.TxtPw.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtPw.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.TxtPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtPw.CustomButton.TabIndex = 1;
             this.TxtPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TxtPw.CustomButton.UseSelectable = true;
             this.TxtPw.CustomButton.Visible = false;
             this.TxtPw.Lines = new string[0];
-            this.TxtPw.Location = new System.Drawing.Point(259, 303);
+            this.TxtPw.Location = new System.Drawing.Point(129, 245);
+            this.TxtPw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPw.MaxLength = 32767;
             this.TxtPw.Name = "TxtPw";
             this.TxtPw.PasswordChar = '*';
@@ -133,7 +143,7 @@
             this.TxtPw.SelectionLength = 0;
             this.TxtPw.SelectionStart = 0;
             this.TxtPw.ShortcutsEnabled = true;
-            this.TxtPw.Size = new System.Drawing.Size(202, 23);
+            this.TxtPw.Size = new System.Drawing.Size(152, 19);
             this.TxtPw.TabIndex = 2;
             this.TxtPw.UseSelectable = true;
             this.TxtPw.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -141,9 +151,11 @@
             // 
             // BtnLogin
             // 
-            this.BtnLogin.Location = new System.Drawing.Point(288, 354);
+            this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLogin.Location = new System.Drawing.Point(151, 287);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(136, 36);
+            this.BtnLogin.Size = new System.Drawing.Size(102, 29);
             this.BtnLogin.TabIndex = 4;
             this.BtnLogin.Text = "Iniciar Sesion";
             this.BtnLogin.UseSelectable = true;
@@ -152,9 +164,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(230, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(129, 62);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -162,9 +175,11 @@
             // CbxSee
             // 
             this.CbxSee.AutoSize = true;
-            this.CbxSee.Location = new System.Drawing.Point(488, 303);
+            this.CbxSee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CbxSee.Location = new System.Drawing.Point(301, 245);
+            this.CbxSee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CbxSee.Name = "CbxSee";
-            this.CbxSee.Size = new System.Drawing.Size(43, 17);
+            this.CbxSee.Size = new System.Drawing.Size(39, 15);
             this.CbxSee.TabIndex = 3;
             this.CbxSee.Text = "Ver";
             this.CbxSee.UseSelectable = true;
@@ -172,18 +187,22 @@
             // 
             // LnResetPw
             // 
-            this.LnResetPw.Location = new System.Drawing.Point(361, 425);
+            this.LnResetPw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnResetPw.Location = new System.Drawing.Point(206, 344);
+            this.LnResetPw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LnResetPw.Name = "LnResetPw";
-            this.LnResetPw.Size = new System.Drawing.Size(199, 23);
+            this.LnResetPw.Size = new System.Drawing.Size(149, 19);
             this.LnResetPw.TabIndex = 10;
             this.LnResetPw.Text = "Recuperar Contraseña";
             this.LnResetPw.UseSelectable = true;
             // 
             // LnRegister
             // 
-            this.LnRegister.Location = new System.Drawing.Point(372, 483);
+            this.LnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnRegister.Location = new System.Drawing.Point(214, 391);
+            this.LnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LnRegister.Name = "LnRegister";
-            this.LnRegister.Size = new System.Drawing.Size(98, 23);
+            this.LnRegister.Size = new System.Drawing.Size(74, 19);
             this.LnRegister.TabIndex = 11;
             this.LnRegister.Text = "Regístrate";
             this.LnRegister.UseSelectable = true;
@@ -191,9 +210,9 @@
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 549);
+            this.ClientSize = new System.Drawing.Size(392, 446);
             this.Controls.Add(this.LnRegister);
             this.Controls.Add(this.LnResetPw);
             this.Controls.Add(this.CbxSee);
@@ -205,9 +224,7 @@
             this.Controls.Add(this.LblResetPw);
             this.Controls.Add(this.LblPw);
             this.Controls.Add(this.LblEmail);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LogIn";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Text = "Iniciar Sesion";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

@@ -47,14 +47,15 @@
             this.BttnRestablecerConfig = new MetroFramework.Controls.MetroButton();
             this.BttnGuardarConfig = new MetroFramework.Controls.MetroButton();
             this.BtnReturn = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblResolucion
             // 
             this.LblResolucion.AutoSize = true;
             this.LblResolucion.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblResolucion.Location = new System.Drawing.Point(168, 108);
-            this.LblResolucion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblResolucion.Location = new System.Drawing.Point(139, 182);
             this.LblResolucion.Name = "LblResolucion";
             this.LblResolucion.Size = new System.Drawing.Size(94, 25);
             this.LblResolucion.TabIndex = 0;
@@ -65,8 +66,7 @@
             // 
             this.LblTema.AutoSize = true;
             this.LblTema.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblTema.Location = new System.Drawing.Point(225, 164);
-            this.LblTema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTema.Location = new System.Drawing.Point(182, 227);
             this.LblTema.Name = "LblTema";
             this.LblTema.Size = new System.Drawing.Size(51, 25);
             this.LblTema.TabIndex = 1;
@@ -76,8 +76,7 @@
             // 
             this.LblEncenderIniciar.AutoSize = true;
             this.LblEncenderIniciar.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblEncenderIniciar.Location = new System.Drawing.Point(92, 214);
-            this.LblEncenderIniciar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblEncenderIniciar.Location = new System.Drawing.Point(82, 268);
             this.LblEncenderIniciar.Name = "LblEncenderIniciar";
             this.LblEncenderIniciar.Size = new System.Drawing.Size(151, 25);
             this.LblEncenderIniciar.TabIndex = 2;
@@ -86,20 +85,18 @@
             // LblFiltrarTareas
             // 
             this.LblFiltrarTareas.AutoSize = true;
-            this.LblFiltrarTareas.Location = new System.Drawing.Point(109, 346);
-            this.LblFiltrarTareas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblFiltrarTareas.Location = new System.Drawing.Point(95, 375);
             this.LblFiltrarTareas.Name = "LblFiltrarTareas";
-            this.LblFiltrarTareas.Size = new System.Drawing.Size(115, 20);
+            this.LblFiltrarTareas.Size = new System.Drawing.Size(112, 19);
             this.LblFiltrarTareas.TabIndex = 3;
             this.LblFiltrarTareas.Text = "Filtrar Tareas por:";
             // 
             // LblFiltrarProyectos
             // 
             this.LblFiltrarProyectos.AutoSize = true;
-            this.LblFiltrarProyectos.Location = new System.Drawing.Point(425, 346);
-            this.LblFiltrarProyectos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblFiltrarProyectos.Location = new System.Drawing.Point(332, 375);
             this.LblFiltrarProyectos.Name = "LblFiltrarProyectos";
-            this.LblFiltrarProyectos.Size = new System.Drawing.Size(137, 20);
+            this.LblFiltrarProyectos.Size = new System.Drawing.Size(133, 19);
             this.LblFiltrarProyectos.TabIndex = 4;
             this.LblFiltrarProyectos.Text = "Filtrar Proyectos por:";
             // 
@@ -107,8 +104,7 @@
             // 
             this.LblEjecutarSegundoPlano.AutoSize = true;
             this.LblEjecutarSegundoPlano.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblEjecutarSegundoPlano.Location = new System.Drawing.Point(7, 265);
-            this.LblEjecutarSegundoPlano.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblEjecutarSegundoPlano.Location = new System.Drawing.Point(18, 309);
             this.LblEjecutarSegundoPlano.Name = "LblEjecutarSegundoPlano";
             this.LblEjecutarSegundoPlano.Size = new System.Drawing.Size(215, 25);
             this.LblEjecutarSegundoPlano.TabIndex = 5;
@@ -116,46 +112,46 @@
             // 
             // metroComboBox1
             // 
+            this.metroComboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Location = new System.Drawing.Point(341, 108);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(269, 182);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(160, 30);
+            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
             this.metroComboBox1.TabIndex = 6;
             this.metroComboBox1.UseSelectable = true;
             // 
             // metroComboBox2
             // 
+            this.metroComboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 24;
+            this.metroComboBox2.ItemHeight = 23;
             this.metroComboBox2.Items.AddRange(new object[] {
             "Orden Alfabetico (A-Z)"});
-            this.metroComboBox2.Location = new System.Drawing.Point(109, 391);
-            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.metroComboBox2.Location = new System.Drawing.Point(95, 412);
             this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(160, 30);
+            this.metroComboBox2.Size = new System.Drawing.Size(121, 29);
             this.metroComboBox2.TabIndex = 7;
             this.metroComboBox2.UseSelectable = true;
             // 
             // metroComboBox3
             // 
+            this.metroComboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 24;
-            this.metroComboBox3.Location = new System.Drawing.Point(425, 391);
-            this.metroComboBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.metroComboBox3.ItemHeight = 23;
+            this.metroComboBox3.Location = new System.Drawing.Point(332, 412);
             this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(160, 30);
+            this.metroComboBox3.Size = new System.Drawing.Size(121, 29);
             this.metroComboBox3.TabIndex = 8;
             this.metroComboBox3.UseSelectable = true;
             // 
             // ChkBlanco
             // 
             this.ChkBlanco.AutoSize = true;
-            this.ChkBlanco.Location = new System.Drawing.Point(341, 176);
-            this.ChkBlanco.Margin = new System.Windows.Forms.Padding(4);
+            this.ChkBlanco.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChkBlanco.Location = new System.Drawing.Point(269, 237);
             this.ChkBlanco.Name = "ChkBlanco";
-            this.ChkBlanco.Size = new System.Drawing.Size(62, 17);
+            this.ChkBlanco.Size = new System.Drawing.Size(59, 15);
             this.ChkBlanco.TabIndex = 9;
             this.ChkBlanco.Text = "Blanco";
             this.ChkBlanco.UseSelectable = true;
@@ -163,10 +159,10 @@
             // ChkNegro
             // 
             this.ChkNegro.AutoSize = true;
-            this.ChkNegro.Location = new System.Drawing.Point(425, 176);
-            this.ChkNegro.Margin = new System.Windows.Forms.Padding(4);
+            this.ChkNegro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChkNegro.Location = new System.Drawing.Point(332, 237);
             this.ChkNegro.Name = "ChkNegro";
-            this.ChkNegro.Size = new System.Drawing.Size(62, 17);
+            this.ChkNegro.Size = new System.Drawing.Size(56, 15);
             this.ChkNegro.TabIndex = 10;
             this.ChkNegro.Text = "Negro";
             this.ChkNegro.UseSelectable = true;
@@ -174,10 +170,10 @@
             // ChkSi
             // 
             this.ChkSi.AutoSize = true;
-            this.ChkSi.Location = new System.Drawing.Point(341, 225);
-            this.ChkSi.Margin = new System.Windows.Forms.Padding(4);
+            this.ChkSi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChkSi.Location = new System.Drawing.Point(269, 277);
             this.ChkSi.Name = "ChkSi";
-            this.ChkSi.Size = new System.Drawing.Size(34, 17);
+            this.ChkSi.Size = new System.Drawing.Size(32, 15);
             this.ChkSi.TabIndex = 11;
             this.ChkSi.Text = "Si";
             this.ChkSi.UseSelectable = true;
@@ -185,10 +181,10 @@
             // ChkNo
             // 
             this.ChkNo.AutoSize = true;
-            this.ChkNo.Location = new System.Drawing.Point(425, 225);
-            this.ChkNo.Margin = new System.Windows.Forms.Padding(4);
+            this.ChkNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChkNo.Location = new System.Drawing.Point(332, 277);
             this.ChkNo.Name = "ChkNo";
-            this.ChkNo.Size = new System.Drawing.Size(42, 17);
+            this.ChkNo.Size = new System.Drawing.Size(39, 15);
             this.ChkNo.TabIndex = 12;
             this.ChkNo.Text = "No";
             this.ChkNo.UseSelectable = true;
@@ -196,10 +192,10 @@
             // ChkSi2
             // 
             this.ChkSi2.AutoSize = true;
-            this.ChkSi2.Location = new System.Drawing.Point(341, 276);
-            this.ChkSi2.Margin = new System.Windows.Forms.Padding(4);
+            this.ChkSi2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChkSi2.Location = new System.Drawing.Point(269, 318);
             this.ChkSi2.Name = "ChkSi2";
-            this.ChkSi2.Size = new System.Drawing.Size(34, 17);
+            this.ChkSi2.Size = new System.Drawing.Size(32, 15);
             this.ChkSi2.TabIndex = 13;
             this.ChkSi2.Text = "Si";
             this.ChkSi2.UseSelectable = true;
@@ -207,30 +203,30 @@
             // ChkNo2
             // 
             this.ChkNo2.AutoSize = true;
-            this.ChkNo2.Location = new System.Drawing.Point(425, 274);
-            this.ChkNo2.Margin = new System.Windows.Forms.Padding(4);
+            this.ChkNo2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChkNo2.Location = new System.Drawing.Point(332, 317);
             this.ChkNo2.Name = "ChkNo2";
-            this.ChkNo2.Size = new System.Drawing.Size(42, 17);
+            this.ChkNo2.Size = new System.Drawing.Size(39, 15);
             this.ChkNo2.TabIndex = 14;
             this.ChkNo2.Text = "No";
             this.ChkNo2.UseSelectable = true;
             // 
             // BttnRestablecerConfig
             // 
-            this.BttnRestablecerConfig.Location = new System.Drawing.Point(141, 498);
-            this.BttnRestablecerConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.BttnRestablecerConfig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BttnRestablecerConfig.Location = new System.Drawing.Point(119, 499);
             this.BttnRestablecerConfig.Name = "BttnRestablecerConfig";
-            this.BttnRestablecerConfig.Size = new System.Drawing.Size(201, 37);
+            this.BttnRestablecerConfig.Size = new System.Drawing.Size(151, 30);
             this.BttnRestablecerConfig.TabIndex = 15;
             this.BttnRestablecerConfig.Text = "Reestablecer Configuración";
             this.BttnRestablecerConfig.UseSelectable = true;
             // 
             // BttnGuardarConfig
             // 
-            this.BttnGuardarConfig.Location = new System.Drawing.Point(384, 498);
-            this.BttnGuardarConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.BttnGuardarConfig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BttnGuardarConfig.Location = new System.Drawing.Point(301, 499);
             this.BttnGuardarConfig.Name = "BttnGuardarConfig";
-            this.BttnGuardarConfig.Size = new System.Drawing.Size(173, 37);
+            this.BttnGuardarConfig.Size = new System.Drawing.Size(130, 30);
             this.BttnGuardarConfig.TabIndex = 16;
             this.BttnGuardarConfig.Text = "Guardar Configuracion";
             this.BttnGuardarConfig.UseSelectable = true;
@@ -239,18 +235,31 @@
             // 
             this.BtnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnReturn.BackgroundImage")));
             this.BtnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnReturn.Location = new System.Drawing.Point(635, 34);
+            this.BtnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnReturn.Location = new System.Drawing.Point(454, 62);
+            this.BtnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReturn.Name = "BtnReturn";
-            this.BtnReturn.Size = new System.Drawing.Size(63, 56);
+            this.BtnReturn.Size = new System.Drawing.Size(47, 46);
             this.BtnReturn.TabIndex = 17;
             this.BtnReturn.UseSelectable = true;
             this.BtnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(227, 63);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // ConfigPersonalizacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 596);
+            this.ClientSize = new System.Drawing.Size(523, 563);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnReturn);
             this.Controls.Add(this.BttnGuardarConfig);
             this.Controls.Add(this.BttnRestablecerConfig);
@@ -269,12 +278,11 @@
             this.Controls.Add(this.LblEncenderIniciar);
             this.Controls.Add(this.LblTema);
             this.Controls.Add(this.LblResolucion);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConfigPersonalizacion";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Text = "Configuracion y Personalización";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +308,6 @@
         private MetroFramework.Controls.MetroButton BttnRestablecerConfig;
         private MetroFramework.Controls.MetroButton BttnGuardarConfig;
         private MetroFramework.Controls.MetroButton BtnReturn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

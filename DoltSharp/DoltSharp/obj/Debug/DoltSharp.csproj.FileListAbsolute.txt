@@ -178,3 +178,4 @@ C:\Users\itsda\Desktop\Proyect\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\D
 C:\Users\itsda\Desktop\Proyect\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.dll
 C:\Users\itsda\Desktop\Proyect\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\itsda\Desktop\Proyect\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
+C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MaterialSkin.dll

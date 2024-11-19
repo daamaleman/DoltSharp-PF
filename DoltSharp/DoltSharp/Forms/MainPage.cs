@@ -1,4 +1,6 @@
 ﻿using DoltSharp.Models;
+using DoltSharp.Properties;
+using MaterialSkin.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace DoltSharp
 {
     public partial class MainPage : MetroFramework.Forms.MetroForm
@@ -17,6 +20,7 @@ namespace DoltSharp
         {
             InitializeComponent();
         }
+        
 
         private void BtnSalida_Click(object sender, EventArgs e)
         {
@@ -51,5 +55,10 @@ namespace DoltSharp
             configPersonalizacion.Show();
             this.Close();
         }
+
+        // metodos para animar el logo (si es que funciona) 
+        //Nota estube intentandolo y no parece funcionar porque Resources no reconoce ningun archivo xd
+
+
     }
 }
