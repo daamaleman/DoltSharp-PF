@@ -17,33 +17,11 @@ namespace DoltSharp
             InitializeComponent();
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnReturn_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Close();
-        }
-
-        private void close()
-        {
-            
-        }
-
-        private void Task_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MainPage mainPage = new MainPage();
-            mainPage.Show();
-            this.Close();
-        }
-
-        private void Task_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -55,7 +55,6 @@
             this.BtnAdd.TabIndex = 6;
             this.BtnAdd.Text = "Crear";
             this.BtnAdd.UseSelectable = true;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // LblName
             // 
@@ -263,8 +262,6 @@
             this.Resizable = false;
             this.Text = "Agregar Tarea";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Task_FormClosing);
-            this.Load += new System.EventHandler(this.Task_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
