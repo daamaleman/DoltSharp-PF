@@ -56,6 +56,18 @@ namespace DoltSharp
             this.Close();
         }
 
+        //A la hora de cerrar la ventana del programa se cierra la aplicacion y se detiene el debug
+        static class Program
+        {
+            [STAThread]
+            static void Main()
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new FrmMainPage());
+            }
+        }
+
         // metodos para animar el logo (si es que funciona) 
         //Nota estube intentandolo y no parece funcionar porque Resources no reconoce ningun archivo xd
 

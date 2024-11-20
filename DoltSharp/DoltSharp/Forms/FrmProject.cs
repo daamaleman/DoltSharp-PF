@@ -40,7 +40,7 @@ namespace DoltSharp
                 string.IsNullOrWhiteSpace(resources))
             {
                 MetroFramework.MetroMessageBox.Show(this,
-                    "Por favor, llena todos los campos obligatorios.",
+                    "Llena todos los campos.",
                     "Advertencia",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -61,6 +61,12 @@ namespace DoltSharp
                     "Éxito",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+
+                // Redirige a la pantalla principal después de guardar.
+                FrmMainPage mainPage = new FrmMainPage();
+                mainPage.Show();
+                this.Close(); // Cierra la ventana actual.
+
             }
             catch (Exception ex)
             {

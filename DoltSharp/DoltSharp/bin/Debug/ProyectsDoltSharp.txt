@@ -1,7 +1,14 @@
 -------------------------------
-Nombre del Proyecto: thgt
-Descripción: tyhrt
-Fecha de Inicio: 17/11/2024
-Fecha Límite: 17/11/2024
-Asignaciones de Recursos: rthrt
+Nombre del Proyecto: Corregir los close de los forms
+Descripción: defdwefwe
+Fecha de Inicio: 20/11/2024
+Fecha Límite: 01/03/2024
+Asignaciones de Recursos: tosdos
+-------------------------------
+-------------------------------
+Nombre del Proyecto: tht
+Descripción: rthrty
+Fecha de Inicio: 01/02/2000
+Fecha Límite: 07/02/1990
+Asignaciones de Recursos: thrtr
 -------------------------------
