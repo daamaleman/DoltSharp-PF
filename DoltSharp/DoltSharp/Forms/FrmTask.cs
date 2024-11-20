@@ -5,21 +5,20 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoltSharp
 {
-    public partial class Task : MetroFramework.Forms.MetroForm
+    public partial class FrmTask : MetroFramework.Forms.MetroForm
     {
-        public Task()
+        public FrmTask()
         {
             InitializeComponent();
         }
 
         private void BtnReturn_Click(object sender, EventArgs e)
         {
-            MainPage mainPage = new MainPage();
+            FrmMainPage mainPage = new FrmMainPage();
             mainPage.Show();
             this.Close();
         }

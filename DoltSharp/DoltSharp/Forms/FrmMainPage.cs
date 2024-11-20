@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace DoltSharp
 {
-    public partial class MainPage : MetroFramework.Forms.MetroForm
+    public partial class FrmMainPage : MetroFramework.Forms.MetroForm
     {
-        public MainPage()
+        public FrmMainPage()
         {
             InitializeComponent();
         }
@@ -29,14 +29,14 @@ namespace DoltSharp
 
         private void BtnEditarInformarcion_Click(object sender, EventArgs e)
         {
-            UsuarioConfig usuarioConfig = new UsuarioConfig();
+            FrmUsuarioConfig usuarioConfig = new FrmUsuarioConfig();
             usuarioConfig.Show();
             this.Close();
         }
 
         private void BtnNewTask_Click(object sender, EventArgs e)
         {
-            Task task = new Task();
+            FrmTask task = new FrmTask();
             task.Show();
             this.Hide();   
 
@@ -44,14 +44,14 @@ namespace DoltSharp
 
         private void BtnNewProject_Click(object sender, EventArgs e)
         {
-            Project project = new Project();
+            FrmProject project = new FrmProject();
             project.Show();
             this.Hide();
         }
 
         private void BtnConfiguration_Click(object sender, EventArgs e)
         {
-            ConfigPersonalizacion configPersonalizacion = new ConfigPersonalizacion();
+            FrmConfig configPersonalizacion = new FrmConfig();
             configPersonalizacion.Show();
             this.Close();
         }

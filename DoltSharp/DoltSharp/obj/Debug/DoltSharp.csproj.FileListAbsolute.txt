@@ -200,3 +200,24 @@ C:\Users\Dell\Documents\2DO SEMESTRE\Analisis y Diseño\DoltSharp\DoltSharp-Proy
 C:\Users\Dell\Documents\2DO SEMESTRE\Analisis y Diseño\DoltSharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
 C:\Users\Dell\Documents\2DO SEMESTRE\Analisis y Diseño\DoltSharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\Dell\Documents\2DO SEMESTRE\Analisis y Diseño\DoltSharp\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MaterialSkin.dll
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Design.dll
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.dll
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Fonts.dll
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.AssemblyReference.cache
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmConfig.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmProject.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmTask.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmUsuarioConfig.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.LogIn.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmMainPage.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Properties.Resources.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmRegister.resources
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.GenerateResource.cache
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.CoreCompileInputs.cache
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.CopyComplete
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
+D:\Nueva carpeta\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb

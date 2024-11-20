@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoltSharp.Models
 {
-    internal class Projects
+    internal class Project
     {
         public int ProjectId { get; set; }
         public string ProjectTitle { get; set; }

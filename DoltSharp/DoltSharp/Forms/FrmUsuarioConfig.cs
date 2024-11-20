@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace DoltSharp
 {
-    public partial class UsuarioConfig : MetroFramework.Forms.MetroForm
+    public partial class FrmUsuarioConfig : MetroFramework.Forms.MetroForm
     {
-        public UsuarioConfig()
+        public FrmUsuarioConfig()
         {
             InitializeComponent();
         }
@@ -167,7 +167,7 @@ namespace DoltSharp
                 MetroFramework.MetroMessageBox.Show(this, "Información actualizada.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Regresar a la página principal
-                MainPage mainPage = new MainPage();
+                FrmMainPage mainPage = new FrmMainPage();
                 mainPage.Show();
                 this.Close();
             }
@@ -202,7 +202,7 @@ namespace DoltSharp
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             // Regresar a la página principal
-            MainPage mainPage = new MainPage();
+            FrmMainPage mainPage = new FrmMainPage();
             mainPage.Show();
             this.Close();
         }

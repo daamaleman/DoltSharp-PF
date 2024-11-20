@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DoltSharp
 {
-    public partial class ConfigPersonalizacion : MetroFramework.Forms.MetroForm
+    public partial class FrmConfig : MetroFramework.Forms.MetroForm
     {
-        public ConfigPersonalizacion()
+        public FrmConfig()
         {
             InitializeComponent();
         }
 
         private void BtnReturn_Click(object sender, EventArgs e)
         {
-            MainPage mainPage = new MainPage();
+            FrmMainPage mainPage = new FrmMainPage();
             mainPage.Show();
             this.Hide();
         }

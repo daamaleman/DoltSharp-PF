@@ -75,7 +75,7 @@ namespace DoltSharp
             if (loginSuccessful)
             {
                 MetroFramework.MetroMessageBox.Show(this, "Bienvenido", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                new MainPage().Show(); 
+                new FrmMainPage().Show(); 
                 this.Hide();
             }
             else
@@ -102,7 +102,7 @@ namespace DoltSharp
         private void LnRegister_Click(object sender, EventArgs e)
         {
             // Redirige a la ventana de registro y oculta la ventana actual
-            Register register = new Register();
+            FrmRegister register = new FrmRegister();
             register.Show();
             this.Hide();
         }

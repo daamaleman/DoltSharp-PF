@@ -1,6 +1,6 @@
 ﻿namespace DoltSharp
 {
-    partial class MainPage
+    partial class FrmMainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainPage));
             this.LblWelcome = new MetroFramework.Controls.MetroLabel();
             this.LblTaskView = new MetroFramework.Controls.MetroLabel();
             this.LlblProjectsView = new MetroFramework.Controls.MetroLabel();
