@@ -56,7 +56,7 @@
             this.LblWelcome.AutoSize = true;
             this.LblWelcome.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblWelcome.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblWelcome.Location = new System.Drawing.Point(193, 60);
+            this.LblWelcome.Location = new System.Drawing.Point(313, 71);
             this.LblWelcome.Name = "LblWelcome";
             this.LblWelcome.Size = new System.Drawing.Size(206, 25);
             this.LblWelcome.TabIndex = 0;
@@ -65,7 +65,7 @@
             // LblTaskView
             // 
             this.LblTaskView.AutoSize = true;
-            this.LblTaskView.Location = new System.Drawing.Point(66, 238);
+            this.LblTaskView.Location = new System.Drawing.Point(163, 248);
             this.LblTaskView.Name = "LblTaskView";
             this.LblTaskView.Size = new System.Drawing.Size(93, 19);
             this.LblTaskView.TabIndex = 3;
@@ -74,7 +74,7 @@
             // LlblProjectsView
             // 
             this.LlblProjectsView.AutoSize = true;
-            this.LlblProjectsView.Location = new System.Drawing.Point(357, 238);
+            this.LlblProjectsView.Location = new System.Drawing.Point(579, 248);
             this.LlblProjectsView.Name = "LlblProjectsView";
             this.LlblProjectsView.Size = new System.Drawing.Size(114, 19);
             this.LlblProjectsView.TabIndex = 5;
@@ -83,7 +83,7 @@
             // BtnNewTask
             // 
             this.BtnNewTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewTask.Location = new System.Drawing.Point(82, 403);
+            this.BtnNewTask.Location = new System.Drawing.Point(131, 453);
             this.BtnNewTask.Name = "BtnNewTask";
             this.BtnNewTask.Size = new System.Drawing.Size(125, 30);
             this.BtnNewTask.TabIndex = 1;
@@ -94,7 +94,7 @@
             // BtnNewProject
             // 
             this.BtnNewProject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewProject.Location = new System.Drawing.Point(366, 403);
+            this.BtnNewProject.Location = new System.Drawing.Point(579, 453);
             this.BtnNewProject.Name = "BtnNewProject";
             this.BtnNewProject.Size = new System.Drawing.Size(142, 30);
             this.BtnNewProject.TabIndex = 2;
@@ -129,7 +129,7 @@
             this.DgvTaskList.EnableHeadersVisualStyles = false;
             this.DgvTaskList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DgvTaskList.GridColor = System.Drawing.Color.Black;
-            this.DgvTaskList.Location = new System.Drawing.Point(66, 273);
+            this.DgvTaskList.Location = new System.Drawing.Point(5, 270);
             this.DgvTaskList.Name = "DgvTaskList";
             this.DgvTaskList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -143,7 +143,7 @@
             this.DgvTaskList.RowHeadersWidth = 51;
             this.DgvTaskList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvTaskList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvTaskList.Size = new System.Drawing.Size(161, 104);
+            this.DgvTaskList.Size = new System.Drawing.Size(393, 177);
             this.DgvTaskList.TabIndex = 13;
             // 
             // DgvProjectsList
@@ -173,7 +173,7 @@
             this.DgvProjectsList.EnableHeadersVisualStyles = false;
             this.DgvProjectsList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DgvProjectsList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DgvProjectsList.Location = new System.Drawing.Point(357, 273);
+            this.DgvProjectsList.Location = new System.Drawing.Point(422, 270);
             this.DgvProjectsList.Name = "DgvProjectsList";
             this.DgvProjectsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -187,14 +187,15 @@
             this.DgvProjectsList.RowHeadersWidth = 51;
             this.DgvProjectsList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvProjectsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvProjectsList.Size = new System.Drawing.Size(161, 104);
+            this.DgvProjectsList.Size = new System.Drawing.Size(393, 177);
             this.DgvProjectsList.TabIndex = 14;
+            this.DgvProjectsList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProjectsList_CellContentClick);
             // 
             // PbLogo
             // 
             this.PbLogo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
-            this.PbLogo.Location = new System.Drawing.Point(221, 92);
+            this.PbLogo.Location = new System.Drawing.Point(339, 114);
             this.PbLogo.Name = "PbLogo";
             this.PbLogo.Size = new System.Drawing.Size(146, 128);
             this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 484);
+            this.ClientSize = new System.Drawing.Size(827, 594);
             this.Controls.Add(this.DgvProjectsList);
             this.Controls.Add(this.DgvTaskList);
             this.Controls.Add(this.PbLogo);

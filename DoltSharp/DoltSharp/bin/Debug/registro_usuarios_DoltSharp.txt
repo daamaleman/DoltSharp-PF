@@ -1,0 +1,8 @@
+-------------------------------
+ID: USR14326
+Nombre: David Alejandro
+Apellido: Espinoza Largaespada
+Correo: david@gmail.com
+Fecha de nacimiento: 25/08/2005
+Contraseña: MTIzNDU2Nzg=
+-------------------------------

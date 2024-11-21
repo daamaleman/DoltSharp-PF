@@ -1,0 +1,8 @@
+-------------------------------
+ID del Proyecto: 3455
+Nombre del Proyecto: Hola
+Descripción: viva la vida
+Fecha de Inicio: 20/11/2024
+Fecha Límite: 20/11/2024
+Estado: En progreso
+-------------------------------
