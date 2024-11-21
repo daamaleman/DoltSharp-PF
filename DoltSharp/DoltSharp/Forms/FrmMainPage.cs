@@ -1,4 +1,5 @@
-﻿using DoltSharp.Models;
+﻿using DoltSharp;
+using DoltSharp.Models;
 using DoltSharp.Properties;
 using MaterialSkin.Properties;
 using System;
@@ -11,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace DoltSharp
 {
     public partial class FrmMainPage : MetroFramework.Forms.MetroForm
@@ -20,11 +20,16 @@ namespace DoltSharp
         {
             InitializeComponent();
         }
-        
 
         private void BtnSalida_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // Limpia el usuario autenticado actual.
+            LogIn.LoggedInUserId = null;
+
+            // Redirige al formulario de inicio de sesión.
+            LogIn login = new LogIn();
+            login.Show();
+            this.Close();
         }
 
         private void BtnEditarInformarcion_Click(object sender, EventArgs e)
@@ -38,8 +43,7 @@ namespace DoltSharp
         {
             FrmTask task = new FrmTask();
             task.Show();
-            this.Hide();   
-
+            this.Hide();
         }
 
         private void BtnNewProject_Click(object sender, EventArgs e)
@@ -55,22 +59,5 @@ namespace DoltSharp
             configPersonalizacion.Show();
             this.Close();
         }
-
-        //A la hora de cerrar la ventana del programa se cierra la aplicacion y se detiene el debug
-        static class Program
-        {
-            [STAThread]
-            static void Main()
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FrmMainPage());
-            }
-        }
-
-        // metodos para animar el logo (si es que funciona) 
-        //Nota estube intentandolo y no parece funcionar porque Resources no reconoce ningun archivo xd
-
-
     }
 }

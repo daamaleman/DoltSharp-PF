@@ -240,7 +240,7 @@
             this.BtnConfiguration.UseSelectable = true;
             this.BtnConfiguration.Click += new System.EventHandler(this.BtnConfiguration_Click);
             // 
-            // MainPage
+            // FrmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +256,7 @@
             this.Controls.Add(this.LlblProjectsView);
             this.Controls.Add(this.LblTaskView);
             this.Controls.Add(this.LblWelcome);
-            this.Name = "MainPage";
+            this.Name = "FrmMainPage";
             this.Resizable = false;
             this.Text = "Principal";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;

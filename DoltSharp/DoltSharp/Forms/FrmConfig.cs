@@ -23,5 +23,7 @@ namespace DoltSharp
             mainPage.Show();
             this.Hide();
         }
+
+       
     }
 }
