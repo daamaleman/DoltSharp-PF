@@ -8,10 +8,11 @@ namespace DoltSharp.Models
 {
     public class Task
     {
-        public int TaskId { get; set; }
-        public string TaskTitle { get; set; }
-        public string TaskDescription { get; set; }
-        public DateTime TaskDueDate { get; set; }
-        public bool IsCompleteTask { get; set; }
+        public int TaskId { get; set; } // Identificador único.
+        public string TaskName { get; set; } // Nombre de la tarea.
+        public string TaskDescription { get; set; } // Descripción de la tarea.
+        public DateTime TaskDeadline { get; set; } // Fecha límite.
+        public string TaskPriority { get; set; } // Prioridad de la tarea (e.g., Alta, Media, Baja).
+        public string TaskStatus { get; set; } // Estado de la tarea (e.g., Pendiente, En Proceso, Completada).
     }
 }

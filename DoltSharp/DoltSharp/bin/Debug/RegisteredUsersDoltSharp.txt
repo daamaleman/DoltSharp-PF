@@ -1,0 +1,16 @@
+-------------------------------
+ID: USR54917
+Nombre: David
+Apellido: Espinoza
+Correo: david@gmail.com
+Fecha de nacimiento: 02/02/2000
+Contraseña: MTIzNDU2Nzg=
+-------------------------------
+-------------------------------
+ID: USR73602
+Nombre: user
+Apellido: user
+Correo: user@gmail.com
+Fecha de nacimiento: 01/02/2000
+Contraseña: MTIzNDU2Nzg=
+-------------------------------

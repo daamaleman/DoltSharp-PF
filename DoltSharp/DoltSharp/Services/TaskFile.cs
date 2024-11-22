@@ -4,72 +4,140 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DoltSharp.Services;
+using DoltSharp.Models;
+using DoltSharp.Dao;
 
 namespace DoltSharp.Services
 {
-    internal class TaskFile
+    public class TaskFile
     {
-        private readonly string _filePath;
+        private readonly TaskDao _taskDao; // DAO para manejar tareas en memoria.
+        private readonly string _filePath; // Ruta del archivo donde se guardarán las tareas.
 
-        // Constructor: inicializa la clase con la ruta del archivo donde se guardarán las tareas.
+        // Constructor que inicializa el DAO y define la ruta del archivo.
         public TaskFile()
         {
+            _taskDao = new TaskDao();
             _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TasksDoltSharp.txt");
 
-            // Si el archivo no existe, lo crea vacío.
-            if (!File.Exists(_filePath))
+            // Si el archivo ya existe se cargan las tareas desde el archivo.
+            if (File.Exists(_filePath))
             {
-                File.Create(_filePath).Close();
+                LoadTasksFromFile();
             }
         }
 
-        // Método para guardar una nueva tarea en el archivo.
-        public void SaveTask(string name, string description, DateTime deadline, string priority, string status)
+        // Agrega una nueva tarea al DAO y la guarda en el archivo.
+        public void AddTask(string name, string description, DateTime deadline, string priority, string status)
         {
-            ValidateTaskFields(name, description, deadline, priority, status);
-
-            // Escribe los datos de la tarea en el archivo de forma organizada.
-            using (StreamWriter writer = new StreamWriter(_filePath, true))
+            var newTask = new DoltSharp.Models.Task
             {
-                writer.WriteLine("-------------------------------");
-                writer.WriteLine($"Nombre: {name.Trim()}");
-                writer.WriteLine($"Descripción: {description.Trim()}");
-                writer.WriteLine($"Fecha Límite: {deadline:yyyy-MM-dd}");
-                writer.WriteLine($"Prioridad: {priority.Trim()}");
-                writer.WriteLine($"Estado: {status.Trim()}");
-                writer.WriteLine("-------------------------------");
+                TaskId = GenerateRandomId(),
+                TaskName = name,
+                TaskDescription = description,
+                TaskDeadline = deadline,
+                TaskPriority = priority,
+                TaskStatus = status
+            };
+
+            _taskDao.AddTask(newTask);
+            SaveTasksToFile();
+        }
+
+        // Devuelve todas las tareas almacenadas en el DAO.
+        public List<DoltSharp.Models.Task> GetAllTasks()
+        {
+            return _taskDao.GetTasks();
+        }
+
+        public void DeleteTask(int id)
+        {
+            _taskDao.DeleteTaskById(id); // Elimina la tarea del DAO.
+            SaveTasksToFile(); // Guarda los cambios en el archivo.
+        }
+
+        // Guarda todas las tareas actuales en el archivo con el formato especificado.
+        private void SaveTasksToFile()
+        {
+            using (var writer = new StreamWriter(_filePath, false)) // Abre el archivo en modo sobrescritura.
+            {
+                int taskCounter = 1; // Contador para asignar números a las tareas.
+
+                foreach (var task in _taskDao.GetTasks())
+                {
+                    // Escribe la tarea en el archivo en el formato deseado.
+                    writer.WriteLine("-------------------------------");
+                    writer.WriteLine($"Tarea: {taskCounter}");
+                    writer.WriteLine($"ID de la Tarea: {task.TaskId}");
+                    writer.WriteLine($"Nombre de la Tarea: {task.TaskName}");
+                    writer.WriteLine($"Descripción: {task.TaskDescription}");
+                    writer.WriteLine($"Fecha de Inicio: {DateTime.Now:dd/MM/yyyy}");
+                    writer.WriteLine($"Fecha Límite: {task.TaskDeadline:dd/MM/yyyy}");
+                    writer.WriteLine($"Prioridad: {task.TaskPriority}");
+                    writer.WriteLine($"Estado: {task.TaskStatus}");
+                    writer.WriteLine("-------------------------------");
+
+                    taskCounter++; // Incrementa el contador para la próxima tarea.
+                }
             }
         }
 
-        // Método para leer todas las tareas almacenadas en el archivo.
-        public List<string> ReadTasks()
+        // Carga todas las tareas desde el archivo y las agrega al DAO.
+        private void LoadTasksFromFile()
         {
-            if (!File.Exists(_filePath))
-                throw new FileNotFoundException("El archivo de tareas no existe.");
+            DoltSharp.Models.Task task = null; // Variable para almacenar temporalmente una tarea.
 
-            return new List<string>(File.ReadAllLines(_filePath));
+            foreach (var line in File.ReadAllLines(_filePath)) // Lee el archivo línea por línea.
+            {
+                if (line.StartsWith("-------------------------------"))
+                {
+                    // Si hay una tarea previa, la agregamos al DAO.
+                    if (task != null)
+                    {
+                        _taskDao.AddTask(task);
+                    }
+
+                    // Inicia una nueva tarea.
+                    task = new DoltSharp.Models.Task();
+                }
+                else if (line.StartsWith("ID de la Tarea:"))
+                {
+                    task.TaskId = int.Parse(line.Replace("ID de la Tarea:", "").Trim());
+                }
+                else if (line.StartsWith("Nombre de la Tarea:"))
+                {
+                    task.TaskName = line.Replace("Nombre de la Tarea:", "").Trim();
+                }
+                else if (line.StartsWith("Descripción:"))
+                {
+                    task.TaskDescription = line.Replace("Descripción:", "").Trim();
+                }
+                else if (line.StartsWith("Fecha Límite:"))
+                {
+                    task.TaskDeadline = DateTime.Parse(line.Replace("Fecha Límite:", "").Trim());
+                }
+                else if (line.StartsWith("Prioridad:"))
+                {
+                    task.TaskPriority = line.Replace("Prioridad:", "").Trim();
+                }
+                else if (line.StartsWith("Estado:"))
+                {
+                    task.TaskStatus = line.Replace("Estado:", "").Trim();
+                }
+            }
+
+            if (task != null)
+            {
+                _taskDao.AddTask(task);
+            }
         }
 
-        // Método para borrar todas las tareas del archivo.
-        public void ClearTasks()
+        // Genera un ID aleatorio de 4 dígitos para las tareas.
+        private int GenerateRandomId()
         {
-            // Limpia el archivo eliminando todo su contenido.
-            File.WriteAllText(_filePath, string.Empty);
-        }
-
-        // Método privado para validar los datos de la tarea.
-        private void ValidateTaskFields(string name, string description, DateTime deadline, string priority, string status)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("El nombre de la tarea no puede estar vacío.");
-            if (string.IsNullOrWhiteSpace(description))
-                throw new ArgumentException("La descripción no puede estar vacía.");
-            if (string.IsNullOrWhiteSpace(priority))
-                throw new ArgumentException("La prioridad no puede estar vacía.");
-            if (string.IsNullOrWhiteSpace(status))
-                throw new ArgumentException("El estado no puede estar vacío.");
-            if (deadline < DateTime.Now.Date)
-                throw new ArgumentException("La fecha límite no puede ser anterior a hoy.");
+            Random random = new Random();
+            return random.Next(1000, 9999);
         }
     }
 }

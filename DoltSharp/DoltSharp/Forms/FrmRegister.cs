@@ -12,7 +12,7 @@ namespace DoltSharp
         public FrmRegister()
         {
             InitializeComponent();
-            _userRegisterFile = new UserRegisterFile("registro_usuarios_DoltSharp.txt");
+            _userRegisterFile = new UserRegisterFile("RegisteredUsersDoltSharp.txt");
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace DoltSharp
                 MetroFramework.MetroMessageBox.Show(this, "Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LogIn logIn = new LogIn();
-                logIn.Show(); 
+                logIn.Show();
                 this.Close();
             }
             catch (Exception ex)

@@ -145,6 +145,7 @@
             this.DgvTaskList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvTaskList.Size = new System.Drawing.Size(393, 177);
             this.DgvTaskList.TabIndex = 13;
+            this.DgvTaskList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTaskList_CellContentClick);
             // 
             // DgvProjectsList
             // 

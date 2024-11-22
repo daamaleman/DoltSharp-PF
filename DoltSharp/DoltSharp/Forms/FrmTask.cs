@@ -8,22 +8,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DoltSharp.Dao;
+using DoltSharp.Models;
 
 namespace DoltSharp
 {
     public partial class FrmTask : MetroFramework.Forms.MetroForm
     {
-        // Instancia de la clase TaskFile para manejar las tareas.
-        private readonly TaskFile _taskFile;
+        private readonly TaskFile _taskFile; // Ahora se llama TaskFile.
 
-        // Constructor del formulario.
         public FrmTask()
         {
             InitializeComponent();
-            _taskFile = new TaskFile(); // Inicializa la clase TaskFile.
+            _taskFile = new TaskFile(); // Inicializamos TaskFile.
         }
 
-        // Evento que regresa a la pantalla principal.
         private void BtnReturn_Click(object sender, EventArgs e)
         {
             FrmMainPage mainPage = new FrmMainPage();
@@ -31,26 +30,25 @@ namespace DoltSharp
             this.Close();
         }
 
-        // Evento que guarda una nueva tarea cuando se hace clic en el botón "Crear".
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             try
             {
                 // Obtener los datos ingresados por el usuario en el formulario.
-                string taskName = TxtTaskName.Text.Trim();
-                string taskDescription = TxtTaskDescription.Text.Trim();
-                DateTime taskDeadline = DtpTaskDeadLine.Value;
-                string taskPriority = CmbTaskPriority.SelectedItem?.ToString();
-                string taskStatus = CmbTaskStatus.SelectedItem?.ToString();
+                string taskName = TxtTaskName.Text.Trim(); // Nombre de la tarea.
+                string taskDescription = TxtTaskDescription.Text.Trim(); // Descripción de la tarea.
+                DateTime taskDeadline = DtpTaskDeadLine.Value; // Fecha límite.
+                string taskPriority = CmbTaskPriority.SelectedItem?.ToString(); // Prioridad.
+                string taskStatus = CmbTaskStatus.SelectedItem?.ToString(); // Estado.
 
-                // Validaciones de los campos.
+                // Validar campos antes de intentar guardar.
                 if (string.IsNullOrWhiteSpace(taskName))
                 {
                     MetroFramework.MetroMessageBox.Show(this,
                         "El nombre de la tarea no puede estar vacío.",
                         "Error",
                         MessageBoxButtons.OK,
-                        MessageBoxIcon.Error); // Cambiado a "Error" con cuadro rojo.
+                        MessageBoxIcon.Error);
                     return;
                 }
 
@@ -60,7 +58,7 @@ namespace DoltSharp
                         "La descripción no puede estar vacía.",
                         "Error",
                         MessageBoxButtons.OK,
-                        MessageBoxIcon.Error); // Cambiado a "Error" con cuadro rojo.
+                        MessageBoxIcon.Error);
                     return;
                 }
 
@@ -70,7 +68,7 @@ namespace DoltSharp
                         "Debes seleccionar una prioridad.",
                         "Error",
                         MessageBoxButtons.OK,
-                        MessageBoxIcon.Error); // Cambiado a "Error" con cuadro rojo.
+                        MessageBoxIcon.Error);
                     return;
                 }
 
@@ -80,7 +78,7 @@ namespace DoltSharp
                         "Debes seleccionar un estado.",
                         "Error",
                         MessageBoxButtons.OK,
-                        MessageBoxIcon.Error); // Cambiado a "Error" con cuadro rojo.
+                        MessageBoxIcon.Error);
                     return;
                 }
 
@@ -90,12 +88,12 @@ namespace DoltSharp
                         "La fecha límite no puede ser anterior a hoy.",
                         "Error",
                         MessageBoxButtons.OK,
-                        MessageBoxIcon.Error); // Cambiado a "Error" con cuadro rojo.
+                        MessageBoxIcon.Error);
                     return;
                 }
 
-                // Guarda la tarea usando TaskFile.
-                _taskFile.SaveTask(taskName, taskDescription, taskDeadline, taskPriority, taskStatus);
+                // Usar TaskFile para agregar la tarea.
+                _taskFile.AddTask(taskName, taskDescription, taskDeadline, taskPriority, taskStatus);
 
                 // Mostrar mensaje de éxito.
                 MetroFramework.MetroMessageBox.Show(this,
@@ -104,30 +102,31 @@ namespace DoltSharp
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
-                // Redirigir a la pantalla principal.
+                // Redirigir automáticamente a la pantalla principal.
                 FrmMainPage mainPage = new FrmMainPage();
                 mainPage.Show();
-                this.Close(); // Cerrar el formulario actual.
+                this.Close(); // Cierra el formulario actual.
+
             }
             catch (Exception ex)
             {
-                // Mostrar mensaje de error general en caso de excepción.
+                // Mostrar mensaje de error general.
                 MetroFramework.MetroMessageBox.Show(this,
                     $"Error al guardar la tarea: {ex.Message}",
                     "Error",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Error); // Cambiado a "Error" con cuadro rojo.
+                    MessageBoxIcon.Error);
             }
         }
 
-        // Método que limpia los campos del formulario después de guardar una tarea.
+        // Método para limpiar los campos después de guardar.
         private void ClearFormFields()
         {
-            TxtTaskName.Clear();
-            TxtTaskDescription.Clear();
-            CmbTaskPriority.SelectedIndex = -1;
-            CmbTaskStatus.SelectedIndex = -1;
-            DtpTaskDeadLine.Value = DateTime.Now;
+            TxtTaskName.Clear(); // Limpia el nombre de la tarea.
+            TxtTaskDescription.Clear(); // Limpia la descripción.
+            CmbTaskPriority.SelectedIndex = -1; // Limpia la selección de prioridad.
+            CmbTaskStatus.SelectedIndex = -1; // Limpia la selección de estado.
+            DtpTaskDeadLine.Value = DateTime.Now; // Restaura la fecha límite a hoy.
         }
     }
 }

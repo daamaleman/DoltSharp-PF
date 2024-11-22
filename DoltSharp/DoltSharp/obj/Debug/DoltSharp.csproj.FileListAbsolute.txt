@@ -222,3 +222,24 @@ C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\ob
 C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmUsuarioConfig.resources
 C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmMainPage.resources
 C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmRegister.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MaterialSkin.dll
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Design.dll
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.dll
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.AssemblyReference.cache
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmConfig.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmProject.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmTask.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmUsuarioConfig.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.LogIn.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmMainPage.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Properties.Resources.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmRegister.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.GenerateResource.cache
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.CoreCompileInputs.cache
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb

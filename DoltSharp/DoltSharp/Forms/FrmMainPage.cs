@@ -17,29 +17,31 @@ namespace DoltSharp
 {
     public partial class FrmMainPage : MetroFramework.Forms.MetroForm
     {
-        private readonly ProyectFile _proyectFile; // Instancia para manejar el archivo.
-        private List<Project> projects; // Lista local de proyectos.
+        private readonly ProyectFile _proyectFile;
+        private readonly TaskFile _taskFile;
+        private List<Project> projects;
+        private List<DoltSharp.Models.Task> tasks; // Referencia explícita para evitar ambigüedad.
 
         public FrmMainPage()
         {
             InitializeComponent();
 
-            // Configura las columnas del DataGridView.
-            ConfigureDataGridView();
+            // Configura las columnas de ambos DataGridView.
+            ConfigureProjectDataGridView();
+            ConfigureTaskDataGridView();
 
-            // Inicializa la instancia de ProyectFile.
+            // Inicializa las instancias de ProyectFile y TaskFile.
             _proyectFile = new ProyectFile();
+            _taskFile = new TaskFile();
 
-            // Carga los proyectos en el DataGridView.
+            // Carga los datos iniciales en los DataGridView.
             LoadProjectsIntoGrid();
+            LoadTasksIntoGrid();
         }
 
         private void BtnSalida_Click(object sender, EventArgs e)
         {
-            // Limpia el usuario autenticado actual.
             LogIn.LoggedInUserId = null;
-
-            // Redirige al formulario de inicio de sesión.
             LogIn login = new LogIn();
             login.Show();
             this.Close();
@@ -77,17 +79,13 @@ namespace DoltSharp
         {
             if (e.RowIndex >= 0)
             {
-                // Verifica si el clic fue en la columna de acciones.
                 if (e.ColumnIndex == DgvProjectsList.Columns["Actions"].Index)
                 {
                     int projectId = int.Parse(DgvProjectsList.Rows[e.RowIndex].Cells["ProjectId"].Value.ToString());
-
-                    // Buscar el proyecto correspondiente.
                     var project = projects.FirstOrDefault(p => p.ProjectId == projectId);
 
                     if (project != null)
                     {
-                        // Mostrar un menú para seleccionar Ver Detalles o Eliminar.
                         var result = MetroFramework.MetroMessageBox.Show(
                             this,
                             "¿Qué acción deseas realizar?\nSí: Ver detalles\nNo: Eliminar",
@@ -98,7 +96,6 @@ namespace DoltSharp
 
                         if (result == DialogResult.Yes)
                         {
-                            // Mostrar todos los detalles del proyecto en el cuadro de mensaje.
                             MetroFramework.MetroMessageBox.Show(
                                 this,
                                 $"Título: {project.ProjectTitle}\n" +
@@ -113,10 +110,7 @@ namespace DoltSharp
                         }
                         else if (result == DialogResult.No)
                         {
-                            // Eliminar el proyecto de la lista.
                             projects.RemoveAll(p => p.ProjectId == projectId);
-
-                            // Actualizar el archivo y recargar la vista.
                             SaveProjectsToFile();
                             LoadProjectsIntoGrid();
                         }
@@ -125,18 +119,13 @@ namespace DoltSharp
             }
         }
 
-        // Configura las columnas del DataGridView.
-        private void ConfigureDataGridView()
+        private void ConfigureProjectDataGridView()
         {
-            // Limpia las columnas existentes.
             DgvProjectsList.Columns.Clear();
-
-            // Agrega las columnas necesarias.
             DgvProjectsList.Columns.Add("ProjectId", "ID");
             DgvProjectsList.Columns.Add("ProjectTitle", "Título");
             DgvProjectsList.Columns.Add("Status", "Estado");
 
-            // Columna de botones para acciones.
             DataGridViewButtonColumn actionsColumn = new DataGridViewButtonColumn
             {
                 HeaderText = "Acciones",
@@ -146,28 +135,18 @@ namespace DoltSharp
             };
             DgvProjectsList.Columns.Add(actionsColumn);
 
-            // Ajusta el estilo del DataGridView.
             DgvProjectsList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvProjectsList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DgvProjectsList.RowHeadersVisible = false; // Oculta el encabezado de filas para ahorrar espacio.
+            DgvProjectsList.RowHeadersVisible = false;
         }
 
-        // Carga los proyectos desde el archivo al DataGridView.
         private void LoadProjectsIntoGrid()
         {
-            // Limpia el DataGridView antes de cargar datos.
             DgvProjectsList.Rows.Clear();
-
-            // Carga los proyectos desde el archivo.
             projects = _proyectFile.LoadProjects();
 
-            // Si no hay proyectos, simplemente deja el grid vacío.
-            if (projects == null || projects.Count == 0)
-            {
-                return; // No hacer nada.
-            }
+            if (projects == null || projects.Count == 0) return;
 
-            // Agrega cada proyecto al DataGridView.
             foreach (var project in projects)
             {
                 DgvProjectsList.Rows.Add(
@@ -178,16 +157,100 @@ namespace DoltSharp
             }
         }
 
-        // Guarda los proyectos actuales al archivo.
+        private void ConfigureTaskDataGridView()
+        {
+            DgvTaskList.Columns.Clear();
+            DgvTaskList.Columns.Add("TaskId", "ID");
+            DgvTaskList.Columns.Add("TaskName", "Nombre");
+            DgvTaskList.Columns.Add("TaskDescription", "Descripción");
+            DgvTaskList.Columns.Add("TaskDeadline", "Fecha Límite");
+            DgvTaskList.Columns.Add("TaskPriority", "Prioridad");
+            DgvTaskList.Columns.Add("TaskStatus", "Estado");
+
+            DataGridViewButtonColumn actionsColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Acciones",
+                Text = "Ver/Eliminar",
+                UseColumnTextForButtonValue = true,
+                Name = "Actions"
+            };
+            DgvTaskList.Columns.Add(actionsColumn);
+
+            DgvTaskList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvTaskList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DgvTaskList.RowHeadersVisible = false;
+        }
+
+        private void LoadTasksIntoGrid()
+        {
+            DgvTaskList.Rows.Clear();
+            tasks = _taskFile.GetAllTasks();
+
+            if (tasks == null || tasks.Count == 0) return;
+
+            foreach (var task in tasks)
+            {
+                DgvTaskList.Rows.Add(
+                    task.TaskId,
+                    task.TaskName,
+                    task.TaskDescription,
+                    task.TaskDeadline.ToString("dd/MM/yyyy"),
+                    task.TaskPriority,
+                    task.TaskStatus
+                );
+            }
+        }
+
         private void SaveProjectsToFile()
         {
-            // Limpia el archivo antes de guardar los proyectos actualizados.
             System.IO.File.WriteAllText(_proyectFile.GetFilePath(), string.Empty);
 
-            // Guarda cada proyecto en el archivo.
             foreach (var project in projects)
             {
                 _proyectFile.SaveProject(project);
+            }
+        }
+
+        private void DgvTaskList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == DgvTaskList.Columns["Actions"].Index)
+                {
+                    int taskId = int.Parse(DgvTaskList.Rows[e.RowIndex].Cells["TaskId"].Value.ToString());
+                    var task = tasks.FirstOrDefault(t => t.TaskId == taskId);
+
+                    if (task != null)
+                    {
+                        var result = MetroFramework.MetroMessageBox.Show(
+                            this,
+                            "¿Qué acción deseas realizar?\nSí: Ver detalles\nNo: Eliminar",
+                            "Acción requerida",
+                            MessageBoxButtons.YesNoCancel,
+                            MessageBoxIcon.Question
+                        );
+
+                        if (result == DialogResult.Yes)
+                        {
+                            MetroFramework.MetroMessageBox.Show(
+                                this,
+                                $"Nombre: {task.TaskName}\n" +
+                                $"Descripción: {task.TaskDescription}\n" +
+                                $"Fecha Límite: {task.TaskDeadline:dd/MM/yyyy}\n" +
+                                $"Prioridad: {task.TaskPriority}\n" +
+                                $"Estado: {task.TaskStatus}",
+                                "Detalles de la Tarea",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+                        }
+                        else if (result == DialogResult.No)
+                        {
+                            _taskFile.DeleteTask(taskId);
+                            LoadTasksIntoGrid();
+                        }
+                    }
+                }
             }
         }
     }
