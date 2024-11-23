@@ -5,7 +5,6 @@ using System;
 using System.IO; 
 
 
-
 namespace DoltSharp
 {
     public partial class FrmUsuarioConfig : MetroFramework.Forms.MetroForm
