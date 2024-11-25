@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoltSharp.Services;
+using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,66 +17,49 @@ namespace DoltSharp
     {
         public static string LoggedInUserId { get; set; }
 
-        private readonly string filePath = "RegisteredUsersDoltSharp.txt";
+        private readonly LogInServices _logInServices;
 
         public LogIn()
         {
             InitializeComponent();
+            _logInServices = new LogInServices("RegisteredUsersDoltSharp.txt");
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtEmail.Text) || string.IsNullOrWhiteSpace(TxtPw.Text))
+            // Obtener datos ingresados por el usuario
+            string email = TxtEmail.Text.Trim();
+            string password = TxtPw.Text;
+
+            // Validar campos
+            if (!_logInServices.AreFieldsValid(email, password, out string errorMessage))
             {
-                MetroFramework.MetroMessageBox.Show(this, "Los campos no deben estar vacíos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            string encodedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(TxtPw.Text));
-            bool loginSuccessful = false;
+            // Cifrar la contraseña
+            string encryptedPassword = _logInServices.EncryptPassword(password);
 
-            if (File.Exists(filePath))
+            // Intentar autenticar al usuario
+            try
             {
-                var lines = File.ReadAllLines(filePath);
-
-                for (int i = 0; i < lines.Length; i++)
+                if (_logInServices.AuthenticateUser(email, encryptedPassword, out string userId))
                 {
-                    if (lines[i].StartsWith("ID: "))
-                    {
-                        string currentUserId = lines[i].Substring(4).Trim();
-                        string email = "";
-                        string password = "";
+                    LoggedInUserId = userId;
+                    MetroMessageBox.Show(this, "Bienvenido", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        for (int j = i + 1; j < lines.Length && !lines[j].StartsWith("-------------------------------"); j++)
-                        {
-                            if (lines[j].StartsWith("Correo: ")) email = lines[j].Substring(8).Trim();
-                            else if (lines[j].StartsWith("Contraseña: ")) password = lines[j].Substring(12).Trim();
-                        }
-
-                        if (email == TxtEmail.Text.Trim() && password == encodedPassword)
-                        {
-                            loginSuccessful = true;
-                            LoggedInUserId = currentUserId;
-                            break;
-                        }
-                    }
+                    new FrmMainPage().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Correo o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch (FileNotFoundException ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "No se encontró el archivo de usuarios registrados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (loginSuccessful)
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Bienvenido", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                new FrmMainPage().Show();
-                this.Hide();
-            }
-            else
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Correo o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -2,65 +2,49 @@
 
 using System.Windows.Forms;
 using DoltSharp.Services;
+using MetroFramework;
 
 namespace DoltSharp
 {
     public partial class FrmRegister : MetroFramework.Forms.MetroForm
     {
-        private readonly UserRegisterFile _userRegisterFile;
+        private readonly UserRegisterServices _userRegisterServices;
 
         public FrmRegister()
         {
             InitializeComponent();
-            _userRegisterFile = new UserRegisterFile("RegisteredUsersDoltSharp.txt");
+            _userRegisterServices = new UserRegisterServices("RegisteredUsersDoltSharp.txt");
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
+            // Obtener valores de los campos
+            string name = TxtRegisterName.Text;
+            string lastName = TxtRegisterLastName.Text;
+            string email = TxtRegisterEmail.Text;
+            string password = TxtRegisterPw.Text;
+            string confirmPassword = TxtRegisterVPw.Text;
+            DateTime birthDate = DtpBirthDate.Value;
+
             // Validaciones
-            if (string.IsNullOrWhiteSpace(TxtRegisterName.Text) || string.IsNullOrWhiteSpace(TxtRegisterLastName.Text) ||
-                string.IsNullOrWhiteSpace(TxtRegisterEmail.Text) || string.IsNullOrWhiteSpace(TxtRegisterPw.Text) ||
-                string.IsNullOrWhiteSpace(TxtRegisterVPw.Text))
+            if (!_userRegisterServices.AreFieldsValid(name, lastName, email, password, confirmPassword, birthDate, out string errorMessage))
             {
-                MetroFramework.MetroMessageBox.Show(this, "Ninguno de los campos puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (DtpBirthDate.Value.Year > 2006)
+            // Verificar si el correo ya está registrado
+            if (_userRegisterServices.IsEmailRegistered(email))
             {
-                MetroFramework.MetroMessageBox.Show(this, "La fecha no puede ser mayor al año 2006", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "El correo ya está registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!TxtRegisterEmail.Text.Contains("@") || !TxtRegisterEmail.Text.Contains("."))
-            {
-                MetroFramework.MetroMessageBox.Show(this, "El correo no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (TxtRegisterPw.Text.Length < 8)
-            {
-                MetroFramework.MetroMessageBox.Show(this, "La contraseña debe tener al menos 8 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (TxtRegisterPw.Text != TxtRegisterVPw.Text)
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (_userRegisterFile.IsEmailRegistered(TxtRegisterEmail.Text))
-            {
-                MetroFramework.MetroMessageBox.Show(this, "El correo ya está registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Guardar datos usando UserRegisterFile
+            // Intentar registrar al usuario
             try
             {
-                _userRegisterFile.RegisterUser(TxtRegisterName.Text, TxtRegisterLastName.Text, TxtRegisterEmail.Text, DtpBirthDate.Value, TxtRegisterPw.Text);
-                MetroFramework.MetroMessageBox.Show(this, "Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _userRegisterServices.RegisterUser(name, lastName, email, birthDate, password);
+                MetroMessageBox.Show(this, "Usuario registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LogIn logIn = new LogIn();
                 logIn.Show();
@@ -68,7 +52,7 @@ namespace DoltSharp
             }
             catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, $"Error al guardar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, $"Error al guardar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

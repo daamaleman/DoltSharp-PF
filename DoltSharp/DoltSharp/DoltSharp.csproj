@@ -138,8 +138,14 @@
     <Compile Include="Forms\FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\LogInServices.cs" />
+    <Compile Include="Services\MainPageServices.cs" />
     <Compile Include="Services\ProyectFile.cs" />
+    <Compile Include="Services\ProyectServices.cs" />
+    <Compile Include="Services\TaskServices.cs" />
+    <Compile Include="Services\UserRegisterServices.cs" />
     <Compile Include="Services\TaskFile.cs" />
+    <Compile Include="Services\UserConfigServices.cs" />
     <Compile Include="Services\UserRegisterFile.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Forms\FrmConfig.resx">

@@ -8,11 +8,11 @@ Contraseña: MTIzNDU2Nzg=
 -------------------------------
 -------------------------------
 ID: USR73602
-Nombre: user
-Apellido: user
-Correo: user@gmail.com
-Fecha de nacimiento: 01/02/2000
-Contraseña: MTIzNDU2Nzg=
+Nombre: user user
+Apellido: user user
+Correo: user@uamv.com
+Fecha de nacimiento: 21/07/2005
+Contraseña: MTIzNDU2Nzg5
 -------------------------------
 -------------------------------
 ID: USR34694
@@ -21,4 +21,12 @@ Apellido: lopez
 Correo: eliasmarin@.com
 Fecha de nacimiento: 31/12/1999
 Contraseña: dGlvc2tpMjAwNg==
+-------------------------------
+-------------------------------
+ID: USR93071
+Nombre: Deivid Alejandro
+Apellido: Espinoza Largaespada
+Correo: davide@gmail.com
+Fecha de nacimiento: 13/06/1990
+Contraseña: MTIzNDU2Nzg5
 -------------------------------

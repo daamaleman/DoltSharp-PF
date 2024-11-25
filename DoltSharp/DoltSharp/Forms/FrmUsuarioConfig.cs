@@ -2,90 +2,79 @@
 using System.Text;
 using System.Windows.Forms;
 using System;
-using System.IO; 
-
+using System.IO;
+using DoltSharp.Services;
+using MetroFramework.Forms;
+using MetroFramework;
 
 namespace DoltSharp
 {
-    public partial class FrmUsuarioConfig : MetroFramework.Forms.MetroForm
+    public partial class FrmUsuarioConfig : MetroForm
     {
-        private readonly string filePath = "RegisteredUsersDoltSharp.txt";
+        private readonly UserConfigServices userService;
 
         public FrmUsuarioConfig()
         {
             InitializeComponent();
+            userService = new UserConfigServices("RegisteredUsersDoltSharp.txt");
         }
 
         private void BtnSaveUpdates_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(filePath))
+            try
             {
-                MetroFramework.MetroMessageBox.Show(this, "El archivo de usuarios no existe o está vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string[] lines = File.ReadAllLines(filePath);
-            bool userFound = false;
-            List<string> updatedLines = new List<string>();
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                if (lines[i].StartsWith("ID: ") && lines[i].Contains(LogIn.LoggedInUserId))
+                // Verificar existencia del archivo
+                if (!userService.FileExists())
                 {
-                    userFound = true;
-
-                    if (!ValidatePassword(lines, i, TxtUpdateAPw.Text.Trim()))
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, "La contraseña actual no es correcta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    updatedLines.Add(lines[i]);
-                    updatedLines.Add("Nombre: " + TxtUpdateName.Text.Trim());
-                    updatedLines.Add("Apellido: " + TxtUpdateLastName.Text.Trim());
-                    updatedLines.Add("Correo: " + TxtUpdateEmail.Text.Trim());
-                    updatedLines.Add("Fecha de nacimiento: " + DtpUpdateBirthDate.Value.ToString("dd/MM/yyyy"));
-                    updatedLines.Add("Contraseña: " + Convert.ToBase64String(Encoding.UTF8.GetBytes(TxtNewPw.Text.Trim())));
-
-                    while (i < lines.Length && !lines[i].StartsWith("-------------------------------")) i++;
-
-                    updatedLines.Add("-------------------------------");
+                    MetroMessageBox.Show(this, "El archivo de usuarios no existe o está vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
+
+                // Leer datos del archivo
+                string[] lines = userService.ReadAllLines();
+
+                // Buscar y validar contraseña
+                for (int i = 0; i < lines.Length; i++)
                 {
-                    updatedLines.Add(lines[i]);
-                }
-            }
-
-            if (!userFound)
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Usuario no encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            File.WriteAllLines(filePath, updatedLines);
-            MetroFramework.MetroMessageBox.Show(this, "Información actualizada.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FrmMainPage mainPage = new FrmMainPage();
-            mainPage.Show();
-            this.Close();
-        }
-
-        private bool ValidatePassword(string[] lines, int index, string currentPassword)
-        {
-            for (int j = index + 1; j < lines.Length && !lines[j].StartsWith("-------------------------------"); j++)
-            {
-                if (lines[j].StartsWith("Contraseña: "))
-                {
-                    string encodedPasswordFromFile = lines[j].Substring(12).Trim();
-                    string decodedPasswordFromFile = Encoding.UTF8.GetString(Convert.FromBase64String(encodedPasswordFromFile));
-
-                    if (decodedPasswordFromFile == currentPassword)
+                    if (lines[i].StartsWith("ID: ") && lines[i].Contains(LogIn.LoggedInUserId))
                     {
-                        return true;
+                        if (!userService.ValidatePassword(lines, i, TxtUpdateAPw.Text.Trim()))
+                        {
+                            MetroMessageBox.Show(this, "La contraseña actual no es correcta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        break;
                     }
                 }
+
+                // Crear actualizaciones
+                var updates = new Dictionary<string, string>
+                {
+                    { "Nombre", TxtUpdateName.Text.Trim() },
+                    { "Apellido", TxtUpdateLastName.Text.Trim() },
+                    { "Correo", TxtUpdateEmail.Text.Trim() },
+                    { "Fecha de nacimiento", DtpUpdateBirthDate.Value.ToString("dd/MM/yyyy") },
+                    { "Contraseña", Convert.ToBase64String(Encoding.UTF8.GetBytes(TxtNewPw.Text.Trim())) }
+                };
+
+                // Actualizar usuario
+                var updatedLines = userService.UpdateUserInformation(lines, LogIn.LoggedInUserId, updates);
+
+                // Guardar cambios
+                userService.WriteAllLines(updatedLines.ToArray());
+
+                // Mensaje de éxito
+                MetroMessageBox.Show(this, "Información actualizada.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Volver al formulario principal
+                FrmMainPage mainPage = new FrmMainPage();
+                mainPage.Show();
+                this.Close();
             }
-            return false;
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CbxConfigSee1_CheckedChanged(object sender, EventArgs e)

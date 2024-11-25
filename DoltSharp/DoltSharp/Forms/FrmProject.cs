@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoltSharp.Models;
 using DoltSharp.Services;
+using MetroFramework;
 
 namespace DoltSharp
 {
     public partial class FrmProject : MetroFramework.Forms.MetroForm
     {
-        private readonly ProyectFile _proyectFile;
+        private readonly ProjectServices _projectServices;
 
         public FrmProject()
         {
             InitializeComponent();
-            _proyectFile = new ProyectFile(); // Inicializamos la clase de guardado en archivo.
+            _projectServices = new ProjectServices(); // Inicializa el servicio de proyectos
         }
 
         private void BtnReturn_Click(object sender, EventArgs e)
@@ -31,16 +32,15 @@ namespace DoltSharp
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            // Obtener los valores de los campos.
+            // Obtener los valores de los campos
             string projectName = TxtProjectName.Text;
             string projectDescription = TxtProjectDescription.Text;
             DateTime deadline = DtpProjectDeadLine.Value;
 
-            // Valida que los campos no estén vacíos.
-            if (string.IsNullOrWhiteSpace(projectName) ||
-                string.IsNullOrWhiteSpace(projectDescription))
+            // Validar campos
+            if (!_projectServices.ValidateProjectFields(projectName, projectDescription))
             {
-                MetroFramework.MetroMessageBox.Show(this,
+                MetroMessageBox.Show(this,
                     "Llena todos los campos.",
                     "Advertencia",
                     MessageBoxButtons.OK,
@@ -48,37 +48,30 @@ namespace DoltSharp
                 return;
             }
 
-            // Crear un nuevo proyecto usando el modelo `Project`.
-            var project = new Project
-            {
-                ProjectId = new Random().Next(1, 10000), // Generar ID aleatorio. Para algo más robusto, usar un contador único.
-                ProjectTitle = projectName,
-                ProjectDescription = projectDescription,
-                ProjectDueDate = deadline,
-                IsCompleteProject = false // Iniciar como incompleto.
-            };
+            // Crear el proyecto
+            var project = _projectServices.CreateProject(projectName, projectDescription, deadline);
 
-            // Guardar el proyecto usando `ProyectFile`.
+            // Guardar el proyecto
             try
             {
-                _proyectFile.SaveProject(project);
+                _projectServices.SaveProject(project);
 
-                // Mostrar un mensaje de éxito usando MetroMessageBox.
-                MetroFramework.MetroMessageBox.Show(this,
+                // Mostrar un mensaje de éxito
+                MetroMessageBox.Show(this,
                     "Proyecto guardado correctamente.",
                     "Éxito",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
-                // Redirigir a la pantalla principal después de guardar.
+                // Redirigir a la pantalla principal
                 FrmMainPage mainPage = new FrmMainPage();
                 mainPage.Show();
                 this.Close();
             }
             catch (Exception ex)
             {
-                // Mostrar un mensaje de error en caso de excepción.
-                MetroFramework.MetroMessageBox.Show(this,
+                // Mostrar un mensaje de error en caso de excepción
+                MetroMessageBox.Show(this,
                     $"Error al guardar el proyecto: {ex.Message}",
                     "Error",
                     MessageBoxButtons.OK,
@@ -87,4 +80,3 @@ namespace DoltSharp
         }
     }
 }
-
