@@ -228,5 +228,34 @@ namespace DoltSharp
                 }
             }
         }
+
+        private void BtnViewReports_Click(object sender, EventArgs e)
+        {
+            TaskDao taskDao = new TaskDao();
+            TaskFile taskFile = new TaskFile();
+            List<Task> tasks = new List<Task>();
+            tasks = taskFile.GetAllTasks();
+
+
+
+
+            ReportDataSource dataSource = new ReportDataSource("DsDatos", tasks);
+
+            FrmReports frmReports = new FrmReports();
+            frmReports.reportViewer1.LocalReport.DataSources.Clear();
+            frmReports.reportViewer1.LocalReport.DataSources.Add(dataSource);
+
+            //Configurar el archivo de reporte
+            frmReports.reportViewer1.LocalReport.ReportEmbeddedResource = "DoltSharp.Reports.RptTask.rdlc";
+
+            //Refrescarv el reporte 
+            frmReports.reportViewer1.RefreshReport();
+
+            //Visualizar el reporte 
+            frmReports.ShowDialog();
+        }
     }
+
 }
+    
+
