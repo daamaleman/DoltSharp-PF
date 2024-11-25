@@ -14,3 +14,11 @@ Correo: user@gmail.com
 Fecha de nacimiento: 01/02/2000
 Contraseña: MTIzNDU2Nzg=
 -------------------------------
+-------------------------------
+ID: USR34694
+Nombre: alucard
+Apellido: lopez
+Correo: eliasmarin@.com
+Fecha de nacimiento: 31/12/1999
+Contraseña: dGlvc2tpMjAwNg==
+-------------------------------

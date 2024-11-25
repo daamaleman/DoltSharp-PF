@@ -1,0 +1,10 @@
+-------------------------------
+Tarea: 1
+ID de la Tarea: 1258
+Nombre de la Tarea: Matematicas
+Descripción: Examen
+Fecha de Inicio: 24/11/2024
+Fecha Límite: 26/11/2024
+Prioridad: Alta
+Estado: No iniciado 
+-------------------------------
