@@ -1,10 +1,10 @@
 -------------------------------
 Tarea: 1
-ID de la Tarea: 2996
-Nombre de la Tarea: matematicas
-Descripción: examen
-Fecha de Inicio: 25/11/2024
-Fecha Límite: 27/11/2024
-Prioridad: Alta
+ID de la Tarea: 9511
+Nombre de la Tarea: t
+Descripción: n
+Fecha de Inicio: 26/11/2024
+Fecha Límite: 26/11/2024
+Prioridad: Urgente
 Estado: No iniciado 
 -------------------------------

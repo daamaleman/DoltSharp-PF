@@ -115,7 +115,24 @@ namespace DoltSharp.Services
                 }
                 else if (line.StartsWith("Fecha Límite:"))
                 {
-                    task.TaskDeadline = DateTime.Parse(line.Replace("Fecha Límite:", "").Trim());
+                    string fechaTexto = line.Replace("Fecha Límite:", "").Trim();
+
+                    // Intenta analizar la fecha usando el formato específico "dd/MM/yyyy".
+                    if (DateTime.TryParseExact(
+                            fechaTexto,
+                            "dd/MM/yyyy",
+                            new System.Globalization.CultureInfo("es-ES"),
+                            System.Globalization.DateTimeStyles.None,
+                            out DateTime fecha))
+                    {
+                        task.TaskDeadline = fecha;
+                    }
+                    else
+                    {
+                        // Si el formato no es válido, lanza una excepción o asigna una fecha predeterminada.
+                        Console.WriteLine($"Advertencia: Fecha inválida encontrada ('{fechaTexto}').");
+                        throw new FormatException($"El formato de la fecha '{fechaTexto}' no es válido.");
+                    }
                 }
                 else if (line.StartsWith("Prioridad:"))
                 {
