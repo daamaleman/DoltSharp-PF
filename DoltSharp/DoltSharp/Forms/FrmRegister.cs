@@ -74,5 +74,24 @@ namespace DoltSharp
             logIn.Show();
             this.Close();
         }
+
+        private void FrmRegister_Load(object sender, EventArgs e)
+        {
+            ReadConfig();
+        }
+        private void ReadConfig()
+        {
+            AppConfigServices appConfigServices = new AppConfigServices();
+            appConfigServices.LoadConfigFile();
+            if (appConfigServices.MyDarkMode)
+            {
+                this.Theme = MetroThemeStyle.Dark;
+            }
+            else
+            {
+                this.Theme = MetroThemeStyle.Light;
+            }
+            this.Style = (MetroColorStyle)Enum.Parse(typeof(MetroColorStyle), appConfigServices.MyStyle);
+        }
     }
 }

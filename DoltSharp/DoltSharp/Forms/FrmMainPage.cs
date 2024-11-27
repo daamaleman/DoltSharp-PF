@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DoltSharp.Dao;
+using MetroFramework;
 
 namespace DoltSharp
 {
@@ -253,6 +254,25 @@ namespace DoltSharp
 
             //Visualizar el reporte 
             frmReports.ShowDialog();
+        }
+
+        private void FrmMainPage_Load(object sender, EventArgs e)
+        {
+            ReadConfig();
+        }
+        private void ReadConfig()
+        {
+            AppConfigServices appConfigServices = new AppConfigServices();
+            appConfigServices.LoadConfigFile();
+            if (appConfigServices.MyDarkMode)
+            {
+                this.Theme = MetroThemeStyle.Dark;
+            }
+            else
+            {
+                this.Theme = MetroThemeStyle.Light;
+            }
+            this.Style = (MetroColorStyle)Enum.Parse(typeof(MetroColorStyle), appConfigServices.MyStyle);
         }
     }
 

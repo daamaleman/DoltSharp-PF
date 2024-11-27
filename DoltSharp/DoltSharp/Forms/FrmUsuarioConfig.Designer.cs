@@ -70,7 +70,7 @@
             this.LblUpdateName.Location = new System.Drawing.Point(141, 249);
             this.LblUpdateName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateName.Name = "LblUpdateName";
-            this.LblUpdateName.Size = new System.Drawing.Size(64, 20);
+            this.LblUpdateName.Size = new System.Drawing.Size(62, 19);
             this.LblUpdateName.TabIndex = 1;
             this.LblUpdateName.Text = "Nombre:";
             // 
@@ -80,7 +80,7 @@
             this.LblUpdateLastName.Location = new System.Drawing.Point(136, 295);
             this.LblUpdateLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateLastName.Name = "LblUpdateLastName";
-            this.LblUpdateLastName.Size = new System.Drawing.Size(68, 20);
+            this.LblUpdateLastName.Size = new System.Drawing.Size(66, 19);
             this.LblUpdateLastName.TabIndex = 2;
             this.LblUpdateLastName.Text = "Apellidos:";
             // 
@@ -90,7 +90,7 @@
             this.LblUpdateBirthDate.Location = new System.Drawing.Point(43, 343);
             this.LblUpdateBirthDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateBirthDate.Name = "LblUpdateBirthDate";
-            this.LblUpdateBirthDate.Size = new System.Drawing.Size(144, 20);
+            this.LblUpdateBirthDate.Size = new System.Drawing.Size(136, 19);
             this.LblUpdateBirthDate.TabIndex = 3;
             this.LblUpdateBirthDate.Text = "Fecha de Nacimiento:";
             // 
@@ -98,8 +98,8 @@
             // 
             this.DtpUpdateBirthDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DtpUpdateBirthDate.Location = new System.Drawing.Point(249, 337);
-            this.DtpUpdateBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DtpUpdateBirthDate.MinimumSize = new System.Drawing.Size(0, 30);
+            this.DtpUpdateBirthDate.Margin = new System.Windows.Forms.Padding(4);
+            this.DtpUpdateBirthDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.DtpUpdateBirthDate.Name = "DtpUpdateBirthDate";
             this.DtpUpdateBirthDate.Size = new System.Drawing.Size(252, 30);
             this.DtpUpdateBirthDate.TabIndex = 4;
@@ -110,10 +110,10 @@
             // 
             // 
             this.TxtUpdateName.CustomButton.Image = null;
-            this.TxtUpdateName.CustomButton.Location = new System.Drawing.Point(189, 2);
-            this.TxtUpdateName.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateName.CustomButton.Location = new System.Drawing.Point(142, 2);
+            this.TxtUpdateName.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateName.CustomButton.Name = "";
-            this.TxtUpdateName.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.TxtUpdateName.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtUpdateName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtUpdateName.CustomButton.TabIndex = 1;
             this.TxtUpdateName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -121,7 +121,7 @@
             this.TxtUpdateName.CustomButton.Visible = false;
             this.TxtUpdateName.Lines = new string[0];
             this.TxtUpdateName.Location = new System.Drawing.Point(249, 249);
-            this.TxtUpdateName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateName.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateName.MaxLength = 32767;
             this.TxtUpdateName.Name = "TxtUpdateName";
             this.TxtUpdateName.PasswordChar = '\0';
@@ -142,10 +142,10 @@
             // 
             // 
             this.TxtUpdateLastName.CustomButton.Image = null;
-            this.TxtUpdateLastName.CustomButton.Location = new System.Drawing.Point(189, 2);
-            this.TxtUpdateLastName.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateLastName.CustomButton.Location = new System.Drawing.Point(142, 2);
+            this.TxtUpdateLastName.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateLastName.CustomButton.Name = "";
-            this.TxtUpdateLastName.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.TxtUpdateLastName.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtUpdateLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtUpdateLastName.CustomButton.TabIndex = 1;
             this.TxtUpdateLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -153,7 +153,7 @@
             this.TxtUpdateLastName.CustomButton.Visible = false;
             this.TxtUpdateLastName.Lines = new string[0];
             this.TxtUpdateLastName.Location = new System.Drawing.Point(249, 289);
-            this.TxtUpdateLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateLastName.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateLastName.MaxLength = 32767;
             this.TxtUpdateLastName.Name = "TxtUpdateLastName";
             this.TxtUpdateLastName.PasswordChar = '\0';
@@ -174,7 +174,7 @@
             this.LblUpdateEmail.Location = new System.Drawing.Point(161, 396);
             this.LblUpdateEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateEmail.Name = "LblUpdateEmail";
-            this.LblUpdateEmail.Size = new System.Drawing.Size(45, 20);
+            this.LblUpdateEmail.Size = new System.Drawing.Size(44, 19);
             this.LblUpdateEmail.TabIndex = 7;
             this.LblUpdateEmail.Text = "Email:";
             // 
@@ -184,10 +184,10 @@
             // 
             // 
             this.TxtUpdateEmail.CustomButton.Image = null;
-            this.TxtUpdateEmail.CustomButton.Location = new System.Drawing.Point(236, 2);
-            this.TxtUpdateEmail.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateEmail.CustomButton.Location = new System.Drawing.Point(177, 2);
+            this.TxtUpdateEmail.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateEmail.CustomButton.Name = "";
-            this.TxtUpdateEmail.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.TxtUpdateEmail.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtUpdateEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtUpdateEmail.CustomButton.TabIndex = 1;
             this.TxtUpdateEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -195,7 +195,7 @@
             this.TxtUpdateEmail.CustomButton.Visible = false;
             this.TxtUpdateEmail.Lines = new string[0];
             this.TxtUpdateEmail.Location = new System.Drawing.Point(249, 391);
-            this.TxtUpdateEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateEmail.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateEmail.MaxLength = 32767;
             this.TxtUpdateEmail.Name = "TxtUpdateEmail";
             this.TxtUpdateEmail.PasswordChar = '\0';
@@ -216,7 +216,7 @@
             this.LblUpdateAPw.Location = new System.Drawing.Point(65, 436);
             this.LblUpdateAPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUpdateAPw.Name = "LblUpdateAPw";
-            this.LblUpdateAPw.Size = new System.Drawing.Size(122, 20);
+            this.LblUpdateAPw.Size = new System.Drawing.Size(116, 19);
             this.LblUpdateAPw.TabIndex = 9;
             this.LblUpdateAPw.Text = "Contraseña actual:";
             // 
@@ -226,10 +226,10 @@
             // 
             // 
             this.TxtUpdateAPw.CustomButton.Image = null;
-            this.TxtUpdateAPw.CustomButton.Location = new System.Drawing.Point(212, 2);
-            this.TxtUpdateAPw.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateAPw.CustomButton.Location = new System.Drawing.Point(159, 2);
+            this.TxtUpdateAPw.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateAPw.CustomButton.Name = "";
-            this.TxtUpdateAPw.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.TxtUpdateAPw.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtUpdateAPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtUpdateAPw.CustomButton.TabIndex = 1;
             this.TxtUpdateAPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -237,7 +237,7 @@
             this.TxtUpdateAPw.CustomButton.Visible = false;
             this.TxtUpdateAPw.Lines = new string[0];
             this.TxtUpdateAPw.Location = new System.Drawing.Point(249, 430);
-            this.TxtUpdateAPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUpdateAPw.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUpdateAPw.MaxLength = 32767;
             this.TxtUpdateAPw.Name = "TxtUpdateAPw";
             this.TxtUpdateAPw.PasswordChar = '*';
@@ -258,7 +258,7 @@
             this.LblNewPw.Location = new System.Drawing.Point(61, 476);
             this.LblNewPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNewPw.Name = "LblNewPw";
-            this.LblNewPw.Size = new System.Drawing.Size(127, 20);
+            this.LblNewPw.Size = new System.Drawing.Size(119, 19);
             this.LblNewPw.TabIndex = 11;
             this.LblNewPw.Text = "Nueva Contraseña:";
             // 
@@ -268,10 +268,10 @@
             // 
             // 
             this.TxtNewPw.CustomButton.Image = null;
-            this.TxtNewPw.CustomButton.Location = new System.Drawing.Point(212, 2);
-            this.TxtNewPw.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNewPw.CustomButton.Location = new System.Drawing.Point(159, 2);
+            this.TxtNewPw.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNewPw.CustomButton.Name = "";
-            this.TxtNewPw.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.TxtNewPw.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtNewPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtNewPw.CustomButton.TabIndex = 1;
             this.TxtNewPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -279,7 +279,7 @@
             this.TxtNewPw.CustomButton.Visible = false;
             this.TxtNewPw.Lines = new string[0];
             this.TxtNewPw.Location = new System.Drawing.Point(249, 470);
-            this.TxtNewPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNewPw.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNewPw.MaxLength = 32767;
             this.TxtNewPw.Name = "TxtNewPw";
             this.TxtNewPw.PasswordChar = '*';
@@ -300,7 +300,7 @@
             this.LblVNewPw.Location = new System.Drawing.Point(31, 514);
             this.LblVNewPw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblVNewPw.Name = "LblVNewPw";
-            this.LblVNewPw.Size = new System.Drawing.Size(147, 20);
+            this.LblVNewPw.Size = new System.Drawing.Size(142, 19);
             this.LblVNewPw.TabIndex = 13;
             this.LblVNewPw.Text = "Confirmar Contraseña:";
             // 
@@ -310,10 +310,10 @@
             // 
             // 
             this.TxtVNewPw.CustomButton.Image = null;
-            this.TxtVNewPw.CustomButton.Location = new System.Drawing.Point(212, 2);
-            this.TxtVNewPw.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtVNewPw.CustomButton.Location = new System.Drawing.Point(159, 2);
+            this.TxtVNewPw.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.TxtVNewPw.CustomButton.Name = "";
-            this.TxtVNewPw.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.TxtVNewPw.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.TxtVNewPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtVNewPw.CustomButton.TabIndex = 1;
             this.TxtVNewPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -321,7 +321,7 @@
             this.TxtVNewPw.CustomButton.Visible = false;
             this.TxtVNewPw.Lines = new string[0];
             this.TxtVNewPw.Location = new System.Drawing.Point(249, 508);
-            this.TxtVNewPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtVNewPw.Margin = new System.Windows.Forms.Padding(4);
             this.TxtVNewPw.MaxLength = 32767;
             this.TxtVNewPw.Name = "TxtVNewPw";
             this.TxtVNewPw.PasswordChar = '*';
@@ -340,7 +340,7 @@
             // 
             this.BtnSaveUpdates.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSaveUpdates.Location = new System.Drawing.Point(117, 596);
-            this.BtnSaveUpdates.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSaveUpdates.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSaveUpdates.Name = "BtnSaveUpdates";
             this.BtnSaveUpdates.Size = new System.Drawing.Size(149, 37);
             this.BtnSaveUpdates.TabIndex = 15;
@@ -352,7 +352,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(249, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -366,7 +366,7 @@
             this.CbxConfigSee1.Location = new System.Drawing.Point(443, 436);
             this.CbxConfigSee1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbxConfigSee1.Name = "CbxConfigSee1";
-            this.CbxConfigSee1.Size = new System.Drawing.Size(43, 17);
+            this.CbxConfigSee1.Size = new System.Drawing.Size(39, 15);
             this.CbxConfigSee1.TabIndex = 17;
             this.CbxConfigSee1.Text = "Ver";
             this.CbxConfigSee1.UseSelectable = true;
@@ -379,7 +379,7 @@
             this.CbxConfigSee2.Location = new System.Drawing.Point(443, 476);
             this.CbxConfigSee2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbxConfigSee2.Name = "CbxConfigSee2";
-            this.CbxConfigSee2.Size = new System.Drawing.Size(43, 17);
+            this.CbxConfigSee2.Size = new System.Drawing.Size(39, 15);
             this.CbxConfigSee2.TabIndex = 18;
             this.CbxConfigSee2.Text = "Ver";
             this.CbxConfigSee2.UseSelectable = true;
@@ -392,7 +392,7 @@
             this.CbxConfigSee3.Location = new System.Drawing.Point(443, 521);
             this.CbxConfigSee3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbxConfigSee3.Name = "CbxConfigSee3";
-            this.CbxConfigSee3.Size = new System.Drawing.Size(43, 17);
+            this.CbxConfigSee3.Size = new System.Drawing.Size(39, 15);
             this.CbxConfigSee3.TabIndex = 19;
             this.CbxConfigSee3.Text = "Ver";
             this.CbxConfigSee3.UseSelectable = true;
@@ -436,13 +436,14 @@
             this.Controls.Add(this.LblUpdateLastName);
             this.Controls.Add(this.LblUpdateName);
             this.Controls.Add(this.LblUpdateData);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUsuarioConfig";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Text = "Configuracion de Usuario";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Default;
+            this.Load += new System.EventHandler(this.FrmUsuarioConfig_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

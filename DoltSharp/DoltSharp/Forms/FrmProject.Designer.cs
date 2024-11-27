@@ -51,7 +51,7 @@
             this.LblProjectName.AutoSize = true;
             this.LblProjectName.Location = new System.Drawing.Point(69, 257);
             this.LblProjectName.Name = "LblProjectName";
-            this.LblProjectName.Size = new System.Drawing.Size(146, 20);
+            this.LblProjectName.Size = new System.Drawing.Size(140, 19);
             this.LblProjectName.TabIndex = 1;
             this.LblProjectName.Text = "Nombre del proyecto:";
             // 
@@ -71,7 +71,7 @@
             this.LblProjectDescription.AutoSize = true;
             this.LblProjectDescription.Location = new System.Drawing.Point(131, 294);
             this.LblProjectDescription.Name = "LblProjectDescription";
-            this.LblProjectDescription.Size = new System.Drawing.Size(85, 20);
+            this.LblProjectDescription.Size = new System.Drawing.Size(79, 19);
             this.LblProjectDescription.TabIndex = 2;
             this.LblProjectDescription.Text = "Descripcion:";
             // 
@@ -80,7 +80,7 @@
             this.LblProjectDeadLine.AutoSize = true;
             this.LblProjectDeadLine.Location = new System.Drawing.Point(125, 384);
             this.LblProjectDeadLine.Name = "LblProjectDeadLine";
-            this.LblProjectDeadLine.Size = new System.Drawing.Size(90, 20);
+            this.LblProjectDeadLine.Size = new System.Drawing.Size(85, 19);
             this.LblProjectDeadLine.TabIndex = 3;
             this.LblProjectDeadLine.Text = "Fecha Limite:";
             // 
@@ -89,7 +89,7 @@
             this.LblProjectStartDate.AutoSize = true;
             this.LblProjectStartDate.Location = new System.Drawing.Point(111, 335);
             this.LblProjectStartDate.Name = "LblProjectStartDate";
-            this.LblProjectStartDate.Size = new System.Drawing.Size(105, 20);
+            this.LblProjectStartDate.Size = new System.Drawing.Size(99, 19);
             this.LblProjectStartDate.TabIndex = 4;
             this.LblProjectStartDate.Text = "Fecha de Inicio:";
             // 
@@ -106,7 +106,7 @@
             this.LblProjectResources.AutoSize = true;
             this.LblProjectResources.Location = new System.Drawing.Point(51, 437);
             this.LblProjectResources.Name = "LblProjectResources";
-            this.LblProjectResources.Size = new System.Drawing.Size(165, 20);
+            this.LblProjectResources.Size = new System.Drawing.Size(154, 19);
             this.LblProjectResources.TabIndex = 6;
             this.LblProjectResources.Text = "Asigaciones de Recursos:";
             // 
@@ -128,10 +128,10 @@
             // 
             // 
             this.TxtProjectName.CustomButton.Image = null;
-            this.TxtProjectName.CustomButton.Location = new System.Drawing.Point(263, 1);
+            this.TxtProjectName.CustomButton.Location = new System.Drawing.Point(197, 1);
             this.TxtProjectName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtProjectName.CustomButton.Name = "";
-            this.TxtProjectName.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.TxtProjectName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtProjectName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtProjectName.CustomButton.TabIndex = 1;
             this.TxtProjectName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -160,10 +160,10 @@
             // 
             // 
             this.TxtProjectDescription.CustomButton.Image = null;
-            this.TxtProjectDescription.CustomButton.Location = new System.Drawing.Point(263, 1);
+            this.TxtProjectDescription.CustomButton.Location = new System.Drawing.Point(197, 1);
             this.TxtProjectDescription.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtProjectDescription.CustomButton.Name = "";
-            this.TxtProjectDescription.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.TxtProjectDescription.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtProjectDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtProjectDescription.CustomButton.TabIndex = 1;
             this.TxtProjectDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -191,7 +191,7 @@
             this.DtpProjectStartDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DtpProjectStartDate.Location = new System.Drawing.Point(259, 335);
             this.DtpProjectStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DtpProjectStartDate.MinimumSize = new System.Drawing.Size(0, 30);
+            this.DtpProjectStartDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.DtpProjectStartDate.Name = "DtpProjectStartDate";
             this.DtpProjectStartDate.Size = new System.Drawing.Size(219, 30);
             this.DtpProjectStartDate.TabIndex = 3;
@@ -201,7 +201,7 @@
             this.DtpProjectDeadLine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DtpProjectDeadLine.Location = new System.Drawing.Point(259, 384);
             this.DtpProjectDeadLine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DtpProjectDeadLine.MinimumSize = new System.Drawing.Size(0, 30);
+            this.DtpProjectDeadLine.MinimumSize = new System.Drawing.Size(0, 29);
             this.DtpProjectDeadLine.Name = "DtpProjectDeadLine";
             this.DtpProjectDeadLine.Size = new System.Drawing.Size(219, 30);
             this.DtpProjectDeadLine.TabIndex = 4;
@@ -224,10 +224,10 @@
             // 
             // 
             this.TxtProjectResources.CustomButton.Image = null;
-            this.TxtProjectResources.CustomButton.Location = new System.Drawing.Point(263, 1);
+            this.TxtProjectResources.CustomButton.Location = new System.Drawing.Point(197, 1);
             this.TxtProjectResources.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtProjectResources.CustomButton.Name = "";
-            this.TxtProjectResources.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.TxtProjectResources.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtProjectResources.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtProjectResources.CustomButton.TabIndex = 1;
             this.TxtProjectResources.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -275,6 +275,7 @@
             this.Resizable = false;
             this.Text = "Agregar Proyecto";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.FrmProject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

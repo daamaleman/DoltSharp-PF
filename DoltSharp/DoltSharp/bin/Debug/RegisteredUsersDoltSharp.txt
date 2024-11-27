@@ -30,3 +30,19 @@ Correo: davide@gmail.com
 Fecha de nacimiento: 13/06/1990
 Contraseña: MTIzNDU2Nzg5
 -------------------------------
+-------------------------------
+ID: USR41138
+Nombre: Diedereich Alexander
+Apellido: Alemán Martínez
+Correo: diedereich@gmail.com
+Fecha de nacimiento: 20/7/2005
+Contraseña: MTIzNDU2Nzg=
+-------------------------------
+-------------------------------
+ID: USR78664
+Nombre: Chepe
+Apellido: Durán
+Correo: duran@gmail.com
+Fecha de nacimiento: 7/6/1995
+Contraseña: MTIzNDU2Nzg=
+-------------------------------

@@ -52,11 +52,8 @@ C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFi
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.dll
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.AssemblyReference.cache
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.UsuarioConfig.resources
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.LogIn.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.MainPage.resources
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Properties.Resources.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Register.resources
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.GenerateResource.cache
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.CoreCompileInputs.cache
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
@@ -135,9 +132,6 @@ C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
 C:\Users\valde\OneDrive\Documentos\2do Semestre\Analizis y diseno\DoltSharp Code\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.ConfigPersonalizacion.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.ConfigPersonalizacion.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Project.resources
-C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Task.resources
 C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe.config
 C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.exe
 C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\DoltSharp.pdb
@@ -445,3 +439,59 @@ C:\Users\elias\OneDrive\Imágenes\Escritorio\DoltSharp-PF\respaldo\DoltSharp-Pro
 C:\Users\elias\OneDrive\Imágenes\Escritorio\DoltSharp-PF\respaldo\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.csproj.Up2Date
 C:\Users\elias\OneDrive\Imágenes\Escritorio\DoltSharp-PF\respaldo\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\elias\OneDrive\Imágenes\Escritorio\DoltSharp-PF\respaldo\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\MaterialSkin.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\EnvDTE.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\stdole.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmConfig.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmProject.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Forms.FrmReports.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmTask.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmUsuarioConfig.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmMainPage.resources
+C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.FrmRegister.resources
