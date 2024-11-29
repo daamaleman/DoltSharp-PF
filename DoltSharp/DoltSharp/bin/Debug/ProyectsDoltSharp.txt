@@ -1,0 +1,8 @@
+-------------------------------
+ID del Proyecto: 2957
+Nombre del Proyecto: g
+Descripción: gh
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 28/11/2024
+Estado: En progreso
+-------------------------------

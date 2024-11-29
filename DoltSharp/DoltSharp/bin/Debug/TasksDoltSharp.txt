@@ -1,0 +1,110 @@
+-------------------------------
+Tarea: 1
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 2
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 3
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 4
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 5
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 6
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 7
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 8
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 9
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 10
+ID de la Tarea: 0
+Nombre de la Tarea: 
+Descripción: 
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 01/01/0001
+Prioridad: 
+Estado: 
+-------------------------------
+-------------------------------
+Tarea: 11
+ID de la Tarea: 4391
+Nombre de la Tarea: uu
+Descripción: hiuh
+Fecha de Inicio: 28/11/2024
+Fecha Límite: 28/11/2024
+Prioridad: Urgente
+Estado: No iniciado 
+-------------------------------
