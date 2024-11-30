@@ -23,25 +23,25 @@ namespace DoltSharp
         {
             InitializeComponent();
             _logInServices = new LogInServices("RegisteredUsersDoltSharp.txt");
+
+            // Asignar eventos KeyDown a los controles de entrada
+            TxtEmail.KeyDown += Input_KeyDown;
+            TxtPw.KeyDown += Input_KeyDown;
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            // Obtener datos ingresados por el usuario
             string email = TxtEmail.Text.Trim();
             string password = TxtPw.Text;
 
-            // Validar campos
             if (!_logInServices.AreFieldsValid(email, password, out string errorMessage))
             {
                 MetroMessageBox.Show(this, errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Cifrar la contraseña
             string encryptedPassword = _logInServices.EncryptPassword(password);
 
-            // Intentar autenticar al usuario
             try
             {
                 if (_logInServices.AuthenticateUser(email, encryptedPassword, out string userId))
@@ -60,6 +60,17 @@ namespace DoltSharp
             catch (FileNotFoundException ex)
             {
                 MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Input_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Verifica si la tecla presionada es Enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnLogin_Click(sender, e); // Simula clic en BtnLogin
+                e.Handled = true;          // Marca el evento como manejado
+                e.SuppressKeyPress = true; // Evita que se envíe el Enter como texto
             }
         }
 
@@ -86,7 +97,7 @@ namespace DoltSharp
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-           ReadConfig();
+            ReadConfig();
         }
 
         private void ReadConfig()
