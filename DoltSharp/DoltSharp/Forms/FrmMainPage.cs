@@ -93,11 +93,19 @@ namespace DoltSharp
 
         private void ConfigureProjectDataGridView()
         {
+
+            // Limpia las columnas existentes
             DgvProjectsList.Columns.Clear();
+
+            // Define nuevas columnas
             DgvProjectsList.Columns.Add("ProjectId", "ID");
             DgvProjectsList.Columns.Add("ProjectTitle", "Título");
+            DgvProjectsList.Columns.Add("ProjectDescription", "Descripción");
+            DgvProjectsList.Columns.Add("ProjectStartDate", "Fecha de Inicio");
+            DgvProjectsList.Columns.Add("ProjectDueDate", "Fecha Límite");
             DgvProjectsList.Columns.Add("Status", "Estado");
 
+            // Columna para acciones (botones)
             DataGridViewButtonColumn actionsColumn = new DataGridViewButtonColumn
             {
                 HeaderText = "Acciones",
@@ -107,6 +115,7 @@ namespace DoltSharp
             };
             DgvProjectsList.Columns.Add(actionsColumn);
 
+            // Configura el diseño del DataGridView
             DgvProjectsList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvProjectsList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DgvProjectsList.RowHeadersVisible = false;
@@ -142,26 +151,29 @@ namespace DoltSharp
         {
             try
             {
-                // Limpia el DataGridView
+                // Limpia las filas existentes en el DataGridView
                 DgvProjectsList.Rows.Clear();
 
                 // Carga los proyectos usando el servicio
                 projects = _mainPageServices.LoadProjects();
 
-                // Depuración: imprime en consola los proyectos cargados
+                // Depuración: verifica los proyectos cargados
                 foreach (var project in projects)
                 {
-                    Console.WriteLine($"Proyecto cargado: ID={project.ProjectId}, Título={project.ProjectTitle}");
+                    Console.WriteLine($"Cargando proyecto: ID={project.ProjectId}, Título={project.ProjectTitle}");
                 }
 
-                // Agrega los proyectos al DataGridView
+                // Agrega cada proyecto al DataGridView
                 foreach (var project in projects)
                 {
-                    if (!string.IsNullOrWhiteSpace(project.ProjectTitle))
+                    if (!string.IsNullOrWhiteSpace(project.ProjectTitle) && project.ProjectId > 0)
                     {
                         DgvProjectsList.Rows.Add(
                             project.ProjectId,
                             project.ProjectTitle,
+                            project.ProjectDescription,
+                            DateTime.Now.ToShortDateString(), // Fecha de inicio (puedes actualizarla si es dinámica)
+                            project.ProjectDueDate.ToShortDateString(),
                             project.IsCompleteProject ? "Completado" : "En progreso"
                         );
                     }

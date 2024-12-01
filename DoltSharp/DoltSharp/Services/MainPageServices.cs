@@ -62,8 +62,6 @@ namespace DoltSharp.Services
                     {
                         currentProject.IsCompleteProject = line.Contains("Completado");
                     }
-
-                    // Si llegamos al delimitador, agrega el proyecto a la lista y reinicia el objeto
                     if (line == "-------------------------------")
                     {
                         if (!string.IsNullOrWhiteSpace(currentProject.ProjectTitle))
@@ -100,7 +98,7 @@ namespace DoltSharp.Services
         public List<DoltSharp.Models.Task> LoadTasks()
         {
             var tasks = _taskFile.GetAllTasks();
-            return tasks ?? new List<DoltSharp.Models.Task>(); // Evitar null usando ??.
+            return tasks ?? new List<DoltSharp.Models.Task>();
         }
 
         public void DeleteTask(int taskId)
