@@ -39,7 +39,7 @@ namespace DoltSharp.Services
         {
             var projects = new List<Project>();
 
-            if (!File.Exists(_filePath)) // Verifica si el archivo existe.
+            if (!File.Exists(_filePath))
             {
                 return projects; // Devuelve una lista vacía si no existe.
             }
@@ -60,9 +60,10 @@ namespace DoltSharp.Services
                     };
                     projects.Add(project);
                 }
-                catch
+                catch (Exception ex)
                 {
-                    // Ignorar líneas mal formateadas.
+                    // Log para proyectos mal formateados
+                    Console.WriteLine($"Error al procesar proyecto en línea {i + 1}: {ex.Message}");
                 }
             }
 

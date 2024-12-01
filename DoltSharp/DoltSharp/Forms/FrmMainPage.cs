@@ -140,15 +140,24 @@ namespace DoltSharp
 
         private void LoadProjectsIntoGrid()
         {
-
             try
             {
+                // Limpia el DataGridView
                 DgvProjectsList.Rows.Clear();
+
+                // Carga los proyectos usando el servicio
                 projects = _mainPageServices.LoadProjects();
 
+                // Depuración: imprime en consola los proyectos cargados
                 foreach (var project in projects)
                 {
-                    if (!string.IsNullOrWhiteSpace(project.ProjectTitle) && project.ProjectId > 0)
+                    Console.WriteLine($"Proyecto cargado: ID={project.ProjectId}, Título={project.ProjectTitle}");
+                }
+
+                // Agrega los proyectos al DataGridView
+                foreach (var project in projects)
+                {
+                    if (!string.IsNullOrWhiteSpace(project.ProjectTitle))
                     {
                         DgvProjectsList.Rows.Add(
                             project.ProjectId,

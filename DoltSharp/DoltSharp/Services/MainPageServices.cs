@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace DoltSharp.Services
@@ -20,14 +21,76 @@ namespace DoltSharp.Services
 
         public List<Project> LoadProjects()
         {
-            var projects = _proyectFile.LoadProjects();
-            return projects ?? new List<Project>(); // Evitar null usando ??.
+            var projects = new List<Project>();
+
+            // Obtiene la ruta del archivo usando ProyectFile
+            string filePath = _proyectFile.GetFilePath();
+
+            if (!File.Exists(filePath)) // Verifica si el archivo existe.
+            {
+                return projects; // Devuelve una lista vacía si no existe.
+            }
+
+            // Lee todo el contenido del archivo
+            var lines = File.ReadAllLines(filePath);
+            var currentProject = new Project();
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                try
+                {
+                    var line = lines[i].Trim();
+
+                    // Identifica las líneas relevantes basadas en su contenido
+                    if (line.StartsWith("ID del Proyecto:"))
+                    {
+                        currentProject.ProjectId = int.Parse(line.Split(':')[1].Trim());
+                    }
+                    else if (line.StartsWith("Nombre del Proyecto:"))
+                    {
+                        currentProject.ProjectTitle = line.Split(':')[1].Trim();
+                    }
+                    else if (line.StartsWith("Descripción:"))
+                    {
+                        currentProject.ProjectDescription = line.Split(':')[1].Trim();
+                    }
+                    else if (line.StartsWith("Fecha Límite:"))
+                    {
+                        currentProject.ProjectDueDate = DateTime.Parse(line.Split(':')[1].Trim());
+                    }
+                    else if (line.StartsWith("Estado:"))
+                    {
+                        currentProject.IsCompleteProject = line.Contains("Completado");
+                    }
+
+                    // Si llegamos al delimitador, agrega el proyecto a la lista y reinicia el objeto
+                    if (line == "-------------------------------")
+                    {
+                        if (!string.IsNullOrWhiteSpace(currentProject.ProjectTitle))
+                        {
+                            projects.Add(currentProject);
+                        }
+                        currentProject = new Project(); // Reinicia para el siguiente proyecto
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error procesando línea {i + 1}: {ex.Message}");
+                }
+            }
+
+            return projects;
         }
 
         public void SaveProjects(List<Project> projects)
         {
-            System.IO.File.WriteAllText(_proyectFile.GetFilePath(), string.Empty);
+            // Obtiene la ruta del archivo desde la instancia de ProyectFile
+            string filePath = _proyectFile.GetFilePath();
 
+            // Limpia el contenido del archivo
+            File.WriteAllText(filePath, string.Empty);
+
+            // Guarda todos los proyectos en el archivo
             foreach (var project in projects)
             {
                 _proyectFile.SaveProject(project);
