@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DoltSharp.Services;
 using DoltSharp.Models;
 using DoltSharp.Dao;
+using System.Globalization;
 
 namespace DoltSharp.Services
 {
@@ -53,8 +54,16 @@ namespace DoltSharp.Services
                 TaskStatus = string.IsNullOrEmpty(status) ? "Pendiente" : status // Validar estado
             };
 
-            _taskDao.AddTask(newTask);
-            SaveTasksToFile();
+            // Verifica si ya existe una tarea con el mismo ID antes de agregarla
+            if (!_taskDao.GetTasks().Any(t => t.TaskId == newTask.TaskId))
+            {
+                _taskDao.AddTask(newTask);
+                SaveTasksToFile();
+            }
+            else
+            {
+                Console.WriteLine($"La tarea con ID {newTask.TaskId} ya existe. Ignorando...");
+            }
         }
 
         // Devuelve todas las tareas almacenadas en el DAO.
@@ -111,7 +120,15 @@ namespace DoltSharp.Services
                 {
                     if (task != null)
                     {
-                        _taskDao.AddTask(task); // Agrega la tarea al DAO
+                        // Verifica si la tarea ya existe antes de agregarla
+                        if (!_taskDao.GetTasks().Any(t => t.TaskId == task.TaskId))
+                        {
+                            _taskDao.AddTask(task); // Agrega la tarea al DAO
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Tarea duplicada encontrada con ID {task.TaskId}. Ignorando...");
+                        }
                     }
                     task = new DoltSharp.Models.Task(); // Inicia una nueva tarea
                 }
@@ -130,12 +147,11 @@ namespace DoltSharp.Services
                 else if (line.StartsWith("Fecha Límite:"))
                 {
                     string fechaTexto = line.Replace("Fecha Límite:", "").Trim();
-
                     if (DateTime.TryParseExact(
                             fechaTexto,
                             "dd/MM/yyyy",
-                            new System.Globalization.CultureInfo("es-ES"),
-                            System.Globalization.DateTimeStyles.None,
+                            new CultureInfo("es-ES"),
+                            DateTimeStyles.None,
                             out DateTime fecha))
                     {
                         task.TaskDeadline = fecha; // Fecha válida
@@ -158,15 +174,18 @@ namespace DoltSharp.Services
 
             if (task != null)
             {
-                _taskDao.AddTask(task); // Agrega la última tarea al DAO
+                if (!_taskDao.GetTasks().Any(t => t.TaskId == task.TaskId))
+                {
+                    _taskDao.AddTask(task); // Agrega la última tarea al DAO
+                }
             }
         }
 
-        // Genera un ID aleatorio de 4 dígitos para las tareas.
+        // Genera un ID único para las tareas.
         private int GenerateRandomId()
         {
             Random random = new Random();
-            return random.Next(1000, 9999);
+            return random.Next(1000, 9999); // Genera un número entero aleatorio de 4 dígitos
         }
     }
 }
