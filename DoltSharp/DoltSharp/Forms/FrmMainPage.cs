@@ -94,10 +94,9 @@ namespace DoltSharp
         private void ConfigureProjectDataGridView()
         {
 
-            // Limpia las columnas existentes
             DgvProjectsList.Columns.Clear();
 
-            // Define nuevas columnas
+            // Definir columnas
             DgvProjectsList.Columns.Add("ProjectId", "ID");
             DgvProjectsList.Columns.Add("ProjectTitle", "Título");
             DgvProjectsList.Columns.Add("ProjectDescription", "Descripción");
@@ -105,26 +104,29 @@ namespace DoltSharp
             DgvProjectsList.Columns.Add("ProjectDueDate", "Fecha Límite");
             DgvProjectsList.Columns.Add("Status", "Estado");
 
-            // Columna para acciones (botones)
-            DataGridViewButtonColumn actionsColumn = new DataGridViewButtonColumn
+            // Columna para eliminar
+            DataGridViewButtonColumn deleteColumn = new DataGridViewButtonColumn
             {
-                HeaderText = "Acciones",
-                Text = "Ver/Eliminar",
+                HeaderText = "Eliminar",
+                Text = "Eliminar",
                 UseColumnTextForButtonValue = true,
-                Name = "Actions"
+                Name = "Delete"
             };
-            DgvProjectsList.Columns.Add(actionsColumn);
+            DgvProjectsList.Columns.Add(deleteColumn);
 
-            // Configura el diseño del DataGridView
+            // Configuración general
             DgvProjectsList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvProjectsList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DgvProjectsList.RowHeadersVisible = false;
             DgvProjectsList.AllowUserToAddRows = false;
+            DgvProjectsList.ReadOnly = true; // Hace que no sea editable
         }
 
         private void ConfigureTaskDataGridView()
         {
             DgvTaskList.Columns.Clear();
+
+            // Definir columnas
             DgvTaskList.Columns.Add("TaskId", "ID");
             DgvTaskList.Columns.Add("TaskName", "Nombre");
             DgvTaskList.Columns.Add("TaskDescription", "Descripción");
@@ -132,19 +134,22 @@ namespace DoltSharp
             DgvTaskList.Columns.Add("TaskPriority", "Prioridad");
             DgvTaskList.Columns.Add("TaskStatus", "Estado");
 
-            DataGridViewButtonColumn actionsColumn = new DataGridViewButtonColumn
+            // Columna para eliminar
+            DataGridViewButtonColumn deleteColumn = new DataGridViewButtonColumn
             {
-                HeaderText = "Acciones",
-                Text = "Ver/Eliminar",
+                HeaderText = "Eliminar",
+                Text = "Eliminar",
                 UseColumnTextForButtonValue = true,
-                Name = "Actions"
+                Name = "Delete"
             };
-            DgvTaskList.Columns.Add(actionsColumn);
+            DgvTaskList.Columns.Add(deleteColumn);
 
+            // Configuración general
             DgvTaskList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvTaskList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DgvTaskList.RowHeadersVisible = false;
             DgvTaskList.AllowUserToAddRows = false;
+            DgvTaskList.ReadOnly = true; // Hace que no sea editable
         }
 
         private void LoadProjectsIntoGrid()
@@ -228,103 +233,52 @@ namespace DoltSharp
 
         private void DgvProjectsList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            try
+            if (e.RowIndex >= 0 && e.ColumnIndex == DgvProjectsList.Columns["Delete"].Index)
             {
-                if (e.RowIndex < 0 || e.RowIndex >= DgvProjectsList.Rows.Count) return;
-
-                if (e.ColumnIndex == DgvProjectsList.Columns["Actions"].Index)
+                if (int.TryParse(DgvProjectsList.Rows[e.RowIndex].Cells["ProjectId"].Value?.ToString(), out int projectId))
                 {
-                    if (int.TryParse(DgvProjectsList.Rows[e.RowIndex].Cells["ProjectId"].Value?.ToString(), out int projectId))
-                    {
-                        var project = projects.FirstOrDefault(p => p.ProjectId == projectId);
+                    var confirmResult = MetroFramework.MetroMessageBox.Show(this,
+                        "¿Estás seguro de que deseas eliminar este proyecto?",
+                        "Confirmación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
 
-                        if (project != null)
-                        {
-                            var result = MetroMessageBox.Show(
-                                this,
-                                "¿Qué acción deseas realizar?\nSí: Ver detalles\nNo: Eliminar",
-                                "Acción requerida",
-                                MessageBoxButtons.YesNoCancel,
-                                MessageBoxIcon.Question
-                            );
-
-                            if (result == DialogResult.Yes)
-                            {
-                                var details = _mainPageServices.GetProjectDetails(project);
-                                MetroMessageBox.Show(this, details, "Detalles del Proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else if (result == DialogResult.No)
-                            {
-                                projects.RemoveAll(p => p.ProjectId == projectId);
-                                SaveProjectsToFile();
-                                LoadProjectsIntoGrid();
-                            }
-                        }
-                    }
-                    else
+                    if (confirmResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("ID de proyecto no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        projects.RemoveAll(p => p.ProjectId == projectId);
+                        SaveProjectsToFile();
+                        LoadProjectsIntoGrid();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MetroMessageBox.Show(this,
-                    $"Error al procesar acción: {ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("ID de proyecto no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void DgvTaskList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (e.RowIndex >= 0 && e.ColumnIndex == DgvTaskList.Columns["Delete"].Index)
             {
-                if (e.RowIndex < 0 || e.RowIndex >= DgvTaskList.Rows.Count) return;
-
-                if (e.ColumnIndex == DgvTaskList.Columns["Actions"].Index)
+                if (int.TryParse(DgvTaskList.Rows[e.RowIndex].Cells["TaskId"].Value?.ToString(), out int taskId))
                 {
-                    if (int.TryParse(DgvTaskList.Rows[e.RowIndex].Cells["TaskId"].Value?.ToString(), out int taskId))
-                    {
-                        var task = tasks.FirstOrDefault(t => t.TaskId == taskId);
+                    var confirmResult = MetroFramework.MetroMessageBox.Show(this,
+                        "¿Estás seguro de que deseas eliminar esta tarea?",
+                        "Confirmación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
 
-                        if (task != null)
-                        {
-                            var result = MetroMessageBox.Show(
-                                this,
-                                "¿Qué acción deseas realizar?\nSí: Ver detalles\nNo: Eliminar",
-                                "Acción requerida",
-                                MessageBoxButtons.YesNoCancel,
-                                MessageBoxIcon.Question
-                            );
-
-                            if (result == DialogResult.Yes)
-                            {
-                                var details = _mainPageServices.GetTaskDetails(task);
-                                MetroMessageBox.Show(this, details, "Detalles de la Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else if (result == DialogResult.No)
-                            {
-                                _mainPageServices.DeleteTask(taskId);
-                                LoadTasksIntoGrid();
-                            }
-                        }
-                    }
-                    else
+                    if (confirmResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("ID de tarea no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        _mainPageServices.DeleteTask(taskId);
+                        LoadTasksIntoGrid();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MetroMessageBox.Show(this,
-                    $"Error al procesar acción: {ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("ID de tarea no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

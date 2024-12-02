@@ -1,25 +1,5 @@
 -------------------------------
 Tarea: 1
-ID de la Tarea: 8679
-Nombre de la Tarea: wsd
-Descripción: wdq
-Fecha de Inicio: 01/12/2024
-Fecha Límite: 01/12/2024
-Prioridad: Urgente
-Estado: No iniciado
--------------------------------
--------------------------------
-Tarea: 2
-ID de la Tarea: 5618
-Nombre de la Tarea: qwdfq
-Descripción: qwfq
-Fecha de Inicio: 01/12/2024
-Fecha Límite: 01/12/2024
-Prioridad: Urgente
-Estado: Iniciado
--------------------------------
--------------------------------
-Tarea: 3
 ID de la Tarea: 8327
 Nombre de la Tarea: tg45
 Descripción: 4t3

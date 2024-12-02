@@ -1,23 +1,7 @@
 -------------------------------
-ID del Proyecto: 7745
-Nombre del Proyecto: wefw
-Descripción: ewfw
-Fecha de Inicio: 01/12/2024
-Fecha Límite: 01/12/2024
-Estado: En progreso
--------------------------------
--------------------------------
 ID del Proyecto: 5107
 Nombre del Proyecto: wefw
 Descripción: wefw
-Fecha de Inicio: 01/12/2024
-Fecha Límite: 01/12/2024
-Estado: En progreso
--------------------------------
--------------------------------
-ID del Proyecto: 7278
-Nombre del Proyecto: wefw
-Descripción: wef
 Fecha de Inicio: 01/12/2024
 Fecha Límite: 01/12/2024
 Estado: En progreso
