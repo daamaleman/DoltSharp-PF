@@ -1,15 +1,5 @@
 -------------------------------
 Tarea: 1
-ID de la Tarea: 9628
-Nombre de la Tarea: dc
-Descripción: wedcqw
-Fecha de Inicio: 02/12/2024
-Fecha Límite: 02/12/2024
-Prioridad: Urgente
-Estado: Iniciado
--------------------------------
--------------------------------
-Tarea: 2
 ID de la Tarea: 0
 Nombre de la Tarea: 
 Descripción: 
@@ -19,20 +9,20 @@ Prioridad:
 Estado: 
 -------------------------------
 -------------------------------
-Tarea: 3
-ID de la Tarea: 1110
-Nombre de la Tarea: qwfq
-Descripción: qwfqw
+Tarea: 2
+ID de la Tarea: 3507
+Nombre de la Tarea: ewf
+Descripción: we
 Fecha de Inicio: 02/12/2024
 Fecha Límite: 02/12/2024
 Prioridad: Urgente
 Estado: No iniciado
 -------------------------------
 -------------------------------
-Tarea: 4
-ID de la Tarea: 2113
-Nombre de la Tarea: wfqwf
-Descripción: qwfqw
+Tarea: 3
+ID de la Tarea: 4676
+Nombre de la Tarea: ewf
+Descripción: efw
 Fecha de Inicio: 02/12/2024
 Fecha Límite: 02/12/2024
 Prioridad: Urgente

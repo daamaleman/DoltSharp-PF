@@ -15,6 +15,9 @@ using System.Text;
 using System.Windows.Forms;
 using DoltSharp.Dao;
 using MetroFramework;
+
+
+
 namespace DoltSharp
 {
     public partial class FrmMainPage : MetroFramework.Forms.MetroForm
@@ -138,10 +141,22 @@ namespace DoltSharp
             // Agregar la columna al DataGridView
             DgvProjectsList.Columns.Add(statusColumn);
 
+            // Columna para eliminar
+            DataGridViewButtonColumn deleteColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Eliminar",
+                Text = "Eliminar",
+                UseColumnTextForButtonValue = true,
+                Name = "Delete"
+            };
+            DgvProjectsList.Columns.Add(deleteColumn);
+
             DgvProjectsList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvProjectsList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DgvProjectsList.RowHeadersVisible = false;
             DgvProjectsList.AllowUserToAddRows = false;
+            DgvProjectsList.ReadOnly = true; // Hace que no sea editable
+
         }
 
         private void ConfigureTaskDataGridView()
@@ -153,30 +168,64 @@ namespace DoltSharp
             DgvTaskList.Columns.Add("TaskDeadline", "Fecha Límite");
             DgvTaskList.Columns.Add("TaskPriority", "Prioridad");
 
-            // Columna editable para el estado
-            DataGridViewComboBoxColumn statusColumn = new DataGridViewComboBoxColumn
+            // Hacer el DataGridView no editable
+            DgvTaskList.ReadOnly = true;
+
+            // Columna de acción con botón para eliminar
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
             {
-                HeaderText = "Estado",
-                Name = "Status",
-                DataSource = new List<string> { "Pendiente", "En progreso", "Completado" }, // Valores válidos
-                FlatStyle = FlatStyle.Flat
+                HeaderText = "Eliminar",
+                Text = "Eliminar",
+                UseColumnTextForButtonValue = true,
+                Name = "Delete"
             };
+            DgvTaskList.Columns.Add(deleteButtonColumn);
+
+            // Ajustes generales
+            DgvTaskList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvTaskList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DgvTaskList.AllowUserToAddRows = false; // Evita que el usuario agregue filas manualmente
+            DgvTaskList.RowHeadersVisible = false;
+            DgvTaskList.ReadOnly = true; // Hace que no sea editable
+
         }
 
         private void DgvTaskList_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == DgvTaskList.Columns["TaskStatus"].Index)
+            if (e.ColumnIndex == DgvTaskList.Columns["DeleteButton"].Index && e.RowIndex >= 0)
             {
-                if (int.TryParse(DgvTaskList.Rows[e.RowIndex].Cells["TaskId"].Value.ToString(), out int taskId))
+                try
                 {
-                    string nuevoEstado = DgvTaskList.Rows[e.RowIndex].Cells["TaskStatus"].Value.ToString();
-                    var tarea = tasks.FirstOrDefault(t => t.TaskId == taskId);
-
-                    if (tarea != null)
+                    // Obtener el ID de la tarea seleccionada
+                    if (int.TryParse(DgvTaskList.Rows[e.RowIndex].Cells["TaskId"].Value?.ToString(), out int taskId))
                     {
-                        tarea.TaskStatus = nuevoEstado;
-                        _mainPageServices.SaveTasks(tasks); // Guardar los cambios en el archivo
+                        var result = MessageBox.Show(
+                            "¿Estás seguro de que deseas eliminar esta tarea?",
+                            "Confirmación",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            // Lógica para eliminar la tarea
+                            _mainPageServices.DeleteTask(taskId);
+
+                            // Recargar la lista de tareas en el DataGridView
+                            LoadTasksIntoGrid();
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("ID de tarea no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(
+                        $"Error al intentar eliminar la tarea: {ex.Message}",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
         }
@@ -215,35 +264,33 @@ namespace DoltSharp
                 DgvProjectsList.Rows.Clear();
 
                 // Carga los proyectos usando el servicio
-                projects = _mainPageServices.LoadProjects() ?? new List<Project>();
+                projects = _mainPageServices.LoadProjects();
 
-                // Opciones válidas del ComboBox
-                var validStatuses = new List<string> { "Pendiente", "En progreso", "Completado" };
+                // Depuración: verifica los proyectos cargados
+                foreach (var project in projects)
+                {
+                    Console.WriteLine($"Cargando proyecto: ID={project.ProjectId}, Título={project.ProjectTitle}");
+                }
 
                 // Agrega cada proyecto al DataGridView
                 foreach (var project in projects)
                 {
-                    // Validar el estado
-                    string estado = project.IsCompleteProject ? "Completado" : "Pendiente";
-
-                    if (!validStatuses.Contains(estado))
+                    if (!string.IsNullOrWhiteSpace(project.ProjectTitle) && project.ProjectId > 0)
                     {
-                        estado = "Pendiente"; // Valor por defecto si no es válido
+                        DgvProjectsList.Rows.Add(
+                            project.ProjectId,
+                            project.ProjectTitle,
+                            project.ProjectDescription,
+                            DateTime.Now.ToShortDateString(), // Fecha de inicio (puedes actualizarla si es dinámica)
+                            project.ProjectDueDate.ToShortDateString(),
+                            project.IsCompleteProject ? "Completado" : "En progreso"
+                        );
                     }
-
-                    // Agregar el proyecto al DataGridView
-                    DgvProjectsList.Rows.Add(
-                        project.ProjectId,
-                        project.ProjectTitle,
-                        project.ProjectDescription,
-                        project.ProjectDueDate.ToShortDateString(),
-                        estado // Asigna el estado validado
-                    );
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this,
+                MetroMessageBox.Show(this,
                     $"Error al cargar los proyectos: {ex.Message}",
                     "Error",
                     MessageBoxButtons.OK,
@@ -255,33 +302,27 @@ namespace DoltSharp
         {
             try
             {
-                // Limpia las filas existentes en el DataGridView
                 DgvTaskList.Rows.Clear();
-
-                // Carga las tareas desde el servicio
-                tasks = _mainPageServices.LoadTasks() ?? new List<DoltSharp.Models.Task>();
+                tasks = _mainPageServices.LoadTasks();
 
                 foreach (var task in tasks)
                 {
-                    // Validar la fecha límite
-                    string fechaLimite = task.TaskDeadline == DateTime.MinValue
-                        ? "Sin fecha" // Reemplazar fechas inválidas por "Sin fecha"
-                        : task.TaskDeadline.ToShortDateString();
-
-                    // Agregar la tarea al DataGridView
-                    DgvTaskList.Rows.Add(
-                        task.TaskId,
-                        task.TaskName,
-                        task.TaskDescription,
-                        fechaLimite,
-                        task.TaskPriority,
-                        task.TaskStatus
-                    );
+                    if (!string.IsNullOrWhiteSpace(task.TaskName))
+                    {
+                        DgvTaskList.Rows.Add(
+                            task.TaskId,
+                            task.TaskName,
+                            task.TaskDescription,
+                            task.TaskDeadline.ToString("dd/MM/yyyy"),
+                            task.TaskPriority,
+                            task.TaskStatus
+                        );
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this,
+                MetroMessageBox.Show(this,
                     $"Error al cargar las tareas: {ex.Message}",
                     "Error",
                     MessageBoxButtons.OK,
@@ -334,102 +375,52 @@ namespace DoltSharp
         private void DgvProjectsList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            try
+            if (e.RowIndex >= 0 && e.ColumnIndex == DgvProjectsList.Columns["Delete"].Index)
             {
-                if (e.RowIndex < 0 || e.RowIndex >= DgvProjectsList.Rows.Count) return;
-
-                if (e.ColumnIndex == DgvProjectsList.Columns["Actions"].Index)
+                if (int.TryParse(DgvProjectsList.Rows[e.RowIndex].Cells["ProjectId"].Value?.ToString(), out int projectId))
                 {
-                    if (int.TryParse(DgvProjectsList.Rows[e.RowIndex].Cells["ProjectId"].Value?.ToString(), out int projectId))
-                    {
-                        var project = projects.FirstOrDefault(p => p.ProjectId == projectId);
+                    var confirmResult = MetroFramework.MetroMessageBox.Show(this,
+                        "¿Estás seguro de que deseas eliminar este proyecto?",
+                        "Confirmación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
 
-                        if (project != null)
-                        {
-                            var result = MetroMessageBox.Show(
-                                this,
-                                "¿Qué acción deseas realizar?\nSí: Ver detalles\nNo: Eliminar",
-                                "Acción requerida",
-                                MessageBoxButtons.YesNoCancel,
-                                MessageBoxIcon.Question
-                            );
-
-                            if (result == DialogResult.Yes)
-                            {
-                                var details = _mainPageServices.GetProjectDetails(project);
-                                MetroMessageBox.Show(this, details, "Detalles del Proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else if (result == DialogResult.No)
-                            {
-                                projects.RemoveAll(p => p.ProjectId == projectId);
-                                SaveProjectsToFile();
-                                LoadProjectsIntoGrid();
-                            }
-                        }
-                    }
-                    else
+                    if (confirmResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("ID de proyecto no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        projects.RemoveAll(p => p.ProjectId == projectId);
+                        SaveProjectsToFile();
+                        LoadProjectsIntoGrid();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MetroMessageBox.Show(this,
-                    $"Error al procesar acción: {ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("ID de proyecto no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void DgvTaskList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (e.RowIndex >= 0 && e.ColumnIndex == DgvTaskList.Columns["Delete"].Index)
             {
-                if (e.RowIndex < 0 || e.RowIndex >= DgvTaskList.Rows.Count) return;
-
-                if (e.ColumnIndex == DgvTaskList.Columns["Actions"].Index)
+                if (int.TryParse(DgvTaskList.Rows[e.RowIndex].Cells["TaskId"].Value?.ToString(), out int taskId))
                 {
-                    if (int.TryParse(DgvTaskList.Rows[e.RowIndex].Cells["TaskId"].Value?.ToString(), out int taskId))
-                    {
-                        var task = tasks.FirstOrDefault(t => t.TaskId == taskId);
+                    var confirmResult = MetroFramework.MetroMessageBox.Show(this,
+                        "¿Estás seguro de que deseas eliminar esta tarea?",
+                        "Confirmación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
 
-                        if (task != null)
-                        {
-                            var result = MetroMessageBox.Show(
-                                this,
-                                "¿Qué acción deseas realizar?\nSí: Ver detalles\nNo: Eliminar",
-                                "Acción requerida",
-                                MessageBoxButtons.YesNoCancel,
-                                MessageBoxIcon.Question
-                            );
-
-                            if (result == DialogResult.Yes)
-                            {
-                                var details = _mainPageServices.GetTaskDetails(task);
-                                MetroMessageBox.Show(this, details, "Detalles de la Tarea", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else if (result == DialogResult.No)
-                            {
-                                _mainPageServices.DeleteTask(taskId);
-                                LoadTasksIntoGrid();
-                            }
-                        }
-                    }
-                    else
+                    if (confirmResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("ID de tarea no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        _mainPageServices.DeleteTask(taskId);
+                        LoadTasksIntoGrid();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MetroMessageBox.Show(this,
-                    $"Error al procesar acción: {ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("ID de tarea no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -542,6 +533,24 @@ namespace DoltSharp
             //Visualizar el reporte 
             frmReports.ShowDialog();
 
+        }
+
+        private void BtnViewReports_Click_1(object sender, EventArgs e)
+        {
+            TaskDao taskDao = new TaskDao();
+            TaskFile taskFile = new TaskFile();
+            List<Task> tasks = new List<Task>();
+            tasks = taskFile.GetAllTasks();
+            ReportDataSource dataSource = new ReportDataSource("DsDatos", tasks);
+            FrmReports frmReports = new FrmReports();
+            frmReports.reportViewer1.LocalReport.DataSources.Clear();
+            frmReports.reportViewer1.LocalReport.DataSources.Add(dataSource);
+            //Configurar el archivo de reporte
+            frmReports.reportViewer1.LocalReport.ReportEmbeddedResource = "DoltSharp.Reports.RptTask.rdlc";
+            //Refrescarv el reporte 
+            frmReports.reportViewer1.RefreshReport();
+            //Visualizar el reporte 
+            frmReports.ShowDialog();
         }
     }
 }
