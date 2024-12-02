@@ -85,14 +85,8 @@ namespace DoltSharp.Services
             {
                 int taskCounter = 1;
 
-                foreach (var task in _taskDao.GetTasks())
+                foreach (var task in _taskDao.GetTasks().Where(IsValidTask)) // Filtra tareas válidas
                 {
-                    // Validar fechas antes de guardar
-                    if (task.TaskDeadline == DateTime.MinValue || task.TaskDeadline.Year < 1900)
-                    {
-                        task.TaskDeadline = DateTime.Now; // Fecha predeterminada si es inválida
-                    }
-
                     writer.WriteLine("-------------------------------");
                     writer.WriteLine($"Tarea: {taskCounter}");
                     writer.WriteLine($"ID de la Tarea: {task.TaskId}");
@@ -118,12 +112,12 @@ namespace DoltSharp.Services
             {
                 if (line.StartsWith("-------------------------------"))
                 {
-                    if (task != null)
+                    if (task != null && IsValidTask(task))
                     {
-                        // Verifica si la tarea ya existe antes de agregarla
+                        // Agrega la tarea al DAO solo si es válida
                         if (!_taskDao.GetTasks().Any(t => t.TaskId == task.TaskId))
                         {
-                            _taskDao.AddTask(task); // Agrega la tarea al DAO
+                            _taskDao.AddTask(task);
                         }
                         else
                         {
@@ -154,12 +148,7 @@ namespace DoltSharp.Services
                             DateTimeStyles.None,
                             out DateTime fecha))
                     {
-                        task.TaskDeadline = fecha; // Fecha válida
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Advertencia: Fecha inválida encontrada ('{fechaTexto}'). Asignando fecha actual.");
-                        task.TaskDeadline = DateTime.Now; // Asigna una fecha predeterminada
+                        task.TaskDeadline = fecha;
                     }
                 }
                 else if (line.StartsWith("Prioridad:"))
@@ -172,13 +161,24 @@ namespace DoltSharp.Services
                 }
             }
 
-            if (task != null)
+            // Agregar la última tarea si es válida
+            if (task != null && IsValidTask(task))
             {
                 if (!_taskDao.GetTasks().Any(t => t.TaskId == task.TaskId))
                 {
-                    _taskDao.AddTask(task); // Agrega la última tarea al DAO
+                    _taskDao.AddTask(task);
                 }
             }
+        }
+
+        // Método auxiliar para validar si una tarea está completa
+        private bool IsValidTask(DoltSharp.Models.Task task)
+        {
+            return !string.IsNullOrEmpty(task.TaskName) &&
+                   !string.IsNullOrEmpty(task.TaskDescription) &&
+                   task.TaskDeadline != DateTime.MinValue &&
+                   !string.IsNullOrEmpty(task.TaskPriority) &&
+                   !string.IsNullOrEmpty(task.TaskStatus);
         }
 
         // Genera un ID único para las tareas.

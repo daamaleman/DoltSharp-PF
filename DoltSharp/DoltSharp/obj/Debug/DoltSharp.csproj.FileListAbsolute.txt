@@ -743,3 +743,4 @@ C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.exe
 C:\Users\diede\Desktop\Metodología\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.pdb
 C:\Users\itsda\Desktop\New folder\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Forms.FrmNotifications.resources
+C:\Users\itsda\Desktop\New folder (2)\DoltSharp-ProyectoFinal\DoltSharp\DoltSharp\obj\Debug\DoltSharp.Forms.FrmNotifications.resources
