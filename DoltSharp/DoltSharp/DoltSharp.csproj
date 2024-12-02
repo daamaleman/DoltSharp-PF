@@ -79,6 +79,11 @@
   <ItemGroup>
     <Compile Include="Dao\ProjectDao.cs" />
     <Compile Include="Dao\TaskDao.cs" />
+    <Compile Include="DataSet\DsProject.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsProject.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DsTask.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +96,12 @@
       <DependentUpon>FrmConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="Forms\FrmNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNotifications.Designer.cs">
+      <DependentUpon>FrmNotifications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +162,9 @@
     <EmbeddedResource Include="Forms\FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNotifications.resx">
+      <DependentUpon>FrmNotifications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProject.resx">
       <DependentUpon>FrmProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,7 +190,19 @@
     <EmbeddedResource Include="Forms\FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptProject.rdlc" />
     <EmbeddedResource Include="Reports\RptTask.rdlc" />
+    <None Include="DataSet\DsProject.xsc">
+      <DependentUpon>DsProject.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsProject.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProject.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsProject.xss">
+      <DependentUpon>DsProject.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\DsTask.xsc">
       <DependentUpon>DsTask.xsd</DependentUpon>
     </None>

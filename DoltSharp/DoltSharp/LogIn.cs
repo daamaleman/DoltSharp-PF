@@ -47,7 +47,6 @@ namespace DoltSharp
                 if (_logInServices.AuthenticateUser(email, encryptedPassword, out string userId))
                 {
                     LoggedInUserId = userId;
-                    MetroMessageBox.Show(this, "Bienvenido", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     new FrmMainPage().Show();
                     this.Hide();

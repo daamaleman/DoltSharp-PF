@@ -12,16 +12,16 @@ namespace DoltSharp.Services
     {
         private readonly string _filePath;
 
+        // Constructor que define la ruta del archivo
         public ProyectFile()
         {
-            // Define la ruta del archivo.
-            _filePath = "ProyectsDoltSharp.txt";
+            _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProyectsDoltSharp.txt");
         }
 
-        // Guarda un proyecto en el archivo.
+        // Método para guardar un proyecto en el archivo
         public void SaveProject(Project project)
         {
-            using (StreamWriter writer = new StreamWriter(_filePath, true)) // `true` permite agregar al archivo.
+            using (StreamWriter writer = new StreamWriter(_filePath, true)) // `true` permite agregar al archivo
             {
                 writer.WriteLine("-------------------------------");
                 writer.WriteLine("ID del Proyecto: " + project.ProjectId);
@@ -34,19 +34,19 @@ namespace DoltSharp.Services
             }
         }
 
-        // Carga todos los proyectos desde el archivo.
+        // Método para cargar todos los proyectos desde el archivo
         public List<Project> LoadProjects()
         {
             var projects = new List<Project>();
 
             if (!File.Exists(_filePath))
             {
-                return projects; // Devuelve una lista vacía si no existe.
+                return projects; // Devuelve una lista vacía si no existe
             }
 
             var lines = File.ReadAllLines(_filePath);
 
-            for (int i = 0; i < lines.Length; i += 7) // Cada proyecto ocupa 7 líneas.
+            for (int i = 0; i < lines.Length; i += 7) // Cada proyecto ocupa 7 líneas
             {
                 try
                 {
@@ -70,10 +70,35 @@ namespace DoltSharp.Services
             return projects;
         }
 
-        // Devuelve la ruta del archivo.
+        // Alias para cargar todos los proyectos
+        public List<Project> GetAllProjects()
+        {
+            return LoadProjects();
+        }
+
+        // Método para obtener la ruta del archivo
         public string GetFilePath()
         {
             return _filePath;
+        }
+
+        // Método para eliminar todos los proyectos del archivo
+        public void ClearProjects()
+        {
+            File.WriteAllText(_filePath, string.Empty); // Limpia el contenido del archivo
+        }
+
+        // Método para eliminar un proyecto específico por ID
+        public void DeleteProject(int projectId)
+        {
+            var projects = LoadProjects(); // Carga todos los proyectos
+            var updatedProjects = projects.Where(p => p.ProjectId != projectId).ToList(); // Filtra los proyectos
+
+            ClearProjects(); // Limpia el archivo
+            foreach (var project in updatedProjects)
+            {
+                SaveProject(project); // Guarda los proyectos restantes
+            }
         }
     }
 }

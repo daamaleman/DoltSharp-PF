@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProject));
             this.LblProjectName = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,11 +39,13 @@
             this.LblProjectResources = new MetroFramework.Controls.MetroLabel();
             this.BtnSave = new MetroFramework.Controls.MetroButton();
             this.TxtProjectName = new MetroFramework.Controls.MetroTextBox();
-            this.TxtProjectDescription = new MetroFramework.Controls.MetroTextBox();
             this.DtpProjectStartDate = new MetroFramework.Controls.MetroDateTime();
             this.DtpProjectDeadLine = new MetroFramework.Controls.MetroDateTime();
             this.BtnReturn = new MetroFramework.Controls.MetroButton();
             this.TxtProjectResources = new MetroFramework.Controls.MetroTextBox();
+            this.LblClock = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.RtbProjectDescription = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +54,7 @@
             this.LblProjectName.AutoSize = true;
             this.LblProjectName.Location = new System.Drawing.Point(69, 257);
             this.LblProjectName.Name = "LblProjectName";
-            this.LblProjectName.Size = new System.Drawing.Size(140, 19);
+            this.LblProjectName.Size = new System.Drawing.Size(146, 20);
             this.LblProjectName.TabIndex = 1;
             this.LblProjectName.Text = "Nombre del proyecto:";
             // 
@@ -71,7 +74,7 @@
             this.LblProjectDescription.AutoSize = true;
             this.LblProjectDescription.Location = new System.Drawing.Point(131, 294);
             this.LblProjectDescription.Name = "LblProjectDescription";
-            this.LblProjectDescription.Size = new System.Drawing.Size(79, 19);
+            this.LblProjectDescription.Size = new System.Drawing.Size(85, 20);
             this.LblProjectDescription.TabIndex = 2;
             this.LblProjectDescription.Text = "Descripcion:";
             // 
@@ -80,7 +83,7 @@
             this.LblProjectDeadLine.AutoSize = true;
             this.LblProjectDeadLine.Location = new System.Drawing.Point(125, 384);
             this.LblProjectDeadLine.Name = "LblProjectDeadLine";
-            this.LblProjectDeadLine.Size = new System.Drawing.Size(85, 19);
+            this.LblProjectDeadLine.Size = new System.Drawing.Size(90, 20);
             this.LblProjectDeadLine.TabIndex = 3;
             this.LblProjectDeadLine.Text = "Fecha Limite:";
             // 
@@ -89,7 +92,7 @@
             this.LblProjectStartDate.AutoSize = true;
             this.LblProjectStartDate.Location = new System.Drawing.Point(111, 335);
             this.LblProjectStartDate.Name = "LblProjectStartDate";
-            this.LblProjectStartDate.Size = new System.Drawing.Size(99, 19);
+            this.LblProjectStartDate.Size = new System.Drawing.Size(105, 20);
             this.LblProjectStartDate.TabIndex = 4;
             this.LblProjectStartDate.Text = "Fecha de Inicio:";
             // 
@@ -106,7 +109,7 @@
             this.LblProjectResources.AutoSize = true;
             this.LblProjectResources.Location = new System.Drawing.Point(51, 437);
             this.LblProjectResources.Name = "LblProjectResources";
-            this.LblProjectResources.Size = new System.Drawing.Size(154, 19);
+            this.LblProjectResources.Size = new System.Drawing.Size(165, 20);
             this.LblProjectResources.TabIndex = 6;
             this.LblProjectResources.Text = "Asigaciones de Recursos:";
             // 
@@ -154,44 +157,12 @@
             this.TxtProjectName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtProjectName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // TxtProjectDescription
-            // 
-            // 
-            // 
-            // 
-            this.TxtProjectDescription.CustomButton.Image = null;
-            this.TxtProjectDescription.CustomButton.Location = new System.Drawing.Point(197, 1);
-            this.TxtProjectDescription.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtProjectDescription.CustomButton.Name = "";
-            this.TxtProjectDescription.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtProjectDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtProjectDescription.CustomButton.TabIndex = 1;
-            this.TxtProjectDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtProjectDescription.CustomButton.UseSelectable = true;
-            this.TxtProjectDescription.CustomButton.Visible = false;
-            this.TxtProjectDescription.Lines = new string[0];
-            this.TxtProjectDescription.Location = new System.Drawing.Point(259, 294);
-            this.TxtProjectDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtProjectDescription.MaxLength = 32767;
-            this.TxtProjectDescription.Name = "TxtProjectDescription";
-            this.TxtProjectDescription.PasswordChar = '\0';
-            this.TxtProjectDescription.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtProjectDescription.SelectedText = "";
-            this.TxtProjectDescription.SelectionLength = 0;
-            this.TxtProjectDescription.SelectionStart = 0;
-            this.TxtProjectDescription.ShortcutsEnabled = true;
-            this.TxtProjectDescription.Size = new System.Drawing.Size(219, 23);
-            this.TxtProjectDescription.TabIndex = 2;
-            this.TxtProjectDescription.UseSelectable = true;
-            this.TxtProjectDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtProjectDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // DtpProjectStartDate
             // 
             this.DtpProjectStartDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DtpProjectStartDate.Location = new System.Drawing.Point(259, 335);
             this.DtpProjectStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DtpProjectStartDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtpProjectStartDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.DtpProjectStartDate.Name = "DtpProjectStartDate";
             this.DtpProjectStartDate.Size = new System.Drawing.Size(219, 30);
             this.DtpProjectStartDate.TabIndex = 3;
@@ -201,7 +172,7 @@
             this.DtpProjectDeadLine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DtpProjectDeadLine.Location = new System.Drawing.Point(259, 384);
             this.DtpProjectDeadLine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DtpProjectDeadLine.MinimumSize = new System.Drawing.Size(0, 29);
+            this.DtpProjectDeadLine.MinimumSize = new System.Drawing.Size(0, 30);
             this.DtpProjectDeadLine.Name = "DtpProjectDeadLine";
             this.DtpProjectDeadLine.Size = new System.Drawing.Size(219, 30);
             this.DtpProjectDeadLine.TabIndex = 4;
@@ -250,16 +221,34 @@
             this.TxtProjectResources.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtProjectResources.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // LblClock
+            // 
+            this.LblClock.AutoSize = true;
+            this.LblClock.Location = new System.Drawing.Point(23, 32);
+            this.LblClock.Name = "LblClock";
+            this.LblClock.Size = new System.Drawing.Size(31, 16);
+            this.LblClock.TabIndex = 15;
+            this.LblClock.Text = "4:44";
+            // 
+            // RtbProjectDescription
+            // 
+            this.RtbProjectDescription.Location = new System.Drawing.Point(259, 294);
+            this.RtbProjectDescription.Name = "RtbProjectDescription";
+            this.RtbProjectDescription.Size = new System.Drawing.Size(219, 23);
+            this.RtbProjectDescription.TabIndex = 16;
+            this.RtbProjectDescription.Text = "";
+            // 
             // FrmProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 587);
+            this.Controls.Add(this.RtbProjectDescription);
+            this.Controls.Add(this.LblClock);
             this.Controls.Add(this.TxtProjectResources);
             this.Controls.Add(this.BtnReturn);
             this.Controls.Add(this.DtpProjectDeadLine);
             this.Controls.Add(this.DtpProjectStartDate);
-            this.Controls.Add(this.TxtProjectDescription);
             this.Controls.Add(this.TxtProjectName);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.LblProjectResources);
@@ -293,10 +282,12 @@
         private MetroFramework.Controls.MetroLabel LblProjectResources;
         private MetroFramework.Controls.MetroButton BtnSave;
         private MetroFramework.Controls.MetroTextBox TxtProjectName;
-        private MetroFramework.Controls.MetroTextBox TxtProjectDescription;
         private MetroFramework.Controls.MetroDateTime DtpProjectStartDate;
         private MetroFramework.Controls.MetroDateTime DtpProjectDeadLine;
         private MetroFramework.Controls.MetroButton BtnReturn;
         private MetroFramework.Controls.MetroTextBox TxtProjectResources;
+        private System.Windows.Forms.Label LblClock;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.RichTextBox RtbProjectDescription;
     }
 }

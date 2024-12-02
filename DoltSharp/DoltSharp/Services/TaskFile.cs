@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using DoltSharp.Services;
 using DoltSharp.Models;
 using DoltSharp.Dao;
-using System.Globalization;
 
 namespace DoltSharp.Services
 {
@@ -22,23 +21,26 @@ namespace DoltSharp.Services
             _taskDao = new TaskDao();
             _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TasksDoltSharp.txt");
 
-            // Si el archivo ya existe, se cargan las tareas desde el archivo.
+            // Si el archivo ya existe se cargan las tareas desde el archivo.
             if (File.Exists(_filePath))
             {
                 LoadTasksFromFile();
             }
         }
 
+        // Método público para obtener la ruta del archivo
+        public string GetFilePath()
+        {
+            return _filePath;
+        }
+
         // Agrega una nueva tarea al DAO y la guarda en el archivo.
         public void AddTask(string name, string description, DateTime deadline, string priority, string status)
         {
-            // Validación de los datos de entrada.
-            if (string.IsNullOrWhiteSpace(name) ||
-                string.IsNullOrWhiteSpace(priority) ||
-                string.IsNullOrWhiteSpace(status) ||
-                deadline == default)
+            // Validar fecha límite
+            if (deadline == DateTime.MinValue || deadline.Year < 1900)
             {
-                throw new ArgumentException("Todos los campos de la tarea deben ser válidos.");
+                deadline = DateTime.Now; // Fecha predeterminada
             }
 
             var newTask = new DoltSharp.Models.Task
@@ -48,7 +50,7 @@ namespace DoltSharp.Services
                 TaskDescription = description,
                 TaskDeadline = deadline,
                 TaskPriority = priority,
-                TaskStatus = status
+                TaskStatus = string.IsNullOrEmpty(status) ? "Pendiente" : status // Validar estado
             };
 
             _taskDao.AddTask(newTask);
@@ -70,13 +72,18 @@ namespace DoltSharp.Services
         // Guarda todas las tareas actuales en el archivo con el formato especificado.
         private void SaveTasksToFile()
         {
-            using (var writer = new StreamWriter(_filePath, false)) // Abre el archivo en modo sobrescritura.
+            using (var writer = new StreamWriter(_filePath, false))
             {
-                int taskCounter = 1; // Contador para asignar números a las tareas.
+                int taskCounter = 1;
 
-                foreach (var task in _taskDao.GetTasks().Where(IsTaskValid))
+                foreach (var task in _taskDao.GetTasks())
                 {
-                    // Escribe la tarea en el archivo en el formato deseado.
+                    // Validar fechas antes de guardar
+                    if (task.TaskDeadline == DateTime.MinValue || task.TaskDeadline.Year < 1900)
+                    {
+                        task.TaskDeadline = DateTime.Now; // Fecha predeterminada si es inválida
+                    }
+
                     writer.WriteLine("-------------------------------");
                     writer.WriteLine($"Tarea: {taskCounter}");
                     writer.WriteLine($"ID de la Tarea: {task.TaskId}");
@@ -88,7 +95,7 @@ namespace DoltSharp.Services
                     writer.WriteLine($"Estado: {task.TaskStatus}");
                     writer.WriteLine("-------------------------------");
 
-                    taskCounter++; // Incrementa el contador para la próxima tarea.
+                    taskCounter++;
                 }
             }
         }
@@ -96,20 +103,17 @@ namespace DoltSharp.Services
         // Carga todas las tareas desde el archivo y las agrega al DAO.
         private void LoadTasksFromFile()
         {
-            DoltSharp.Models.Task task = null; // Variable para almacenar temporalmente una tarea.
+            DoltSharp.Models.Task task = null;
 
-            foreach (var line in File.ReadAllLines(_filePath)) // Lee el archivo línea por línea.
+            foreach (var line in File.ReadAllLines(_filePath))
             {
                 if (line.StartsWith("-------------------------------"))
                 {
-                    // Si hay una tarea previa válida, la agregamos al DAO.
-                    if (task != null && IsTaskValid(task))
+                    if (task != null)
                     {
-                        _taskDao.AddTask(task);
+                        _taskDao.AddTask(task); // Agrega la tarea al DAO
                     }
-
-                    // Inicia una nueva tarea.
-                    task = new DoltSharp.Models.Task();
+                    task = new DoltSharp.Models.Task(); // Inicia una nueva tarea
                 }
                 else if (line.StartsWith("ID de la Tarea:"))
                 {
@@ -127,21 +131,19 @@ namespace DoltSharp.Services
                 {
                     string fechaTexto = line.Replace("Fecha Límite:", "").Trim();
 
-                    // Intenta analizar la fecha usando el formato específico "dd/MM/yyyy".
                     if (DateTime.TryParseExact(
                             fechaTexto,
                             "dd/MM/yyyy",
-                            new CultureInfo("es-ES"),
-                            DateTimeStyles.None,
+                            new System.Globalization.CultureInfo("es-ES"),
+                            System.Globalization.DateTimeStyles.None,
                             out DateTime fecha))
                     {
-                        task.TaskDeadline = fecha;
+                        task.TaskDeadline = fecha; // Fecha válida
                     }
                     else
                     {
-                        // Fecha no válida; salta la tarea actual.
-                        Console.WriteLine($"Advertencia: Fecha inválida encontrada ('{fechaTexto}').");
-                        task.TaskDeadline = default; // O asigna un valor predeterminado.
+                        Console.WriteLine($"Advertencia: Fecha inválida encontrada ('{fechaTexto}'). Asignando fecha actual.");
+                        task.TaskDeadline = DateTime.Now; // Asigna una fecha predeterminada
                     }
                 }
                 else if (line.StartsWith("Prioridad:"))
@@ -154,10 +156,9 @@ namespace DoltSharp.Services
                 }
             }
 
-            // Agregar la última tarea si es válida.
-            if (task != null && IsTaskValid(task))
+            if (task != null)
             {
-                _taskDao.AddTask(task);
+                _taskDao.AddTask(task); // Agrega la última tarea al DAO
             }
         }
 
@@ -166,15 +167,6 @@ namespace DoltSharp.Services
         {
             Random random = new Random();
             return random.Next(1000, 9999);
-        }
-
-        // Valida si una tarea tiene datos suficientes para considerarse válida.
-        private bool IsTaskValid(DoltSharp.Models.Task task)
-        {
-            return !string.IsNullOrWhiteSpace(task.TaskName) &&
-                   task.TaskDeadline != default &&
-                   !string.IsNullOrWhiteSpace(task.TaskPriority) &&
-                   !string.IsNullOrWhiteSpace(task.TaskStatus);
         }
     }
 }

@@ -17,7 +17,7 @@ namespace DoltSharp
     public partial class FrmTask : MetroFramework.Forms.MetroForm
     {
         private readonly TaskServices _taskServices;
-
+        private Timer timer = new Timer();
         public FrmTask()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace DoltSharp
             {
                 // Obtener los datos ingresados por el usuario en el formulario
                 string taskName = TxtTaskName.Text.Trim();
-                string taskDescription = TxtTaskDescription.Text.Trim();
+                string taskDescription = RtbTaskDescription.Text.Trim();
                 DateTime taskDeadline = DtpTaskDeadLine.Value;
                 string taskPriority = CmbTaskPriority.SelectedItem?.ToString();
                 string taskStatus = CmbTaskStatus.SelectedItem?.ToString();
@@ -71,7 +71,7 @@ namespace DoltSharp
         private void ClearFormFields()
         {
             TxtTaskName.Clear();
-            TxtTaskDescription.Clear();
+            RtbTaskDescription.Clear();
             CmbTaskPriority.SelectedIndex = -1;
             CmbTaskStatus.SelectedIndex = -1;
             DtpTaskDeadLine.Value = DateTime.Now;
@@ -80,6 +80,13 @@ namespace DoltSharp
         private void FrmTask_Load(object sender, EventArgs e)
         {
             ReadConfig();
+            timer.Interval = 1000; // 1 segundo
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            LblClock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
         private void ReadConfig()
         {

@@ -16,6 +16,7 @@ namespace DoltSharp
     public partial class FrmProject : MetroFramework.Forms.MetroForm
     {
         private readonly ProjectServices _projectServices;
+        private Timer timer = new Timer();
 
         public FrmProject()
         {
@@ -34,7 +35,7 @@ namespace DoltSharp
         {
             // Obtener los valores de los campos
             string projectName = TxtProjectName.Text;
-            string projectDescription = TxtProjectDescription.Text;
+            string projectDescription = RtbProjectDescription.Text;
             DateTime deadline = DtpProjectDeadLine.Value;
 
             // Validar campos
@@ -82,6 +83,14 @@ namespace DoltSharp
         private void FrmProject_Load(object sender, EventArgs e)
         {
             ReadConfig();
+
+            timer.Interval = 1000; // 1 segundo
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            LblClock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
         private void ReadConfig()
         {

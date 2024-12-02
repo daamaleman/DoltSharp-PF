@@ -1,8 +1,48 @@
 -------------------------------
-ID: USR69214
+ID: USR54917
 Nombre: David
 Apellido: Espinoza
 Correo: david@gmail.com
-Fecha de nacimiento: 14/07/2005
+Fecha de nacimiento: 02/02/2000
+Contraseña: MTIzNDU2Nzg=
+-------------------------------
+-------------------------------
+ID: USR73602
+Nombre: user user
+Apellido: user user
+Correo: user@uamv.com
+Fecha de nacimiento: 21/07/2005
+Contraseña: MTIzNDU2Nzg5
+-------------------------------
+-------------------------------
+ID: USR34694
+Nombre: alucard
+Apellido: lopez
+Correo: eliasmarin@.com
+Fecha de nacimiento: 31/12/1999
+Contraseña: dGlvc2tpMjAwNg==
+-------------------------------
+-------------------------------
+ID: USR93071
+Nombre: Deivid Alejandro
+Apellido: Espinoza Largaespada
+Correo: davide@gmail.com
+Fecha de nacimiento: 13/06/1990
+Contraseña: MTIzNDU2Nzg5
+-------------------------------
+-------------------------------
+ID: USR41138
+Nombre: Diedereich Alexander
+Apellido: Alemán Martínez
+Correo: diedereich@gmail.com
+Fecha de nacimiento: 20/7/2005
+Contraseña: MTIzNDU2Nzg=
+-------------------------------
+-------------------------------
+ID: USR78664
+Nombre: Chepe
+Apellido: Durán
+Correo: duran@gmail.com
+Fecha de nacimiento: 7/6/1995
 Contraseña: MTIzNDU2Nzg=
 -------------------------------

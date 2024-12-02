@@ -57,5 +57,43 @@ namespace DoltSharp.Services
         {
             _taskFile.AddTask(name, description, deadline, priority, status);
         }
+
+        // Verifica tareas próximas a vencer
+        public List<string> GetTasksDueSoon()
+        {
+            // Obtener todas las tareas desde TaskFile
+            var tasks = _taskFile.GetAllTasks();
+            var notifications = new List<string>();
+
+            foreach (var task in tasks)
+            {
+                TimeSpan timeRemaining = task.TaskDeadline - DateTime.Now;
+
+                if (timeRemaining.TotalHours > 0 && timeRemaining.TotalHours <= 24)
+                {
+                    // Tarea próxima a vencer
+                    notifications.Add($"La tarea '{task.TaskName}' vence en {timeRemaining.TotalHours:F1} horas.");
+                }
+                else if (timeRemaining.TotalHours <= 0)
+                {
+                    // Tarea ya vencida
+                    notifications.Add($"La tarea '{task.TaskName}' ya está vencida.");
+                }
+            }
+
+            return notifications;
+        }
+
+        // Maneja el flujo completo de notificaciones
+        public List<string> HandleNotifications()
+        {
+            // Obtener notificaciones de tareas próximas a vencer
+            var notifications = GetTasksDueSoon();
+
+            // Puedes agregar más lógica aquí si es necesario, por ejemplo:
+            // Filtrar tareas con prioridad alta, enviar notificaciones a usuarios, etc.
+
+            return notifications;
+        }
     }
 }
