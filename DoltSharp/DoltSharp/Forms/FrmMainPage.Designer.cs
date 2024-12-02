@@ -80,7 +80,7 @@
             this.BtnNewTask.Location = new System.Drawing.Point(160, 524);
             this.BtnNewTask.Name = "BtnNewTask";
             this.BtnNewTask.Size = new System.Drawing.Size(125, 30);
-            this.BtnNewTask.TabIndex = 1;
+            this.BtnNewTask.TabIndex = 5;
             this.BtnNewTask.Text = "Agregar nueva Tarea";
             this.BtnNewTask.UseSelectable = true;
             this.BtnNewTask.Click += new System.EventHandler(this.BtnNewTask_Click);
@@ -91,7 +91,7 @@
             this.BtnNewProject.Location = new System.Drawing.Point(775, 524);
             this.BtnNewProject.Name = "BtnNewProject";
             this.BtnNewProject.Size = new System.Drawing.Size(142, 30);
-            this.BtnNewProject.TabIndex = 2;
+            this.BtnNewProject.TabIndex = 8;
             this.BtnNewProject.Text = "Agregar nuevo Proyecto";
             this.BtnNewProject.UseSelectable = true;
             this.BtnNewProject.Click += new System.EventHandler(this.BtnNewProject_Click);
@@ -138,7 +138,7 @@
             this.DgvTaskList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvTaskList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvTaskList.Size = new System.Drawing.Size(578, 270);
-            this.DgvTaskList.TabIndex = 13;
+            this.DgvTaskList.TabIndex = 4;
             this.DgvTaskList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTaskList_CellContentClick);
             // 
             // DgvProjectsList
@@ -183,7 +183,7 @@
             this.DgvProjectsList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvProjectsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProjectsList.Size = new System.Drawing.Size(578, 270);
-            this.DgvProjectsList.TabIndex = 14;
+            this.DgvProjectsList.TabIndex = 7;
             this.DgvProjectsList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProjectsList_CellContentClick);
             // 
             // PbLogo
@@ -205,7 +205,7 @@
             this.BtnEditInformation.Location = new System.Drawing.Point(5, 19);
             this.BtnEditInformation.Name = "BtnEditInformation";
             this.BtnEditInformation.Size = new System.Drawing.Size(45, 50);
-            this.BtnEditInformation.TabIndex = 3;
+            this.BtnEditInformation.TabIndex = 1;
             this.BtnEditInformation.UseSelectable = true;
             this.BtnEditInformation.Click += new System.EventHandler(this.BtnEditarInformarcion_Click);
             // 
@@ -216,7 +216,7 @@
             this.BtnLeave.Location = new System.Drawing.Point(112, 19);
             this.BtnLeave.Name = "BtnLeave";
             this.BtnLeave.Size = new System.Drawing.Size(57, 50);
-            this.BtnLeave.TabIndex = 5;
+            this.BtnLeave.TabIndex = 3;
             this.BtnLeave.UseSelectable = true;
             this.BtnLeave.Click += new System.EventHandler(this.BtnSalida_Click);
             // 
@@ -232,7 +232,7 @@
             this.BtnConfiguration.Location = new System.Drawing.Point(56, 19);
             this.BtnConfiguration.Name = "BtnConfiguration";
             this.BtnConfiguration.Size = new System.Drawing.Size(50, 50);
-            this.BtnConfiguration.TabIndex = 4;
+            this.BtnConfiguration.TabIndex = 2;
             this.BtnConfiguration.UseSelectable = true;
             this.BtnConfiguration.Click += new System.EventHandler(this.BtnConfiguration_Click);
             // 
@@ -242,7 +242,7 @@
             this.BtnViewReports.Location = new System.Drawing.Point(303, 524);
             this.BtnViewReports.Name = "BtnViewReports";
             this.BtnViewReports.Size = new System.Drawing.Size(125, 30);
-            this.BtnViewReports.TabIndex = 15;
+            this.BtnViewReports.TabIndex = 6;
             this.BtnViewReports.Text = "Ver Reporte";
             this.BtnViewReports.UseSelectable = true;
             this.BtnViewReports.Click += new System.EventHandler(this.BtnViewReports_Click);
@@ -251,7 +251,7 @@
             // 
             this.LblClock.AutoSize = true;
             this.LblClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblClock.Location = new System.Drawing.Point(1117, 19);
+            this.LblClock.Location = new System.Drawing.Point(1117, 36);
             this.LblClock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblClock.Name = "LblClock";
             this.LblClock.Size = new System.Drawing.Size(71, 33);
@@ -276,7 +276,7 @@
             this.BtnViewReport.Location = new System.Drawing.Point(931, 524);
             this.BtnViewReport.Name = "BtnViewReport";
             this.BtnViewReport.Size = new System.Drawing.Size(142, 30);
-            this.BtnViewReport.TabIndex = 18;
+            this.BtnViewReport.TabIndex = 9;
             this.BtnViewReport.Text = "Ver Reporte";
             this.BtnViewReport.UseSelectable = true;
             this.BtnViewReport.Click += new System.EventHandler(this.BtnViewReport_Click);

@@ -102,9 +102,36 @@ namespace DoltSharp
             this.Close();
         }
 
+
         private void FrmUsuarioConfig_Load(object sender, EventArgs e)
         {
             ReadConfig();
+            try
+            {
+                // Verificar existencia del archivo
+                if (!userService.FileExists())
+                {
+                    MetroMessageBox.Show(this, "El archivo de usuarios no existe o está vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                // Leer datos del archivo
+                string[] lines = userService.ReadAllLines();
+                // Buscar usuario
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i].StartsWith("ID: ") && lines[i].Contains(LogIn.LoggedInUserId))
+                    {
+                        TxtUpdateName.Text = lines[i + 1].Substring(8).Trim();
+                        TxtUpdateLastName.Text = lines[i + 2].Substring(10).Trim();
+                        TxtUpdateEmail.Text = lines[i + 3].Substring(8).Trim();
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void ReadConfig()
         {

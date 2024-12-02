@@ -56,7 +56,7 @@
             this.BttnRestablecerConfig.Location = new System.Drawing.Point(108, 353);
             this.BttnRestablecerConfig.Name = "BttnRestablecerConfig";
             this.BttnRestablecerConfig.Size = new System.Drawing.Size(151, 30);
-            this.BttnRestablecerConfig.TabIndex = 15;
+            this.BttnRestablecerConfig.TabIndex = 3;
             this.BttnRestablecerConfig.Text = "Reestablecer Configuración";
             this.BttnRestablecerConfig.UseSelectable = true;
             // 
@@ -66,7 +66,7 @@
             this.BttnGuardarConfig.Location = new System.Drawing.Point(301, 353);
             this.BttnGuardarConfig.Name = "BttnGuardarConfig";
             this.BttnGuardarConfig.Size = new System.Drawing.Size(130, 30);
-            this.BttnGuardarConfig.TabIndex = 16;
+            this.BttnGuardarConfig.TabIndex = 4;
             this.BttnGuardarConfig.Text = "Guardar Configuracion";
             this.BttnGuardarConfig.UseSelectable = true;
             this.BttnGuardarConfig.Click += new System.EventHandler(this.BttnGuardarConfig_Click);
@@ -77,10 +77,10 @@
             this.BtnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnReturn.Location = new System.Drawing.Point(454, 62);
-            this.BtnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReturn.Name = "BtnReturn";
             this.BtnReturn.Size = new System.Drawing.Size(47, 46);
-            this.BtnReturn.TabIndex = 17;
+            this.BtnReturn.TabIndex = 5;
             this.BtnReturn.UseSelectable = true;
             this.BtnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
             // 
@@ -98,10 +98,10 @@
             // 
             this.TglDark.AutoSize = true;
             this.TglDark.Location = new System.Drawing.Point(268, 206);
-            this.TglDark.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TglDark.Margin = new System.Windows.Forms.Padding(2);
             this.TglDark.Name = "TglDark";
             this.TglDark.Size = new System.Drawing.Size(80, 17);
-            this.TglDark.TabIndex = 19;
+            this.TglDark.TabIndex = 1;
             this.TglDark.Text = "Off";
             this.TglDark.UseSelectable = true;
             this.TglDark.CheckedChanged += new System.EventHandler(this.TglDark_CheckedChanged);
@@ -125,10 +125,10 @@
             "Blue ",
             "Red"});
             this.CmbStyle.Location = new System.Drawing.Point(269, 239);
-            this.CmbStyle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmbStyle.Margin = new System.Windows.Forms.Padding(2);
             this.CmbStyle.Name = "CmbStyle";
             this.CmbStyle.Size = new System.Drawing.Size(108, 29);
-            this.CmbStyle.TabIndex = 21;
+            this.CmbStyle.TabIndex = 2;
             this.CmbStyle.UseSelectable = true;
             // 
             // FrmConfig

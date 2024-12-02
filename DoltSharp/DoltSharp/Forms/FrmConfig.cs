@@ -50,13 +50,12 @@ namespace DoltSharp
             if (TglDark.Checked)
             {
                 TglDark.Text = "Dark";
-                TglDark.Checked = true;
             }
             else
             {
                 TglDark.Text = "Light";
-                TglDark.Checked = false;
             }
+            SaveTheme();
         }
     }
 }
