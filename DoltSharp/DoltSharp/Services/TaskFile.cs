@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DoltSharp.Services;
 using DoltSharp.Models;
 using DoltSharp.Dao;
+using System.Globalization;
 
 namespace DoltSharp.Services
 {
@@ -21,7 +22,7 @@ namespace DoltSharp.Services
             _taskDao = new TaskDao();
             _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TasksDoltSharp.txt");
 
-            // Si el archivo ya existe se cargan las tareas desde el archivo.
+            // Si el archivo ya existe, se cargan las tareas desde el archivo.
             if (File.Exists(_filePath))
             {
                 LoadTasksFromFile();
@@ -31,6 +32,15 @@ namespace DoltSharp.Services
         // Agrega una nueva tarea al DAO y la guarda en el archivo.
         public void AddTask(string name, string description, DateTime deadline, string priority, string status)
         {
+            // Validación de los datos de entrada.
+            if (string.IsNullOrWhiteSpace(name) ||
+                string.IsNullOrWhiteSpace(priority) ||
+                string.IsNullOrWhiteSpace(status) ||
+                deadline == default)
+            {
+                throw new ArgumentException("Todos los campos de la tarea deben ser válidos.");
+            }
+
             var newTask = new DoltSharp.Models.Task
             {
                 TaskId = GenerateRandomId(),
@@ -64,7 +74,7 @@ namespace DoltSharp.Services
             {
                 int taskCounter = 1; // Contador para asignar números a las tareas.
 
-                foreach (var task in _taskDao.GetTasks())
+                foreach (var task in _taskDao.GetTasks().Where(IsTaskValid))
                 {
                     // Escribe la tarea en el archivo en el formato deseado.
                     writer.WriteLine("-------------------------------");
@@ -92,8 +102,8 @@ namespace DoltSharp.Services
             {
                 if (line.StartsWith("-------------------------------"))
                 {
-                    // Si hay una tarea previa, la agregamos al DAO.
-                    if (task != null)
+                    // Si hay una tarea previa válida, la agregamos al DAO.
+                    if (task != null && IsTaskValid(task))
                     {
                         _taskDao.AddTask(task);
                     }
@@ -121,17 +131,17 @@ namespace DoltSharp.Services
                     if (DateTime.TryParseExact(
                             fechaTexto,
                             "dd/MM/yyyy",
-                            new System.Globalization.CultureInfo("es-ES"),
-                            System.Globalization.DateTimeStyles.None,
+                            new CultureInfo("es-ES"),
+                            DateTimeStyles.None,
                             out DateTime fecha))
                     {
                         task.TaskDeadline = fecha;
                     }
                     else
                     {
-                        // Si el formato no es válido, lanza una excepción o asigna una fecha predeterminada.
+                        // Fecha no válida; salta la tarea actual.
                         Console.WriteLine($"Advertencia: Fecha inválida encontrada ('{fechaTexto}').");
-                        throw new FormatException($"El formato de la fecha '{fechaTexto}' no es válido.");
+                        task.TaskDeadline = default; // O asigna un valor predeterminado.
                     }
                 }
                 else if (line.StartsWith("Prioridad:"))
@@ -144,7 +154,8 @@ namespace DoltSharp.Services
                 }
             }
 
-            if (task != null)
+            // Agregar la última tarea si es válida.
+            if (task != null && IsTaskValid(task))
             {
                 _taskDao.AddTask(task);
             }
@@ -155,6 +166,15 @@ namespace DoltSharp.Services
         {
             Random random = new Random();
             return random.Next(1000, 9999);
+        }
+
+        // Valida si una tarea tiene datos suficientes para considerarse válida.
+        private bool IsTaskValid(DoltSharp.Models.Task task)
+        {
+            return !string.IsNullOrWhiteSpace(task.TaskName) &&
+                   task.TaskDeadline != default &&
+                   !string.IsNullOrWhiteSpace(task.TaskPriority) &&
+                   !string.IsNullOrWhiteSpace(task.TaskStatus);
         }
     }
 }
