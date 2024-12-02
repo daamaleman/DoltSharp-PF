@@ -30,16 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfig));
             this.LblTema = new MetroFramework.Controls.MetroLabel();
-            this.LblEncenderIniciar = new MetroFramework.Controls.MetroLabel();
-            this.LblFiltrarTareas = new MetroFramework.Controls.MetroLabel();
-            this.LblFiltrarProyectos = new MetroFramework.Controls.MetroLabel();
-            this.LblEjecutarSegundoPlano = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
-            this.ChkSi = new MetroFramework.Controls.MetroCheckBox();
-            this.ChkNo = new MetroFramework.Controls.MetroCheckBox();
-            this.ChkSi2 = new MetroFramework.Controls.MetroCheckBox();
-            this.ChkNo2 = new MetroFramework.Controls.MetroCheckBox();
             this.BttnRestablecerConfig = new MetroFramework.Controls.MetroButton();
             this.BttnGuardarConfig = new MetroFramework.Controls.MetroButton();
             this.BtnReturn = new MetroFramework.Controls.MetroButton();
@@ -54,136 +44,18 @@
             // 
             this.LblTema.AutoSize = true;
             this.LblTema.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblTema.Location = new System.Drawing.Point(232, 248);
-            this.LblTema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTema.Location = new System.Drawing.Point(174, 202);
             this.LblTema.Name = "LblTema";
             this.LblTema.Size = new System.Drawing.Size(55, 25);
             this.LblTema.TabIndex = 1;
             this.LblTema.Text = "Tema:";
             // 
-            // LblEncenderIniciar
-            // 
-            this.LblEncenderIniciar.AutoSize = true;
-            this.LblEncenderIniciar.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblEncenderIniciar.Location = new System.Drawing.Point(109, 330);
-            this.LblEncenderIniciar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblEncenderIniciar.Name = "LblEncenderIniciar";
-            this.LblEncenderIniciar.Size = new System.Drawing.Size(151, 25);
-            this.LblEncenderIniciar.TabIndex = 2;
-            this.LblEncenderIniciar.Text = "Iniciar al Encender";
-            // 
-            // LblFiltrarTareas
-            // 
-            this.LblFiltrarTareas.AutoSize = true;
-            this.LblFiltrarTareas.Location = new System.Drawing.Point(127, 462);
-            this.LblFiltrarTareas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblFiltrarTareas.Name = "LblFiltrarTareas";
-            this.LblFiltrarTareas.Size = new System.Drawing.Size(112, 19);
-            this.LblFiltrarTareas.TabIndex = 3;
-            this.LblFiltrarTareas.Text = "Filtrar Tareas por:";
-            // 
-            // LblFiltrarProyectos
-            // 
-            this.LblFiltrarProyectos.AutoSize = true;
-            this.LblFiltrarProyectos.Location = new System.Drawing.Point(443, 462);
-            this.LblFiltrarProyectos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblFiltrarProyectos.Name = "LblFiltrarProyectos";
-            this.LblFiltrarProyectos.Size = new System.Drawing.Size(133, 19);
-            this.LblFiltrarProyectos.TabIndex = 4;
-            this.LblFiltrarProyectos.Text = "Filtrar Proyectos por:";
-            // 
-            // LblEjecutarSegundoPlano
-            // 
-            this.LblEjecutarSegundoPlano.AutoSize = true;
-            this.LblEjecutarSegundoPlano.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblEjecutarSegundoPlano.Location = new System.Drawing.Point(24, 380);
-            this.LblEjecutarSegundoPlano.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblEjecutarSegundoPlano.Name = "LblEjecutarSegundoPlano";
-            this.LblEjecutarSegundoPlano.Size = new System.Drawing.Size(215, 25);
-            this.LblEjecutarSegundoPlano.TabIndex = 5;
-            this.LblEjecutarSegundoPlano.Text = "Ejecutar en segundo Plano";
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Items.AddRange(new object[] {
-            "Orden Alfabetico (A-Z)"});
-            this.metroComboBox2.Location = new System.Drawing.Point(127, 507);
-            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(160, 29);
-            this.metroComboBox2.TabIndex = 7;
-            this.metroComboBox2.UseSelectable = true;
-            // 
-            // metroComboBox3
-            // 
-            this.metroComboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroComboBox3.FormattingEnabled = true;
-            this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Location = new System.Drawing.Point(443, 507);
-            this.metroComboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.metroComboBox3.Name = "metroComboBox3";
-            this.metroComboBox3.Size = new System.Drawing.Size(160, 29);
-            this.metroComboBox3.TabIndex = 8;
-            this.metroComboBox3.UseSelectable = true;
-            // 
-            // ChkSi
-            // 
-            this.ChkSi.AutoSize = true;
-            this.ChkSi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChkSi.Location = new System.Drawing.Point(359, 341);
-            this.ChkSi.Margin = new System.Windows.Forms.Padding(4);
-            this.ChkSi.Name = "ChkSi";
-            this.ChkSi.Size = new System.Drawing.Size(32, 15);
-            this.ChkSi.TabIndex = 11;
-            this.ChkSi.Text = "Si";
-            this.ChkSi.UseSelectable = true;
-            // 
-            // ChkNo
-            // 
-            this.ChkNo.AutoSize = true;
-            this.ChkNo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChkNo.Location = new System.Drawing.Point(443, 341);
-            this.ChkNo.Margin = new System.Windows.Forms.Padding(4);
-            this.ChkNo.Name = "ChkNo";
-            this.ChkNo.Size = new System.Drawing.Size(39, 15);
-            this.ChkNo.TabIndex = 12;
-            this.ChkNo.Text = "No";
-            this.ChkNo.UseSelectable = true;
-            // 
-            // ChkSi2
-            // 
-            this.ChkSi2.AutoSize = true;
-            this.ChkSi2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChkSi2.Location = new System.Drawing.Point(359, 391);
-            this.ChkSi2.Margin = new System.Windows.Forms.Padding(4);
-            this.ChkSi2.Name = "ChkSi2";
-            this.ChkSi2.Size = new System.Drawing.Size(32, 15);
-            this.ChkSi2.TabIndex = 13;
-            this.ChkSi2.Text = "Si";
-            this.ChkSi2.UseSelectable = true;
-            // 
-            // ChkNo2
-            // 
-            this.ChkNo2.AutoSize = true;
-            this.ChkNo2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChkNo2.Location = new System.Drawing.Point(443, 390);
-            this.ChkNo2.Margin = new System.Windows.Forms.Padding(4);
-            this.ChkNo2.Name = "ChkNo2";
-            this.ChkNo2.Size = new System.Drawing.Size(39, 15);
-            this.ChkNo2.TabIndex = 14;
-            this.ChkNo2.Text = "No";
-            this.ChkNo2.UseSelectable = true;
-            // 
             // BttnRestablecerConfig
             // 
             this.BttnRestablecerConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BttnRestablecerConfig.Location = new System.Drawing.Point(159, 614);
-            this.BttnRestablecerConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.BttnRestablecerConfig.Location = new System.Drawing.Point(108, 353);
             this.BttnRestablecerConfig.Name = "BttnRestablecerConfig";
-            this.BttnRestablecerConfig.Size = new System.Drawing.Size(201, 37);
+            this.BttnRestablecerConfig.Size = new System.Drawing.Size(151, 30);
             this.BttnRestablecerConfig.TabIndex = 15;
             this.BttnRestablecerConfig.Text = "Reestablecer Configuración";
             this.BttnRestablecerConfig.UseSelectable = true;
@@ -191,10 +63,9 @@
             // BttnGuardarConfig
             // 
             this.BttnGuardarConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BttnGuardarConfig.Location = new System.Drawing.Point(401, 614);
-            this.BttnGuardarConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.BttnGuardarConfig.Location = new System.Drawing.Point(301, 353);
             this.BttnGuardarConfig.Name = "BttnGuardarConfig";
-            this.BttnGuardarConfig.Size = new System.Drawing.Size(173, 37);
+            this.BttnGuardarConfig.Size = new System.Drawing.Size(130, 30);
             this.BttnGuardarConfig.TabIndex = 16;
             this.BttnGuardarConfig.Text = "Guardar Configuracion";
             this.BttnGuardarConfig.UseSelectable = true;
@@ -205,10 +76,10 @@
             this.BtnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnReturn.BackgroundImage")));
             this.BtnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnReturn.Location = new System.Drawing.Point(605, 76);
-            this.BtnReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnReturn.Location = new System.Drawing.Point(454, 62);
+            this.BtnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnReturn.Name = "BtnReturn";
-            this.BtnReturn.Size = new System.Drawing.Size(63, 57);
+            this.BtnReturn.Size = new System.Drawing.Size(47, 46);
             this.BtnReturn.TabIndex = 17;
             this.BtnReturn.UseSelectable = true;
             this.BtnReturn.Click += new System.EventHandler(this.BtnReturn_Click);
@@ -216,10 +87,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(303, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(227, 63);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(101, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -227,19 +97,20 @@
             // TglDark
             // 
             this.TglDark.AutoSize = true;
-            this.TglDark.Location = new System.Drawing.Point(358, 253);
+            this.TglDark.Location = new System.Drawing.Point(268, 206);
+            this.TglDark.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TglDark.Name = "TglDark";
-            this.TglDark.Size = new System.Drawing.Size(80, 20);
+            this.TglDark.Size = new System.Drawing.Size(80, 17);
             this.TglDark.TabIndex = 19;
             this.TglDark.Text = "Off";
             this.TglDark.UseSelectable = true;
+            this.TglDark.CheckedChanged += new System.EventHandler(this.TglDark_CheckedChanged);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(232, 294);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(174, 239);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(55, 25);
             this.metroLabel1.TabIndex = 20;
@@ -253,17 +124,18 @@
             "Black",
             "Blue ",
             "Red"});
-            this.CmbStyle.Location = new System.Drawing.Point(359, 294);
+            this.CmbStyle.Location = new System.Drawing.Point(269, 239);
+            this.CmbStyle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CmbStyle.Name = "CmbStyle";
-            this.CmbStyle.Size = new System.Drawing.Size(142, 29);
+            this.CmbStyle.Size = new System.Drawing.Size(108, 29);
             this.CmbStyle.TabIndex = 21;
             this.CmbStyle.UseSelectable = true;
             // 
             // FrmConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 693);
+            this.ClientSize = new System.Drawing.Size(532, 431);
             this.Controls.Add(this.CmbStyle);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.TglDark);
@@ -271,20 +143,8 @@
             this.Controls.Add(this.BtnReturn);
             this.Controls.Add(this.BttnGuardarConfig);
             this.Controls.Add(this.BttnRestablecerConfig);
-            this.Controls.Add(this.ChkNo2);
-            this.Controls.Add(this.ChkSi2);
-            this.Controls.Add(this.ChkNo);
-            this.Controls.Add(this.ChkSi);
-            this.Controls.Add(this.metroComboBox3);
-            this.Controls.Add(this.metroComboBox2);
-            this.Controls.Add(this.LblEjecutarSegundoPlano);
-            this.Controls.Add(this.LblFiltrarProyectos);
-            this.Controls.Add(this.LblFiltrarTareas);
-            this.Controls.Add(this.LblEncenderIniciar);
             this.Controls.Add(this.LblTema);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmConfig";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Text = "Configuracion y Personalización";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
@@ -296,16 +156,6 @@
 
         #endregion
         private MetroFramework.Controls.MetroLabel LblTema;
-        private MetroFramework.Controls.MetroLabel LblEncenderIniciar;
-        private MetroFramework.Controls.MetroLabel LblFiltrarTareas;
-        private MetroFramework.Controls.MetroLabel LblFiltrarProyectos;
-        private MetroFramework.Controls.MetroLabel LblEjecutarSegundoPlano;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox3;
-        private MetroFramework.Controls.MetroCheckBox ChkSi;
-        private MetroFramework.Controls.MetroCheckBox ChkNo;
-        private MetroFramework.Controls.MetroCheckBox ChkSi2;
-        private MetroFramework.Controls.MetroCheckBox ChkNo2;
         private MetroFramework.Controls.MetroButton BttnRestablecerConfig;
         private MetroFramework.Controls.MetroButton BttnGuardarConfig;
         private MetroFramework.Controls.MetroButton BtnReturn;

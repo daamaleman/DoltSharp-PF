@@ -180,6 +180,7 @@ namespace DoltSharp
                 }
             }
         }
+
         private void DgvProjectsList_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             // Verificar si el cambio ocurrió en la columna "Status"
@@ -205,7 +206,6 @@ namespace DoltSharp
                 }
             }
         }
-
 
         private void LoadProjectsIntoGrid()
         {
@@ -313,7 +313,6 @@ namespace DoltSharp
 
     e.ThrowException = false; // Evita que la excepción se propague
 }
-
         private void DgvTaskList_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             MessageBox.Show(
@@ -441,9 +440,6 @@ namespace DoltSharp
             List<Task> tasks = new List<Task>();
             tasks = taskFile.GetAllTasks();
 
-
-
-
             ReportDataSource dataSource = new ReportDataSource("DsDatos", tasks);
 
             FrmReports frmReports = new FrmReports();
@@ -500,7 +496,6 @@ namespace DoltSharp
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
-
             LblClock.Text = DateTime.Now.ToString("HH:mm:ss");
 
             // Verificar si es la hora específica para mostrar notificaciones (ejemplo: 9:00 AM)
@@ -508,8 +503,8 @@ namespace DoltSharp
             {
                 MostrarFormularioDeNotificaciones();
             }
-
         }
+
         private void ReadConfig()
         {
             AppConfigServices appConfigServices = new AppConfigServices();
@@ -549,8 +544,6 @@ namespace DoltSharp
 
         }
     }
-
-
 }
 
 

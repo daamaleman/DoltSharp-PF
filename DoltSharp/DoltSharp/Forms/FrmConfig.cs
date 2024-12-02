@@ -41,8 +41,22 @@ namespace DoltSharp
             // Guarda el tema seleccionado
             AppConfigServices appConfigServices = new AppConfigServices();
             appConfigServices.MyDarkMode = TglDark.Checked;
-            appConfigServices.MyStyle = CmbStyle.SelectedItem.ToString();
+            appConfigServices.MyStyle = CmbStyle.SelectedItem?.ToString() ?? "Blue";
             appConfigServices.SaveConfigFile();
+        }
+
+        private void TglDark_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TglDark.Checked)
+            {
+                TglDark.Text = "Dark";
+                TglDark.Checked = true;
+            }
+            else
+            {
+                TglDark.Text = "Light";
+                TglDark.Checked = false;
+            }
         }
     }
 }
