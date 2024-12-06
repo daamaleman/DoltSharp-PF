@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ModelsTask = DoltSharp.Models.Task;
+using DoltSharp.Models;
 
 namespace DoltSharp.Services
 {
@@ -58,45 +60,37 @@ namespace DoltSharp.Services
             _taskFile.AddTask(name, description, deadline, priority, status);
         }
 
-        // Verifica tareas próximas a vencer
-        public List<string> GetTasksDueSoon()
+        // Devuelve tareas próximas a vencer o ya vencidas
+        public List<ModelsTask> GetTasksDueSoon()
         {
             // Obtener todas las tareas desde TaskFile
             var tasks = _taskFile.GetAllTasks();
-            var notifications = new List<string>();
+            var dueTasks = new List<ModelsTask>();
 
-            foreach (var task in tasks)
+            foreach (var task in tasks) // task ahora es ModelsTask
             {
                 TimeSpan timeRemaining = task.TaskDeadline - DateTime.Now;
 
                 if (timeRemaining.TotalHours > 0 && timeRemaining.TotalHours <= 24)
                 {
                     // Tarea próxima a vencer
-                    notifications.Add($"La tarea '{task.TaskName}' vence en {timeRemaining.TotalHours:F1} horas.");
+                    dueTasks.Add(task);
                 }
                 else if (timeRemaining.TotalHours <= 0)
                 {
                     // Tarea ya vencida
-                    notifications.Add($"La tarea '{task.TaskName}' ya está vencida.");
+                    dueTasks.Add(task);
                 }
             }
 
-            return notifications;
+            return dueTasks;
         }
 
         // Maneja el flujo completo de notificaciones
-        public List<string> HandleNotifications()
+        public List<ModelsTask> HandleNotifications()
         {
-            // Obtener las notificaciones por vencimiento
-            var notifications = GetTasksDueSoon();
-
-            // Lógica adicional si es necesario
-            if (notifications.Count == 0)
-            {
-                notifications.Add("No hay tareas próximas a vencer en las próximas 24 horas.");
-            }
-
-            return notifications;
+            // Devuelve las tareas vencidas o próximas a vencer
+            return GetTasksDueSoon();
         }
     }
 }

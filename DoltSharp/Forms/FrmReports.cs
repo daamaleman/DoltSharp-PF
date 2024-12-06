@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoltSharp.Forms
 {
-    public partial class FrmReports : Form
+    public partial class FrmReports : MetroFramework.Forms.MetroForm
     {
         public FrmReports()
         {

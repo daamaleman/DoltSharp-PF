@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfig));
             this.LblTema = new MetroFramework.Controls.MetroLabel();
-            this.BttnRestablecerConfig = new MetroFramework.Controls.MetroButton();
             this.BttnGuardarConfig = new MetroFramework.Controls.MetroButton();
             this.BtnReturn = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,20 +49,10 @@
             this.LblTema.TabIndex = 1;
             this.LblTema.Text = "Tema:";
             // 
-            // BttnRestablecerConfig
-            // 
-            this.BttnRestablecerConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BttnRestablecerConfig.Location = new System.Drawing.Point(108, 353);
-            this.BttnRestablecerConfig.Name = "BttnRestablecerConfig";
-            this.BttnRestablecerConfig.Size = new System.Drawing.Size(151, 30);
-            this.BttnRestablecerConfig.TabIndex = 3;
-            this.BttnRestablecerConfig.Text = "Reestablecer Configuración";
-            this.BttnRestablecerConfig.UseSelectable = true;
-            // 
             // BttnGuardarConfig
             // 
             this.BttnGuardarConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BttnGuardarConfig.Location = new System.Drawing.Point(301, 353);
+            this.BttnGuardarConfig.Location = new System.Drawing.Point(218, 351);
             this.BttnGuardarConfig.Name = "BttnGuardarConfig";
             this.BttnGuardarConfig.Size = new System.Drawing.Size(130, 30);
             this.BttnGuardarConfig.TabIndex = 4;
@@ -77,7 +66,7 @@
             this.BtnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnReturn.Location = new System.Drawing.Point(454, 62);
-            this.BtnReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnReturn.Name = "BtnReturn";
             this.BtnReturn.Size = new System.Drawing.Size(47, 46);
             this.BtnReturn.TabIndex = 5;
@@ -98,7 +87,7 @@
             // 
             this.TglDark.AutoSize = true;
             this.TglDark.Location = new System.Drawing.Point(268, 206);
-            this.TglDark.Margin = new System.Windows.Forms.Padding(2);
+            this.TglDark.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TglDark.Name = "TglDark";
             this.TglDark.Size = new System.Drawing.Size(80, 17);
             this.TglDark.TabIndex = 1;
@@ -125,7 +114,7 @@
             "Blue ",
             "Red"});
             this.CmbStyle.Location = new System.Drawing.Point(269, 239);
-            this.CmbStyle.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbStyle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CmbStyle.Name = "CmbStyle";
             this.CmbStyle.Size = new System.Drawing.Size(108, 29);
             this.CmbStyle.TabIndex = 2;
@@ -136,14 +125,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 431);
+            this.ControlBox = false;
             this.Controls.Add(this.CmbStyle);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.TglDark);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnReturn);
             this.Controls.Add(this.BttnGuardarConfig);
-            this.Controls.Add(this.BttnRestablecerConfig);
             this.Controls.Add(this.LblTema);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConfig";
             this.Resizable = false;
             this.Text = "Configuracion y Personalización";
@@ -156,7 +146,6 @@
 
         #endregion
         private MetroFramework.Controls.MetroLabel LblTema;
-        private MetroFramework.Controls.MetroButton BttnRestablecerConfig;
         private MetroFramework.Controls.MetroButton BttnGuardarConfig;
         private MetroFramework.Controls.MetroButton BtnReturn;
         private System.Windows.Forms.PictureBox pictureBox1;

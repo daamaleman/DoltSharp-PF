@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainPage));
             this.LblTaskView = new MetroFramework.Controls.MetroLabel();
             this.LlblProjectsView = new MetroFramework.Controls.MetroLabel();
@@ -42,16 +42,15 @@
             this.BtnNewProject = new MetroFramework.Controls.MetroButton();
             this.DgvTaskList = new MetroFramework.Controls.MetroGrid();
             this.DgvProjectsList = new MetroFramework.Controls.MetroGrid();
-            this.PbLogo = new System.Windows.Forms.PictureBox();
-            this.BtnEditInformation = new MetroFramework.Controls.MetroButton();
-            this.BtnLeave = new MetroFramework.Controls.MetroButton();
-            this.BtnConfiguration = new MetroFramework.Controls.MetroButton();
-            this.BtnViewReports = new MetroFramework.Controls.MetroButton();
             this.LblClock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LblWelcome = new System.Windows.Forms.Label();
-            this.BtnViewReport = new MetroFramework.Controls.MetroButton();
-            this.BtnShowNotifications = new MetroFramework.Controls.MetroButton();
+            this.BtnShowReport = new MetroFramework.Controls.MetroButton();
+            this.BtnShowNotif = new MetroFramework.Controls.MetroButton();
+            this.BtnClose = new MetroFramework.Controls.MetroButton();
+            this.PbLogo = new System.Windows.Forms.PictureBox();
+            this.BtnEditInformation = new MetroFramework.Controls.MetroButton();
+            this.BtnConfiguration = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTaskList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProjectsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
@@ -60,44 +59,40 @@
             // LblTaskView
             // 
             this.LblTaskView.AutoSize = true;
-            this.LblTaskView.Location = new System.Drawing.Point(349, 278);
-            this.LblTaskView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTaskView.Location = new System.Drawing.Point(248, 217);
             this.LblTaskView.Name = "LblTaskView";
-            this.LblTaskView.Size = new System.Drawing.Size(99, 20);
+            this.LblTaskView.Size = new System.Drawing.Size(93, 19);
             this.LblTaskView.TabIndex = 3;
             this.LblTaskView.Text = "Lista de Tareas";
             // 
             // LlblProjectsView
             // 
             this.LlblProjectsView.AutoSize = true;
-            this.LlblProjectsView.Location = new System.Drawing.Point(1171, 278);
-            this.LlblProjectsView.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LlblProjectsView.Location = new System.Drawing.Point(956, 217);
             this.LlblProjectsView.Name = "LlblProjectsView";
-            this.LlblProjectsView.Size = new System.Drawing.Size(121, 20);
+            this.LlblProjectsView.Size = new System.Drawing.Size(114, 19);
             this.LlblProjectsView.TabIndex = 5;
             this.LlblProjectsView.Text = "Lista de Proyectos";
             // 
             // BtnNewTask
             // 
             this.BtnNewTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewTask.Location = new System.Drawing.Point(213, 645);
-            this.BtnNewTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnNewTask.Location = new System.Drawing.Point(197, 572);
             this.BtnNewTask.Name = "BtnNewTask";
-            this.BtnNewTask.Size = new System.Drawing.Size(167, 37);
-            this.BtnNewTask.TabIndex = 5;
-            this.BtnNewTask.Text = "Agregar nueva Tarea";
+            this.BtnNewTask.Size = new System.Drawing.Size(125, 30);
+            this.BtnNewTask.TabIndex = 4;
+            this.BtnNewTask.Text = "Agregar nueva Tareas";
             this.BtnNewTask.UseSelectable = true;
             this.BtnNewTask.Click += new System.EventHandler(this.BtnNewTask_Click);
             // 
             // BtnNewProject
             // 
             this.BtnNewProject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewProject.Location = new System.Drawing.Point(1033, 645);
-            this.BtnNewProject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnNewProject.Location = new System.Drawing.Point(956, 572);
             this.BtnNewProject.Name = "BtnNewProject";
-            this.BtnNewProject.Size = new System.Drawing.Size(189, 37);
-            this.BtnNewProject.TabIndex = 8;
-            this.BtnNewProject.Text = "Agregar nuevo Proyecto";
+            this.BtnNewProject.Size = new System.Drawing.Size(142, 30);
+            this.BtnNewProject.TabIndex = 6;
+            this.BtnNewProject.Text = "Agregar nueva Proyectos";
             this.BtnNewProject.UseSelectable = true;
             this.BtnNewProject.Click += new System.EventHandler(this.BtnNewProject_Click);
             // 
@@ -108,43 +103,42 @@
             this.DgvTaskList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DgvTaskList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DgvTaskList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvTaskList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvTaskList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvTaskList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvTaskList.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvTaskList.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvTaskList.EnableHeadersVisualStyles = false;
             this.DgvTaskList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DgvTaskList.GridColor = System.Drawing.Color.Black;
-            this.DgvTaskList.Location = new System.Drawing.Point(16, 305);
-            this.DgvTaskList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DgvTaskList.Location = new System.Drawing.Point(663, 239);
             this.DgvTaskList.Name = "DgvTaskList";
             this.DgvTaskList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvTaskList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvTaskList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvTaskList.RowHeadersWidth = 51;
             this.DgvTaskList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvTaskList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvTaskList.Size = new System.Drawing.Size(771, 332);
-            this.DgvTaskList.TabIndex = 4;
+            this.DgvTaskList.Size = new System.Drawing.Size(652, 327);
+            this.DgvTaskList.TabIndex = 5;
             this.DgvTaskList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTaskList_CellContentClick);
             // 
             // DgvProjectsList
@@ -154,53 +148,107 @@
             this.DgvProjectsList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DgvProjectsList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DgvProjectsList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvProjectsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProjectsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvProjectsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvProjectsList.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvProjectsList.DefaultCellStyle = dataGridViewCellStyle5;
             this.DgvProjectsList.EnableHeadersVisualStyles = false;
             this.DgvProjectsList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DgvProjectsList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DgvProjectsList.Location = new System.Drawing.Point(824, 305);
-            this.DgvProjectsList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DgvProjectsList.Location = new System.Drawing.Point(5, 239);
             this.DgvProjectsList.Name = "DgvProjectsList";
             this.DgvProjectsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvProjectsList.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProjectsList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DgvProjectsList.RowHeadersWidth = 51;
             this.DgvProjectsList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DgvProjectsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvProjectsList.Size = new System.Drawing.Size(771, 332);
-            this.DgvProjectsList.TabIndex = 7;
+            this.DgvProjectsList.Size = new System.Drawing.Size(652, 327);
+            this.DgvProjectsList.TabIndex = 3;
             this.DgvProjectsList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProjectsList_CellContentClick);
+            // 
+            // LblClock
+            // 
+            this.LblClock.AutoSize = true;
+            this.LblClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblClock.Location = new System.Drawing.Point(192, 27);
+            this.LblClock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblClock.Name = "LblClock";
+            this.LblClock.Size = new System.Drawing.Size(71, 33);
+            this.LblClock.TabIndex = 16;
+            this.LblClock.Text = "4:45";
+            // 
+            // LblWelcome
+            // 
+            this.LblWelcome.AutoSize = true;
+            this.LblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblWelcome.Location = new System.Drawing.Point(523, 60);
+            this.LblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblWelcome.Name = "LblWelcome";
+            this.LblWelcome.Size = new System.Drawing.Size(290, 25);
+            this.LblWelcome.TabIndex = 17;
+            this.LblWelcome.Text = "Bienvenido a la Pagina Principal";
+            this.LblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BtnShowReport
+            // 
+            this.BtnShowReport.BackgroundImage = global::DoltSharp.Properties.Resources.reporte;
+            this.BtnShowReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnShowReport.Location = new System.Drawing.Point(1250, 19);
+            this.BtnShowReport.Name = "BtnShowReport";
+            this.BtnShowReport.Size = new System.Drawing.Size(50, 50);
+            this.BtnShowReport.TabIndex = 9;
+            this.BtnShowReport.UseSelectable = true;
+            this.BtnShowReport.Click += new System.EventHandler(this.BtnShowReport_Click_1);
+            // 
+            // BtnShowNotif
+            // 
+            this.BtnShowNotif.BackgroundImage = global::DoltSharp.Properties.Resources.notificacion;
+            this.BtnShowNotif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnShowNotif.Location = new System.Drawing.Point(1181, 19);
+            this.BtnShowNotif.Name = "BtnShowNotif";
+            this.BtnShowNotif.Size = new System.Drawing.Size(47, 50);
+            this.BtnShowNotif.TabIndex = 8;
+            this.BtnShowNotif.UseSelectable = true;
+            this.BtnShowNotif.Click += new System.EventHandler(this.BtnShowNotif_Click);
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.BackgroundImage = global::DoltSharp.Properties.Resources.cerrar_sesion;
+            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnClose.Location = new System.Drawing.Point(1090, 19);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(69, 50);
+            this.BtnClose.TabIndex = 7;
+            this.BtnClose.UseSelectable = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // PbLogo
             // 
             this.PbLogo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
-            this.PbLogo.Location = new System.Drawing.Point(704, 140);
-            this.PbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PbLogo.Location = new System.Drawing.Point(591, 105);
             this.PbLogo.Name = "PbLogo";
-            this.PbLogo.Size = new System.Drawing.Size(193, 157);
+            this.PbLogo.Size = new System.Drawing.Size(146, 128);
             this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbLogo.TabIndex = 12;
             this.PbLogo.TabStop = false;
@@ -210,25 +258,12 @@
             // 
             this.BtnEditInformation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnEditInformation.BackgroundImage")));
             this.BtnEditInformation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnEditInformation.Location = new System.Drawing.Point(7, 23);
-            this.BtnEditInformation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnEditInformation.Location = new System.Drawing.Point(12, 19);
             this.BtnEditInformation.Name = "BtnEditInformation";
-            this.BtnEditInformation.Size = new System.Drawing.Size(60, 62);
+            this.BtnEditInformation.Size = new System.Drawing.Size(45, 50);
             this.BtnEditInformation.TabIndex = 1;
             this.BtnEditInformation.UseSelectable = true;
             this.BtnEditInformation.Click += new System.EventHandler(this.BtnEditarInformarcion_Click);
-            // 
-            // BtnLeave
-            // 
-            this.BtnLeave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnLeave.BackgroundImage")));
-            this.BtnLeave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnLeave.Location = new System.Drawing.Point(149, 23);
-            this.BtnLeave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BtnLeave.Name = "BtnLeave";
-            this.BtnLeave.Size = new System.Drawing.Size(76, 62);
-            this.BtnLeave.TabIndex = 3;
-            this.BtnLeave.UseSelectable = true;
-            this.BtnLeave.Click += new System.EventHandler(this.BtnSalida_Click);
             // 
             // BtnConfiguration
             // 
@@ -239,95 +274,41 @@
             this.BtnConfiguration.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.BtnConfiguration.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.BtnConfiguration.ForeColor = System.Drawing.Color.White;
-            this.BtnConfiguration.Location = new System.Drawing.Point(75, 23);
-            this.BtnConfiguration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnConfiguration.Location = new System.Drawing.Point(84, 19);
             this.BtnConfiguration.Name = "BtnConfiguration";
-            this.BtnConfiguration.Size = new System.Drawing.Size(67, 62);
+            this.BtnConfiguration.Size = new System.Drawing.Size(50, 50);
             this.BtnConfiguration.TabIndex = 2;
             this.BtnConfiguration.UseSelectable = true;
             this.BtnConfiguration.Click += new System.EventHandler(this.BtnConfiguration_Click);
             // 
-            // BtnViewReports
-            // 
-            this.BtnViewReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnViewReports.Location = new System.Drawing.Point(404, 645);
-            this.BtnViewReports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BtnViewReports.Name = "BtnViewReports";
-            this.BtnViewReports.Size = new System.Drawing.Size(167, 37);
-            this.BtnViewReports.TabIndex = 6;
-            this.BtnViewReports.Text = "Ver Reporte";
-            this.BtnViewReports.UseSelectable = true;
-            this.BtnViewReports.Click += new System.EventHandler(this.BtnViewReports_Click);
-            // 
-            // LblClock
-            // 
-            this.LblClock.AutoSize = true;
-            this.LblClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblClock.Location = new System.Drawing.Point(1489, 44);
-            this.LblClock.Name = "LblClock";
-            this.LblClock.Size = new System.Drawing.Size(91, 42);
-            this.LblClock.TabIndex = 16;
-            this.LblClock.Text = "4:45";
-            // 
-            // LblWelcome
-            // 
-            this.LblWelcome.AutoSize = true;
-            this.LblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblWelcome.Location = new System.Drawing.Point(611, 82);
-            this.LblWelcome.Name = "LblWelcome";
-            this.LblWelcome.Size = new System.Drawing.Size(378, 29);
-            this.LblWelcome.TabIndex = 17;
-            this.LblWelcome.Text = "Bienvenido a la Pagina Principal";
-            this.LblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BtnViewReport
-            // 
-            this.BtnViewReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnViewReport.Location = new System.Drawing.Point(1241, 645);
-            this.BtnViewReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BtnViewReport.Name = "BtnViewReport";
-            this.BtnViewReport.Size = new System.Drawing.Size(189, 37);
-            this.BtnViewReport.TabIndex = 9;
-            this.BtnViewReport.Text = "Ver Reporte";
-            this.BtnViewReport.UseSelectable = true;
-            this.BtnViewReport.Click += new System.EventHandler(this.BtnViewReport_Click);
-            // 
-            // BtnShowNotifications
-            // 
-            this.BtnShowNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnShowNotifications.Location = new System.Drawing.Point(31, 645);
-            this.BtnShowNotifications.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnShowNotifications.Name = "BtnShowNotifications";
-            this.BtnShowNotifications.Size = new System.Drawing.Size(167, 37);
-            this.BtnShowNotifications.TabIndex = 18;
-            this.BtnShowNotifications.Text = "Ver Notificacion";
-            this.BtnShowNotifications.UseSelectable = true;
-            this.BtnShowNotifications.Click += new System.EventHandler(this.BtnShowNotifications_Click);
-            // 
             // FrmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1613, 822);
-            this.Controls.Add(this.BtnShowNotifications);
-            this.Controls.Add(this.BtnViewReport);
+            this.ClientSize = new System.Drawing.Size(1323, 766);
+            this.ControlBox = false;
+            this.Controls.Add(this.BtnShowReport);
+            this.Controls.Add(this.BtnShowNotif);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.LblWelcome);
             this.Controls.Add(this.LblClock);
-            this.Controls.Add(this.BtnViewReports);
             this.Controls.Add(this.DgvProjectsList);
             this.Controls.Add(this.DgvTaskList);
             this.Controls.Add(this.PbLogo);
             this.Controls.Add(this.BtnEditInformation);
-            this.Controls.Add(this.BtnLeave);
             this.Controls.Add(this.BtnConfiguration);
             this.Controls.Add(this.BtnNewProject);
             this.Controls.Add(this.BtnNewTask);
             this.Controls.Add(this.LlblProjectsView);
             this.Controls.Add(this.LblTaskView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Movable = false;
             this.Name = "FrmMainPage";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
+            this.ShowIcon = false;
             this.Text = "Principal";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.FrmMainPage_Load);
@@ -345,16 +326,15 @@
         private MetroFramework.Controls.MetroButton BtnNewTask;
         private MetroFramework.Controls.MetroButton BtnNewProject;
         private MetroFramework.Controls.MetroButton BtnConfiguration;
-        private MetroFramework.Controls.MetroButton BtnLeave;
         private MetroFramework.Controls.MetroButton BtnEditInformation;
         private System.Windows.Forms.PictureBox PbLogo;
         private MetroFramework.Controls.MetroGrid DgvTaskList;
         private MetroFramework.Controls.MetroGrid DgvProjectsList;
-        private MetroFramework.Controls.MetroButton BtnViewReports;
         private System.Windows.Forms.Label LblClock;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label LblWelcome;
-        private MetroFramework.Controls.MetroButton BtnViewReport;
-        private MetroFramework.Controls.MetroButton BtnShowNotifications;
+        private MetroFramework.Controls.MetroButton BtnClose;
+        private MetroFramework.Controls.MetroButton BtnShowNotif;
+        private MetroFramework.Controls.MetroButton BtnShowReport;
     }
 }

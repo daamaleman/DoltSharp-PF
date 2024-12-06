@@ -87,10 +87,10 @@
             // 
             // 
             this.TxtEmail.CustomButton.Image = null;
-            this.TxtEmail.CustomButton.Location = new System.Drawing.Point(241, 1);
+            this.TxtEmail.CustomButton.Location = new System.Drawing.Point(181, 1);
             this.TxtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtEmail.CustomButton.Name = "";
-            this.TxtEmail.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.TxtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtEmail.CustomButton.TabIndex = 1;
             this.TxtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -119,10 +119,10 @@
             // 
             // 
             this.TxtPw.CustomButton.Image = null;
-            this.TxtPw.CustomButton.Location = new System.Drawing.Point(241, 1);
+            this.TxtPw.CustomButton.Location = new System.Drawing.Point(181, 1);
             this.TxtPw.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtPw.CustomButton.Name = "";
-            this.TxtPw.CustomButton.Size = new System.Drawing.Size(28, 26);
+            this.TxtPw.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtPw.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TxtPw.CustomButton.TabIndex = 1;
             this.TxtPw.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -220,7 +220,10 @@
             this.Controls.Add(this.LblResetPw);
             this.Controls.Add(this.LblPw);
             this.Controls.Add(this.LblEmail);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LogIn";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
